@@ -67,7 +67,7 @@ const MODULES_DATA = [
         "formatClass": "format-video",
         "hasRealContent": true,
         "embedUrl": "https://player.vimeo.com/video/1246890324?h=2ba8f2e4d6",
-        "embedHtml": '<div class="vimeo-embed-wrapper"><iframe src="https://player.vimeo.com/video/1246890324?h=2ba8f2e4d6&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="0201 Arcidiacono"></iframe></div>'
+        "embedHtml": '<div class="vimeo-embed-wrapper"><iframe src="https://player.vimeo.com/video/1246890324?h=2ba8f2e4d6&autoplay=1&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="0201 Arcidiacono"></iframe></div>'
       },
       {
         "id": "02:02:00",
@@ -77,7 +77,7 @@ const MODULES_DATA = [
         "formatClass": "format-video",
         "hasRealContent": true,
         "embedUrl": "https://player.vimeo.com/video/1246890324?h=2ba8f2e4d6",
-        "embedHtml": '<div class="vimeo-embed-wrapper"><iframe src="https://player.vimeo.com/video/1246890324?h=2ba8f2e4d6&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="0202 Arcidiacono"></iframe></div>'
+        "embedHtml": '<div class="vimeo-embed-wrapper"><iframe src="https://player.vimeo.com/video/1246890324?h=2ba8f2e4d6&autoplay=1&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="0202 Arcidiacono"></iframe></div>'
       },
       {
         "id": "02:03:00",
@@ -108,7 +108,7 @@ const MODULES_DATA = [
         "formatClass": "format-video",
         "hasRealContent": true,
         "embedUrl": "https://player.vimeo.com/video/1248713581?h=cd2ad0b805",
-        "embedHtml": '<div class="vimeo-embed-wrapper"><iframe src="https://player.vimeo.com/video/1248713581?h=cd2ad0b805&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="0301 Grandone"></iframe></div>'
+        "embedHtml": '<div class="vimeo-embed-wrapper"><iframe src="https://player.vimeo.com/video/1248713581?h=cd2ad0b805&autoplay=1&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="0301 Grandone"></iframe></div>'
       },
       {
         "id": "03:02:00",
@@ -159,10 +159,12 @@ const MODULES_DATA = [
       {
         "id": "04:04:00",
         "title": "Ruolo di Odontoiatra",
-        "authors": "Anna Grandone / Vincenzo Grassia / Maurizio Scorianz",
-        "type": "Video Pillola",
+        "authors": "Anna Grandone",
+        "type": "Video Lezione",
         "formatClass": "format-video",
-        "hasRealContent": false
+        "hasRealContent": true,
+        "embedUrl": "https://player.vimeo.com/video/1248731358?h=71a8d18886",
+        "embedHtml": '<div class="vimeo-embed-wrapper"><iframe src="https://player.vimeo.com/video/1248731358?h=71a8d18886&autoplay=1&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="0404 Grandone"></iframe></div>'
       },
       {
         "id": "04:05:00",
@@ -318,7 +320,7 @@ const PROLOGO_MODULE = {
       formatClass: "format-video",
       hasRealContent: true,
       embedUrl: "https://player.vimeo.com/video/1248701878?h=bad1833c80",
-      embedHtml: '<div class="vimeo-embed-wrapper"><iframe src="https://player.vimeo.com/video/1248701878?h=bad1833c80&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="PROLOGO RADAR XLH"></iframe></div>'
+      embedHtml: '<div class="vimeo-embed-wrapper"><iframe src="https://player.vimeo.com/video/1248701878?h=bad1833c80&autoplay=1&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="PROLOGO RADAR XLH"></iframe></div>'
     }
   ]
 };
@@ -532,10 +534,21 @@ function renderModuleViewer(id) {
 }
 
 // ── MODAL VISUALIZZATORE DEL SINGOLO CONTENUTO SELEZIONATO ──
+let currentVimeoPlayer = null;
+
 function closeContentModal() {
   const overlay = document.getElementById("contentModal");
   if (!overlay) return;
   overlay.classList.remove("open");
+
+  // Arresta immediatamente la riproduzione video tramite Vimeo SDK
+  if (currentVimeoPlayer) {
+    try {
+      currentVimeoPlayer.pause();
+      currentVimeoPlayer.unload();
+    } catch (e) {}
+    currentVimeoPlayer = null;
+  }
 
   // Arresta immediatamente la riproduzione video/audio distruggendo il frame
   const stageBox = document.getElementById("modalContentStage");
@@ -604,9 +617,37 @@ function openContentModal(unitId, moduleId) {
 
   // Se è presente il contenuto reale caricato
   if (unit.hasRealContent && unit.embedHtml) {
-    const isVideo = unit.formatClass === "format-video" || (unit.type && unit.type.toLowerCase().includes("video"));
+    const isVideo = unit.formatClass === "format-video" || (unit.type && unit.type.toLowerCase().includes("video")) || (unit.type && unit.type.toLowerCase().includes("lezione"));
     stageBox.className = `modal-content-stage has-embed ${isVideo ? "is-video" : "is-flipbook"}`;
-    stageBox.innerHTML = unit.embedHtml;
+    
+    // Assicura il parametro autoplay=1 nell'iframe per l'avvio immediato
+    let htmlToInject = unit.embedHtml;
+    if (isVideo && !htmlToInject.includes("autoplay=1")) {
+      htmlToInject = htmlToInject.replace(/(\/video\/[^\s"'?&]+)\?/, '$1?autoplay=1&');
+    }
+    stageBox.innerHTML = htmlToInject;
+
+    // Se è un video, inizializza e avvia automaticamente tramite Vimeo Player SDK
+    if (isVideo) {
+      const iframe = stageBox.querySelector("iframe");
+      if (iframe && typeof Vimeo !== "undefined") {
+        try {
+          currentVimeoPlayer = new Vimeo.Player(iframe);
+          currentVimeoPlayer.ready().then(function() {
+            currentVimeoPlayer.play().catch(function(err) {
+              console.log("Autoplay con audio bloccato, tentativo in muto:", err);
+              if (currentVimeoPlayer) {
+                currentVimeoPlayer.setVolume(0).then(() => currentVimeoPlayer.play()).catch(() => {});
+              }
+            });
+          }).catch(function(err) {
+            console.warn("Vimeo ready error:", err);
+          });
+        } catch (e) {
+          console.warn("Vimeo Player init error:", e);
+        }
+      }
+    }
   } else {
     stageBox.className = "modal-content-stage";
     stageBox.innerHTML = `
