@@ -20,6 +20,9 @@
 </head>
 <body>
 
+  <!-- Watermark Pattern sfondo (richiamo RADAR XLH FONDALE) -->
+  <div class="page-watermark-rings" aria-hidden="true"></div>
+
   <!-- ══════════════════ NAVBAR ══════════════════ -->
   <header class="nav" role="banner">
     <div class="container nav-inner">
@@ -57,10 +60,31 @@
     <a href="#schedaEventoSection">Scheda ECM & Accreditamento</a>
   </div>
 
-  <!-- ══════════════════ HERO PORTAL (LOGO & CORE MISSION) ══════════════════ -->
+  <!-- ══════════════════ HERO PORTAL (CERCHI FISSI + RADAR ANIMATO + LOGO) ══════════════════ -->
   <section id="hero" class="hero-portal">
     <div class="hero-fondale-layer" aria-hidden="true"></div>
-    <div class="hero-radar-glow" aria-hidden="true"></div>
+
+    <!-- 1. CERCHI RADAR FISSI (Base sorgente brand RADAR XLH) -->
+    <div class="hero-radar-fixed-rings" aria-hidden="true">
+      <div class="radar-fixed-circle c1"></div>
+      <div class="radar-fixed-circle c2"></div>
+      <div class="radar-fixed-circle c3"></div>
+      <div class="radar-fixed-circle c4"></div>
+      <div class="radar-fixed-circle c5"></div>
+      <div class="radar-fixed-circle c6"></div>
+      <div class="radar-fixed-circle c7"></div>
+      <div class="radar-center-blip"></div>
+    </div>
+
+    <!-- Cerchi radar secondari a sinistra per equilibrio compositivo -->
+    <div class="hero-radar-left-rings" aria-hidden="true">
+      <div class="radar-fixed-circle c2"></div>
+      <div class="radar-fixed-circle c4"></div>
+      <div class="radar-fixed-circle c6"></div>
+    </div>
+
+    <!-- 2. EFFETTO ANIMATO RADAR (Rotazione fascio conico continuo 360°) -->
+    <div class="hero-radar-sweep-scanner" aria-hidden="true"></div>
 
     <div class="container">
       <div class="hero-grid">
@@ -158,7 +182,7 @@
       </div>
 
       <div class="units-grid" id="stageUnitsList">
-        <!-- Generato dinamicamente -->
+        <!-- Generato dinamicamente (include box per il FlipBook Modulo 1 Capitolo 3) -->
       </div>
     </section>
   </main>
@@ -330,25 +354,16 @@
     <div class="modal-dialog">
       <div class="modal-header">
         <div class="modal-header-meta">
-          <span class="code" id="modalUnitCode">01:01:00</span>
+          <span class="code" id="modalUnitCode">01:03:00</span>
           <div class="modal-title-text" id="modalUnitTitle">Titolo Contenuto</div>
         </div>
         <button class="modal-close-btn" id="modalCloseBtn" aria-label="Chiudi finestra">&times;</button>
       </div>
 
       <div class="modal-body">
-        <!-- Player / Contenuto Stage Demo -->
-        <div class="modal-content-stage">
-          <div class="modal-stage-pattern" aria-hidden="true"></div>
-          <div class="stage-preview-icon">
-            <svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-          </div>
-          <div class="stage-preview-title" id="modalPreviewTitle">Omeostasi minerale</div>
-          <div class="stage-preview-sub" id="modalPreviewSub">Spazio di preview del contenuto didattico pronto per accogliere i testi e i media editati.</div>
-          <div class="stage-preview-badge">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            In attesa inserimento contenuti editati
-          </div>
+        <!-- Player / Contenuto Stage Reale o Preview Placeholder -->
+        <div class="modal-content-stage" id="modalContentStage">
+          <!-- Popolato dinamicamente da app.js (iframe o placeholder) -->
         </div>
 
         <!-- Meta Informazioni da Matrice Excel -->
@@ -359,7 +374,7 @@
           </div>
           <div class="meta-field">
             <label>Tipologia Formativa</label>
-            <span id="modalUnitType">Video Pillola</span>
+            <span id="modalUnitType">Info-grafiche / FlipBook</span>
           </div>
           <div class="meta-field">
             <label>Modulo di Riferimento</label>

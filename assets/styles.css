@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════════════════════
    RADAR XLH — Faculty Review Platform
-   Design System · Premium Medical-Editorial (V2 - Core Moduli Focus)
+   Design System · Premium Medical-Editorial (V3 - Radar Animations & Content)
    ═══════════════════════════════════════════════════════ */
 
 :root {
@@ -45,8 +45,6 @@
   --shadow-md:  0 4px 14px rgba(27, 58, 92, 0.08), 0 2px 6px rgba(27, 58, 92, 0.04);
   --shadow-lg:  0 12px 32px rgba(27, 58, 92, 0.10), 0 4px 12px rgba(27, 58, 92, 0.05);
   --shadow-xl:  0 20px 48px rgba(11, 30, 51, 0.16);
-  --shadow-glow-blue: 0 0 24px rgba(14, 138, 200, 0.25);
-  --shadow-glow-orange: 0 0 24px rgba(232, 124, 30, 0.25);
 
   /* Layout */
   --max-width: 1360px;
@@ -73,6 +71,20 @@ body {
   background: var(--surface-alt);
   line-height: 1.6;
   overflow-x: hidden;
+  position: relative;
+}
+
+/* Background fixed watermark rings (fondale pattern) */
+.page-watermark-rings {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.035;
+  background-image: 
+    radial-gradient(circle at 10% 20%, #1B3A5C 1px, transparent 1px),
+    radial-gradient(circle at 90% 75%, #E87C1E 1px, transparent 1px);
+  background-size: 80px 80px, 120px 120px;
 }
 
 a {
@@ -90,6 +102,8 @@ img {
   max-width: var(--max-width);
   margin-inline: auto;
   padding-inline: clamp(1rem, 3vw, 2rem);
+  position: relative;
+  z-index: 2;
 }
 
 /* ══════════════════ NAVBAR ══════════════════ */
@@ -267,12 +281,12 @@ img {
   text-align: center;
 }
 
-/* ══════════════════ HERO SECTION (Focus su Logo + Accesso Didattico) ══════════════════ */
+/* ══════════════════ HERO SECTION (Cerchi Fissi + Sweep Animato) ══════════════════ */
 .hero-portal {
   position: relative;
   background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 60%, #164366 100%);
   padding-top: calc(80px + 2.5rem);
-  padding-bottom: 4.5rem;
+  padding-bottom: 5rem;
   color: var(--white);
   overflow: hidden;
 }
@@ -286,26 +300,105 @@ img {
   background-image: url('assets/img/fondale.png');
   background-size: cover;
   background-position: center right;
-  opacity: 0.15;
+  opacity: 0.16;
   mix-blend-mode: overlay;
   pointer-events: none;
+  z-index: 1;
 }
 
-.hero-radar-glow {
+/* ── ELEMENTO 1: CERCHI RADAR FISSI (Dalla base sorgente) ── */
+.hero-radar-fixed-rings {
   position: absolute;
-  width: 650px;
-  height: 650px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(14, 138, 200, 0.28) 0%, transparent 70%);
-  top: 5%;
-  right: 5%;
+  top: 50%;
+  right: 18%;
+  transform: translate(50%, -50%);
+  width: 780px;
+  height: 780px;
   pointer-events: none;
-  animation: radar-pulse 6s ease-in-out infinite alternate;
+  z-index: 1;
 }
 
-@keyframes radar-pulse {
-  from { transform: scale(0.92); opacity: 0.55; }
-  to { transform: scale(1.15); opacity: 0.95; }
+.radar-fixed-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.radar-fixed-circle.c1 { width: 140px; height: 140px; border-color: rgba(232, 124, 30, 0.22); }
+.radar-fixed-circle.c2 { width: 260px; height: 260px; border-color: rgba(14, 138, 200, 0.18); }
+.radar-fixed-circle.c3 { width: 380px; height: 380px; border-color: rgba(255, 255, 255, 0.12); }
+.radar-fixed-circle.c4 { width: 500px; height: 500px; border-color: rgba(14, 138, 200, 0.15); }
+.radar-fixed-circle.c5 { width: 640px; height: 640px; border-color: rgba(255, 255, 255, 0.09); }
+.radar-fixed-circle.c6 { width: 780px; height: 780px; border-color: rgba(232, 124, 30, 0.14); }
+.radar-fixed-circle.c7 { width: 940px; height: 940px; border-color: rgba(255, 255, 255, 0.05); }
+
+/* Cerchi secondari a sinistra */
+.hero-radar-left-rings {
+  position: absolute;
+  bottom: -20%;
+  left: -10%;
+  width: 500px;
+  height: 500px;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.4;
+}
+
+/* ── ELEMENTO 2: EFFETTO ANIMATO RADAR (Rotazione fascio 360°) ── */
+.hero-radar-sweep-scanner {
+  position: absolute;
+  top: 50%;
+  right: 18%;
+  transform: translate(50%, -50%);
+  width: 680px;
+  height: 680px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.hero-radar-sweep-scanner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    rgba(14, 138, 200, 0.02) 20deg,
+    rgba(14, 138, 200, 0.20) 50deg,
+    rgba(232, 124, 30, 0.35) 60deg,
+    transparent 62deg
+  );
+  animation: radarSweepLoop 5s linear infinite;
+}
+
+@keyframes radarSweepLoop {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Radar Center Blip */
+.radar-center-blip {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  background: var(--orange);
+  border-radius: 50%;
+  box-shadow: 0 0 16px var(--orange);
+  animation: blipPulse 2s ease-in-out infinite;
+}
+
+@keyframes blipPulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
+  50%      { transform: translate(-50%, -50%) scale(1.6); opacity: 1; box-shadow: 0 0 24px var(--orange); }
 }
 
 .hero-grid {
@@ -314,7 +407,7 @@ img {
   gap: 2.5rem;
   align-items: center;
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 
 @media (min-width: 992px) {
@@ -421,11 +514,11 @@ img {
   color: var(--white);
 }
 
-/* Hero Right: LOGO DEL PROGETTO IN PRIMISSIMO PIANO */
+/* Hero Right: LOGO DEL PROGETTO */
 .hero-logo-card {
   position: relative;
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: var(--radius-xl);
   padding: 2.25rem 2rem;
   display: flex;
@@ -671,7 +764,7 @@ img {
   transform: translateX(3px);
 }
 
-/* ══════════════════ CORE STAGE VIEWER: VISUALIZZATORE DIDATTICO MODULO ══════════════════ */
+/* ══════════════════ CORE STAGE VIEWER ══════════════════ */
 .stage-viewer-section {
   background: var(--white);
   border: 1px solid var(--border);
@@ -679,6 +772,53 @@ img {
   padding: 2.25rem;
   box-shadow: var(--shadow-lg);
   margin-bottom: 4rem;
+  position: relative;
+}
+
+/* Box speciale per contenuti pronti / editati */
+.featured-content-ready-box {
+  background: linear-gradient(135deg, #F0FDF4 0%, #E0F2FE 100%);
+  border: 2px solid #86EFAC;
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.featured-content-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #16A34A;
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 100px;
+  width: fit-content;
+}
+
+.featured-content-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--navy-deep);
+}
+
+.featured-content-desc {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.featured-iframe-wrap {
+  width: 100%;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  background: var(--white);
+  border: 1px solid var(--border);
 }
 
 .stage-viewer-header {
@@ -793,6 +933,11 @@ img {
   transition: all 0.2s ease;
 }
 
+.unit-row.has-content {
+  border-color: #86EFAC;
+  background: #F0FDF4;
+}
+
 .unit-row:hover {
   border-color: var(--blue-radar);
   background: #FFFFFF;
@@ -832,6 +977,19 @@ img {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+}
+
+.badge-live-ready {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #DCFCE7;
+  color: #15803D;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 100px;
+  border: 1px solid #86EFAC;
 }
 
 .format-badge {
@@ -891,6 +1049,14 @@ img {
   transform: translateY(-1px);
 }
 
+.btn-review-content.btn-ready {
+  background: #16A34A;
+}
+
+.btn-review-content.btn-ready:hover {
+  background: #15803D;
+}
+
 @media (max-width: 768px) {
   .unit-row {
     grid-template-columns: 1fr;
@@ -926,8 +1092,8 @@ img {
 .modal-dialog {
   background: var(--white);
   width: 100%;
-  max-width: 880px;
-  max-height: 90vh;
+  max-width: 960px;
+  max-height: 92vh;
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-xl);
   display: flex;
@@ -1000,26 +1166,34 @@ img {
   gap: 1.5rem;
 }
 
+/* Modal Content Stage per Contenuto Reale o Placeholder */
 .modal-content-stage {
   background: #0B1E33;
   border-radius: var(--radius-lg);
-  padding: 2.5rem 1.5rem;
+  padding: 1.5rem;
   color: var(--white);
-  text-align: center;
+  min-height: 280px;
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 280px;
-  position: relative;
-  overflow: hidden;
 }
 
-.modal-stage-pattern {
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(circle at center, rgba(14, 138, 200, 0.15) 0%, transparent 70%);
-  pointer-events: none;
+.modal-content-stage.has-embed {
+  background: transparent;
+  padding: 0;
+  min-height: auto;
+  border: 1px solid var(--border);
+}
+
+.modal-content-stage.has-embed iframe {
+  width: 100%;
+  height: 460px;
+  border: none;
+  border-radius: var(--radius-lg);
+  display: block;
 }
 
 .stage-preview-icon {
@@ -1038,6 +1212,7 @@ img {
   font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 .stage-preview-sub {
@@ -1045,6 +1220,7 @@ img {
   color: rgba(255, 255, 255, 0.7);
   max-width: 480px;
   margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .stage-preview-badge {
@@ -1142,11 +1318,13 @@ img {
   background: #15803D;
 }
 
-/* ══════════════════ SECONDARY DOSSIER SECTION (Info, Razionale, Governance) ══════════════════ */
+/* ══════════════════ SECONDARY DOSSIER SECTION ══════════════════ */
 .dossier-section {
   padding-block: 4.5rem;
   background: #EEF3F8;
   border-top: 1px solid var(--border);
+  position: relative;
+  z-index: 2;
 }
 
 .dossier-header {
@@ -1268,6 +1446,8 @@ img {
   padding: 2.5rem 0;
   font-size: 0.8125rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 2;
 }
 
 .footer-portal-inner {
