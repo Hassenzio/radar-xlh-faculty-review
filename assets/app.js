@@ -8,15 +8,15 @@ const MODULES_DATA = [
   {
     "id": 1,
     "code": "01",
-    "rawTitle": "Modulo 1 - L'importanza del fosfato",
-    "title": "L'importanza del fosfato",
+    "rawTitle": "Modulo 1 - L'Importanza del Fosfato",
+    "title": "L'Importanza del Fosfato",
     "authors": [
       "Danilo Fintini"
     ],
     "units": [
       {
         "id": "01:01:00",
-        "title": "Omeostasi minerale",
+        "title": "Omeostasi Minerale",
         "authors": "Danilo Fintini",
         "type": "Video Pillola",
         "formatClass": "format-video",
@@ -24,7 +24,7 @@ const MODULES_DATA = [
       },
       {
         "id": "01:02:00",
-        "title": "Ruolo clinico del fosfato",
+        "title": "Ruolo Clinico del Fosfato",
         "authors": "Danilo Fintini",
         "type": "Video Pillola",
         "formatClass": "format-video",
@@ -32,7 +32,7 @@ const MODULES_DATA = [
       },
       {
         "id": "01:03:00",
-        "title": "Omeostasi fosfo-calcica in una pagina",
+        "title": "Omeostasi Fosfo-Calcica in una Pagina",
         "authors": "Danilo Fintini",
         "type": "Info-grafiche/flipbook",
         "formatClass": "format-flipbook",
@@ -42,7 +42,7 @@ const MODULES_DATA = [
       },
       {
         "id": "01:04:00",
-        "title": "Quanto conosci e utilizzi il metabolismo fosfo-calcico nella tua pratica?",
+        "title": "Quanto Conosci e Utilizzi il Metabolismo Fosfo-Calcico nella Tua Pratica?",
         "authors": "Danilo Fintini",
         "type": "Survey Baseline",
         "formatClass": "format-survey",
@@ -61,7 +61,7 @@ const MODULES_DATA = [
     "units": [
       {
         "id": "02:01:00",
-        "title": "Da PHEX a FGF23: perché nell'XLH si perde fosfato",
+        "title": "Da PHEX a FGF23: Perché nell'XLH si Perde Fosfato",
         "authors": "Gaetano Paride Arcidiacono",
         "type": "Video Lezione",
         "formatClass": "format-video",
@@ -69,15 +69,15 @@ const MODULES_DATA = [
       },
       {
         "id": "02:02:00",
-        "title": "Caso Interattivo",
+        "title": "Il Paziente con Ipofosfatemia: dall'Alterazione Biochimica alla Diagnosi",
         "authors": "Gaetano Paride Arcidiacono",
-        "type": "Caso Interattivo",
-        "formatClass": "format-interactive",
+        "type": "Video Lezione",
+        "formatClass": "format-video",
         "hasRealContent": false
       },
       {
         "id": "02:03:00",
-        "title": "XLH spiegata al referrer",
+        "title": "XLH Spiegata al Referrer",
         "authors": "Gaetano Paride Arcidiacono",
         "type": "FlipBook",
         "formatClass": "format-flipbook",
@@ -88,8 +88,8 @@ const MODULES_DATA = [
   {
     "id": 3,
     "code": "03",
-    "rawTitle": "Modulo 3 - Identificare il paziente",
-    "title": "Identificare il paziente",
+    "rawTitle": "Modulo 3 - Identificare il Paziente",
+    "title": "Identificare il Paziente",
     "authors": [
       "Anna Grandone",
       "Gemma Marcucci"
@@ -97,7 +97,7 @@ const MODULES_DATA = [
     "units": [
       {
         "id": "03:01:00",
-        "title": "Quando pensare all'XLH nel bambino",
+        "title": "Quando Pensare all'XLH nel Bambino",
         "authors": "Anna Grandone",
         "type": "Video Pillola",
         "formatClass": "format-video",
@@ -105,7 +105,7 @@ const MODULES_DATA = [
       },
       {
         "id": "03:02:00",
-        "title": "Manifestazioni nell'adulto",
+        "title": "Manifestazioni nell'Adulto",
         "authors": "Gemma Marcucci",
         "type": "Video Pillola",
         "formatClass": "format-video",
@@ -113,7 +113,7 @@ const MODULES_DATA = [
       },
       {
         "id": "03:03:00",
-        "title": "Mini-Casi Interattivi \"effetto Sliding Doors\"",
+        "title": "Mini-Casi Interattivi \"Effetto Sliding Doors\"",
         "authors": "Anna Grandone / Gemma Marcucci",
         "type": "Mini-Casi Interattivi",
         "formatClass": "format-interactive",
@@ -132,8 +132,8 @@ const MODULES_DATA = [
   {
     "id": 4,
     "code": "04",
-    "rawTitle": "Modulo 4 - Mappatura e network di referral",
-    "title": "Mappatura e network di referral",
+    "rawTitle": "Modulo 4 - Mappatura e Network di Referral",
+    "title": "Mappatura e Network di Referral",
     "authors": [
       "Anna Grandone",
       "Vincenzo Grassia",
@@ -151,7 +151,7 @@ const MODULES_DATA = [
       },
       {
         "id": "04:04:00",
-        "title": "Ruolo di odontoiatra",
+        "title": "Ruolo di Odontoiatra",
         "authors": "Anna Grandone / Vincenzo Grassia / Maurizio Scorianz",
         "type": "Video Pillola",
         "formatClass": "format-video",
@@ -159,7 +159,7 @@ const MODULES_DATA = [
       },
       {
         "id": "04:05:00",
-        "title": "Ruolo di ortopedico e fisiatra",
+        "title": "Ruolo di Ortopedico e Fisiatra",
         "authors": "Anna Grandone / Vincenzo Grassia / Maurizio Scorianz",
         "type": "Video Pillola",
         "formatClass": "format-video",
@@ -167,7 +167,7 @@ const MODULES_DATA = [
       },
       {
         "id": "04:06:00",
-        "title": "Dove invieresti oggi un paziente sospetto?",
+        "title": "Dove Invieresti Oggi un Paziente Sospetto?",
         "authors": "Anna Grandone / Rossella Santoro / Maurizio Scorianz",
         "type": "Survey Referral Mapping",
         "formatClass": "format-survey",
@@ -175,7 +175,7 @@ const MODULES_DATA = [
       },
       {
         "id": "04:07:00",
-        "title": "Corretto Work Flow  di referral ed Infografica centri italiani sul territorio",
+        "title": "Corretto Work Flow di Referral ed Infografica Centri Italiani sul Territorio",
         "authors": "Anna Grandone / Rossella Santoro / Maurizio Scorianz",
         "type": "Info-Grafica",
         "formatClass": "format-infografica",
@@ -186,15 +186,15 @@ const MODULES_DATA = [
   {
     "id": 5,
     "code": "05",
-    "rawTitle": "Modulo 5 - Mappatura famigliare",
-    "title": "Mappatura famigliare",
+    "rawTitle": "Modulo 5 - Mappatura Famigliare",
+    "title": "Mappatura Famigliare",
     "authors": [
       "Francesco Gallo"
     ],
     "units": [
       {
         "id": "05:01:00",
-        "title": "Genetica ed ereditarietà X-linked dominante",
+        "title": "Genetica ed Ereditarietà X-Linked Dominante",
         "authors": "Francesco Gallo",
         "type": "Video Masterclass",
         "formatClass": "format-video",
@@ -221,8 +221,8 @@ const MODULES_DATA = [
   {
     "id": 6,
     "code": "06",
-    "rawTitle": "Modulo 6 - Il percorso dell'XLH",
-    "title": "Il percorso dell'XLH",
+    "rawTitle": "Modulo 6 - Il Percorso dell'XLH",
+    "title": "Il Percorso dell'XLH",
     "authors": [
       "Danilo Fintini",
       "Gemma Marcucci"
@@ -246,7 +246,7 @@ const MODULES_DATA = [
       },
       {
         "id": "06:03:00",
-        "title": "Transizione pediatrico-adulto",
+        "title": "Transizione Pediatrico-Adulto",
         "authors": "Danilo Fintini",
         "type": "Video Pillola",
         "formatClass": "format-video",
@@ -257,7 +257,7 @@ const MODULES_DATA = [
   {
     "id": 7,
     "code": "07",
-    "rawTitle": "Modulo 7 - Vivere con I'XLH",
+    "rawTitle": "Modulo 7 - Vivere con l'XLH",
     "title": "Vivere con l'XLH",
     "authors": [
       "Sabrina Corbetta"
@@ -265,7 +265,7 @@ const MODULES_DATA = [
     "units": [
       {
         "id": "07:01:00",
-        "title": "Dal bambino all'adulto in età avanzata",
+        "title": "Dal Bambino all'Adulto in Età Avanzata",
         "authors": "Sabrina Corbetta",
         "type": "Video-Case Simulato",
         "formatClass": "format-interactive",
@@ -273,7 +273,7 @@ const MODULES_DATA = [
       },
       {
         "id": "07:02:00",
-        "title": "Transizione- Qualità di vita-",
+        "title": "Transizione - Qualità di Vita",
         "authors": "Sabrina Corbetta",
         "type": "FlipBook Finale",
         "formatClass": "format-flipbook",
@@ -281,7 +281,7 @@ const MODULES_DATA = [
       },
       {
         "id": "07:04:00",
-        "title": "Cosa cambierai nella tua pratica?",
+        "title": "Cosa Cambierai nella Tua Pratica?",
         "authors": "Sabrina Corbetta",
         "type": "Survey Finale",
         "formatClass": "format-survey",
@@ -339,7 +339,7 @@ function renderRoadmapGrid() {
           ${hasReady ? '<span class="tappa-ready-pill">1 Pronto</span>' : ''}
         </div>
         <div class="tappa-card-title">${mod.title}</div>
-        <div class="tappa-card-author">${mod.authors.join(', ')}</div>
+        <div class="tappa-card-author">${mod.authors.map(a => `<span class="tappa-author-name">${escapeHtml(a)}</span>`).join(', ')}</div>
         <div class="tappa-card-footer">
           <span class="tappa-count">${mod.units.length} Contenuti</span>
           <span class="tappa-action-arrow">→</span>
