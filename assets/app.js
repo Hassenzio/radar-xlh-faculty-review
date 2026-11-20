@@ -34,7 +34,7 @@ const MODULES_DATA = [
         "id": "01:03:00",
         "title": "Omeostasi Fosfo-Calcica in una Pagina",
         "authors": "Danilo Fintini",
-        "type": "Info-grafiche/flipbook",
+        "type": "Contenuto Multimediale",
         "formatClass": "format-flipbook",
         "hasRealContent": true,
         "embedUrl": "https://heyzine.com/flip-book/97c5fa83a3.html",
@@ -83,7 +83,7 @@ const MODULES_DATA = [
         "id": "02:03:00",
         "title": "Guida Pratica e Metodologia del Referral (XLH Spiegata al Referrer)",
         "authors": "Gaetano Paride Arcidiacono",
-        "type": "FlipBook",
+        "type": "Contenuto Multimediale",
         "formatClass": "format-flipbook",
         "hasRealContent": true,
         "embedUrl": "https://heyzine.com/flip-book/b168ce046b.html",
@@ -282,7 +282,7 @@ const MODULES_DATA = [
         "id": "07:02:00",
         "title": "Transizione - Qualità di Vita",
         "authors": "Sabrina Corbetta",
-        "type": "FlipBook Finale",
+        "type": "Contenuto Multimediale",
         "formatClass": "format-flipbook",
         "hasRealContent": false
       },
@@ -522,7 +522,7 @@ function renderModuleViewer(id) {
 
             <button class="btn-select-unit ${isReady ? "ready-action" : ""}" onclick="openContentModal('${unit.id}', '${moduleData.id}')">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-              ${isReady ? (unit.formatClass === "format-video" ? (unit.type && unit.type.toLowerCase().includes("lezione") ? "Guarda Video Lezione HD" : "Guarda Video Pillola HD") : "Sfoglia FlipBook HD") : "In Fase Editoriale"}
+              ${isReady ? (unit.formatClass === "format-video" ? (unit.type && unit.type.toLowerCase().includes("lezione") ? "Guarda Video Lezione HD" : "Guarda Video Pillola HD") : "Leggi il contenuto multimediale") : "In Fase Editoriale"}
             </button>
           </div>
         `;
@@ -532,24 +532,41 @@ function renderModuleViewer(id) {
 }
 
 // ── MODAL VISUALIZZATORE DEL SINGOLO CONTENUTO SELEZIONATO ──
+function closeContentModal() {
+  const overlay = document.getElementById("contentModal");
+  if (!overlay) return;
+  overlay.classList.remove("open");
+
+  // Arresta immediatamente la riproduzione video/audio distruggendo il frame
+  const stageBox = document.getElementById("modalContentStage");
+  if (stageBox) {
+    const iframes = stageBox.querySelectorAll("iframe");
+    iframes.forEach(iframe => {
+      try {
+        iframe.src = "about:blank";
+      } catch (e) {}
+    });
+    stageBox.innerHTML = "";
+    stageBox.className = "modal-content-stage";
+  }
+}
+
 function initModal() {
   const overlay = document.getElementById("contentModal");
   const closeBtn = document.getElementById("modalCloseBtn");
 
-  closeBtn?.addEventListener("click", () => {
-    overlay.classList.remove("open");
-  });
+  closeBtn?.addEventListener("click", closeContentModal);
 
   overlay?.addEventListener("click", (e) => {
     if (e.target === overlay) {
-      overlay.classList.remove("open");
+      closeContentModal();
     }
   });
 
   // Chiusura con tasto Escape
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && overlay?.classList.contains("open")) {
-      overlay.classList.remove("open");
+      closeContentModal();
     }
   });
 }
