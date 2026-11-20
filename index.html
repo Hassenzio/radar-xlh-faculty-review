@@ -3,991 +3,401 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RADAR XLH — Faculty Review Platform</title>
-  <meta name="description" content="Piattaforma di revisione contenuti per la Faculty del progetto RADAR XLH. Percorso di Formazione a Distanza ECM.">
+  <title>RADAR XLH — Faculty Review Platform · 7 Moduli Didattici</title>
+  <meta name="description" content="Piattaforma di erogazione e validazione dei 7 moduli didattici per la Faculty scientifica di RADAR XLH.">
   <meta name="robots" content="noindex, nofollow">
 
-  <!-- Fonts -->
+  <!-- Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@600;700&display=swap" rel="stylesheet">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/img/logo.png">
 
-  <!-- Styles -->
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
 
-  <!-- ═══════════════ NAVIGATION ═══════════════ -->
-  <nav class="nav" role="navigation" aria-label="Navigazione principale">
+  <!-- ══════════════════ NAVBAR ══════════════════ -->
+  <header class="nav" role="banner">
     <div class="container nav-inner">
-      <a href="#hero" class="nav-logo">
-        <img src="assets/img/logo.png" alt="RADAR XLH" width="40" height="40">
-        <span class="nav-logo-text">RADAR <span>XLH</span></span>
+      <a href="#hero" class="nav-brand" aria-label="RADAR XLH Home">
+        <img src="assets/img/logo.png" alt="Logo Ufficiale RADAR XLH" class="nav-brand-logo">
+        <div class="nav-brand-meta">
+          <div class="nav-brand-title">RADAR <span>XLH</span></div>
+          <div class="nav-brand-badge">Faculty Review Platform</div>
+        </div>
       </a>
 
-      <ul class="nav-links">
-        <li><a href="#info">Progetto</a></li>
-        <li><a href="#razionale">Razionale</a></li>
-        <li><a href="#obiettivi">Obiettivi</a></li>
-        <li><a href="#moduli">Moduli</a></li>
-        <li><a href="#faculty">Faculty</a></li>
-        <li><a href="#scheda">Scheda Evento</a></li>
-        <li><a href="#metodologia">Metodologia</a></li>
-        <li><a href="#moduli" class="nav-cta">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-          Accedi ai Contenuti
-        </a></li>
-      </ul>
+      <nav class="nav-links" role="navigation" aria-label="Menu navigazione">
+        <a href="#tappeFormative" class="highlight">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          7 Tappe Formative
+        </a>
+        <a href="#stageViewer">Contenuti Modulo</a>
+        <a href="#dossierProgetto">Razionale & Info</a>
+        <a href="#facultySection">Faculty</a>
+        <a href="#schedaEventoSection">Scheda Evento</a>
+      </nav>
 
-      <button class="nav-burger" aria-label="Menu">
+      <button class="nav-burger" aria-label="Apri Menu Mobile">
         <span></span><span></span><span></span>
       </button>
     </div>
-  </nav>
+  </header>
 
-  <!-- Mobile Menu -->
+  <!-- Mobile Drawer -->
   <div class="nav-mobile" aria-hidden="true">
-    <a href="#info">Progetto</a>
-    <a href="#razionale">Razionale Scientifico</a>
-    <a href="#obiettivi">Obiettivi Formativi</a>
-    <div class="nav-mobile-divider"></div>
-    <a href="#moduli">Moduli Didattici</a>
-    <a href="#faculty">Governance Scientifica</a>
-    <a href="#scheda">Scheda Evento</a>
-    <a href="#metodologia">Innovazione Metodologica</a>
+    <a href="#tappeFormative" class="highlight">7 Tappe Formative</a>
+    <a href="#stageViewer">Contenuti Modulo Selezionato</a>
+    <a href="#dossierProgetto">Razionale & Finalità</a>
+    <a href="#facultySection">Governance Scientifica</a>
+    <a href="#schedaEventoSection">Scheda ECM & Accreditamento</a>
   </div>
 
-  <!-- ═══════════════ HERO ═══════════════ -->
-  <section id="hero" class="hero">
-    <!-- Radar rings decoration -->
-    <div class="hero-rings" aria-hidden="true">
-      <div class="hero-ring"></div>
-      <div class="hero-ring"></div>
-      <div class="hero-ring"></div>
-      <div class="hero-ring"></div>
-      <div class="hero-ring"></div>
-    </div>
-
-    <!-- Animated sweep -->
-    <div class="hero-sweep" aria-hidden="true"></div>
+  <!-- ══════════════════ HERO PORTAL (LOGO & CORE MISSION) ══════════════════ -->
+  <section id="hero" class="hero-portal">
+    <div class="hero-fondale-layer" aria-hidden="true"></div>
+    <div class="hero-radar-glow" aria-hidden="true"></div>
 
     <div class="container">
-      <div class="hero-content">
-        <div class="hero-badge">
-          <span class="hero-badge-dot"></span>
-          <span class="hero-badge-text">Faculty Review Platform</span>
+      <div class="hero-grid">
+        <div class="hero-text-area">
+          <div class="hero-badge-wrap">
+            <span class="dot"></span>
+            <span>Demo Piattaforma Validazione Contenuti</span>
+          </div>
+
+          <h1 class="hero-title">
+            Ambiente di Revisione <br>
+            <span class="brand-blue">RADAR</span> <span class="brand-accent">XLH</span>
+          </h1>
+
+          <p class="hero-desc">
+            Piattaforma riservata alla <strong>Governance Scientifica</strong> per visionare, verificare e validare i contenuti didattici dei <strong>7 moduli formativi</strong> prima dell'erogazione ufficiale FAD ECM.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#tappeFormative" class="btn-primary-hero">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              Accedi alle 7 Tappe Formative
+            </a>
+            <a href="#dossierProgetto" class="btn-secondary-hero">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+              Info & Razionale Progetto
+            </a>
+          </div>
         </div>
 
-        <h1>
-          <span class="accent-blue">RADAR</span> <span class="accent-orange">XLH</span><br>
-          Rete di Apprendimento, Dialogo, Accoglienza e Relazione
-        </h1>
+        <!-- Logo del Progetto Grande & Protagonista -->
+        <div class="hero-logo-card">
+          <img src="assets/img/logo.png" alt="Logo Ufficiale RADAR XLH" class="hero-main-logo">
+          <div class="hero-logo-caption">RADAR XLH</div>
+          <div class="hero-logo-sub">Rete di Apprendimento, Dialogo, Accoglienza e Relazione</div>
 
-        <p class="hero-sub">
-          Piattaforma riservata alla Faculty per la revisione e validazione dei contenuti formativi del percorso ECM sull'Ipofosfatemia Legata all'X.
-        </p>
-
-        <div class="hero-meta">
-          <div class="hero-meta-item">
-            <div class="hero-meta-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <div class="hero-kpis">
+            <div class="kpi-box">
+              <span class="kpi-value">7</span>
+              <span class="kpi-label">Moduli Didattici</span>
             </div>
+            <div class="kpi-box">
+              <span class="kpi-value">25</span>
+              <span class="kpi-label">Contenuti Totali</span>
+            </div>
+            <div class="kpi-box">
+              <span class="kpi-value">18h</span>
+              <span class="kpi-label">FAD ECM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════ CORE ROADMAP: LE 7 TAPPE FORMATIVE IN PRIMISSIMO PIANO ══════════════════ -->
+  <main class="container">
+    <section id="tappeFormative" class="roadmap-section" aria-label="Percorso dei 7 Moduli Didattici">
+      <!-- Header di Navigazione Tappe -->
+      <div class="roadmap-header">
+        <div class="roadmap-header-left">
+          <div class="roadmap-icon-tag">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          </div>
+          <div class="roadmap-title-area">
+            <h2>I 7 Moduli Didattici del Percorso</h2>
+            <p>Seleziona una tappa per visualizzare, verificare e validare i contenuti formativi editati.</p>
+          </div>
+        </div>
+
+        <div class="roadmap-live-badge">
+          <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:var(--orange);"></span>
+          Matrice Ufficiale Validata
+        </div>
+      </div>
+
+      <!-- Quick Switcher 7 Tappe Formative -->
+      <div class="roadmap-grid" id="roadmapGrid">
+        <!-- Renderizzato dinamicamente da app.js -->
+      </div>
+    </section>
+
+    <!-- ══════════════════ STAGE VIEWER: VISUALIZZATORE DETTAGLIATO DEL MODULO ══════════════════ -->
+    <section id="stageViewer" class="stage-viewer-section" aria-live="polite">
+      <div class="stage-viewer-header" id="stageViewerHeader">
+        <!-- Generato dinamicamente -->
+      </div>
+
+      <div class="content-units-heading">
+        <h3>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          Unità Didattiche & Contenuti di questo Modulo
+        </h3>
+        <span class="content-units-count">Clicca su "Visiona & Valida" per ciascun contenuto</span>
+      </div>
+
+      <div class="units-grid" id="stageUnitsList">
+        <!-- Generato dinamicamente -->
+      </div>
+    </section>
+  </main>
+
+  <!-- ══════════════════ DOSSIER SECONDARIO (INFO, RAZIONALE, FACULTY, SCHEDA) ══════════════════ -->
+  <section id="dossierProgetto" class="dossier-section">
+    <div class="container">
+      <div class="dossier-header">
+        <h2>Dossier Scientifico & Informativo</h2>
+        <p>Tutti i riferimenti, gli obiettivi, la governance e la scheda tecnica dell'iniziativa FaD RADAR XLH.</p>
+      </div>
+
+      <div class="dossier-tabs" role="tablist">
+        <button class="dossier-tab-btn active" data-tab="tabRazionale">Razionale Scientifico</button>
+        <button class="dossier-tab-btn" data-tab="tabObiettivi">Obiettivi Formativi</button>
+        <button class="dossier-tab-btn" data-tab="tabFaculty" id="facultySection">Governance Scientifica</button>
+        <button class="dossier-tab-btn" data-tab="tabScheda" id="schedaEventoSection">Scheda Evento ECM</button>
+        <button class="dossier-tab-btn" data-tab="tabMetodologia">Innovazione Metodologica</button>
+      </div>
+
+      <!-- Tab 1: Razionale -->
+      <div class="dossier-panel active" id="tabRazionale">
+        <div style="display:grid; grid-template-columns: 1fr; gap:2rem;">
+          <h3 style="font-size:1.35rem; color:var(--navy-deep); font-weight:800;">Trasformare la conoscenza teorica in comportamento clinico misurabile</h3>
+          <p style="color:var(--text-secondary); line-height:1.75;">
+            L'XLH (Ipofosfatemia Legata all'X) è una rachitismo/osteomalacia ereditaria rara a trasmissione X-linked dominante causata da mutazioni loss-of-function del gene <strong>PHEX</strong>. Il difetto determina un'eccessiva produzione di <strong>FGF23</strong>, che riduce il riassorbimento tubulare di fosfato e inibisce la 1-alfa-idrossilasi.
+          </p>
+          <p style="color:var(--text-secondary); line-height:1.75;">
+            Il risultato è un'ipofosfatemia cronica con difetto di mineralizzazione dello scheletro in crescita e dell'osso maturo. In età pediatrica predominano gambe arcuate, bassa statura e disturbi della deambulazione; nell'adulto dolore cronico, entesopatie, pseudofratture e ascessi dentari spontanei.
+          </p>
+          <div style="background:var(--blue-pale); border-left:4px solid var(--blue-radar); padding:1rem 1.25rem; border-radius:var(--radius-sm); color:var(--navy-deep); font-size:0.9375rem;">
+            <strong>Principio Guida:</strong> La diagnosi precoce dipende in modo cruciale dalle sentinelle territoriali (PLS, Odontoiatri, Ortopedici, Fisiatri, MMG) prima della comparsa di deformità scheletriche irreversibili.
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 2: Obiettivi -->
+      <div class="dossier-panel" id="tabObiettivi">
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:1.25rem;">
+          <div style="background:var(--surface-alt); border:1px solid var(--border); padding:1.25rem; border-radius:var(--radius-md);">
+            <div style="font-weight:800; color:var(--blue-radar); margin-bottom:4px;">01. Ecosistema</div>
+            <p style="font-size:0.875rem; color:var(--text-secondary);">Costruire un ambiente formativo integrato e coerente intorno all'XLH.</p>
+          </div>
+          <div style="background:var(--surface-alt); border:1px solid var(--border); padding:1.25rem; border-radius:var(--radius-md);">
+            <div style="font-weight:800; color:var(--blue-radar); margin-bottom:4px;">02. Competenze</div>
+            <p style="font-size:0.875rem; color:var(--text-secondary);">Elevare il livello di competenza scientifica e diagnostica sul territorio.</p>
+          </div>
+          <div style="background:var(--surface-alt); border:1px solid var(--border); padding:1.25rem; border-radius:var(--radius-md);">
+            <div style="font-weight:800; color:var(--blue-radar); margin-bottom:4px;">03. Diagnosi</div>
+            <p style="font-size:0.875rem; color:var(--text-secondary);">Strumenti pratici per il sospetto precoce e referral appropriato ai centri esperti.</p>
+          </div>
+          <div style="background:var(--surface-alt); border:1px solid var(--border); padding:1.25rem; border-radius:var(--radius-md);">
+            <div style="font-weight:800; color:var(--blue-radar); margin-bottom:4px;">04. Privacy & Sicurezza</div>
+            <p style="font-size:0.875rem; color:var(--text-secondary);">Trend conoscitivi restituiti in forma aggregata e anonima, preservando la privacy.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 3: Faculty -->
+      <div class="dossier-panel" id="tabFaculty">
+        <div class="faculty-grid-dossier">
+          <div class="faculty-card-dossier">
+            <div class="faculty-avatar-circle">FG</div>
             <div>
-              <span class="hero-meta-value">Dal 16 Dicembre 2026</span>
-              Erogazione FAD
+              <h4>Francesco Gallo</h4>
+              <p>Modulo 5 · Mappatura Famigliare</p>
             </div>
           </div>
-          <div class="hero-meta-item">
-            <div class="hero-meta-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
+          <div class="faculty-card-dossier">
+            <div class="faculty-avatar-circle">DF</div>
             <div>
-              <span class="hero-meta-value">18 ore formative</span>
-              7 Moduli didattici
+              <h4>Danilo Fintini</h4>
+              <p>Modulo 1 & Modulo 6 · Fosfato e Terapie</p>
             </div>
           </div>
-          <div class="hero-meta-item">
-            <div class="hero-meta-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            </div>
+          <div class="faculty-card-dossier">
+            <div class="faculty-avatar-circle">AG</div>
             <div>
-              <span class="hero-meta-value">Provider FORUM pro</span>
-              ID Accreditamento 95
+              <h4>Anna Grandone</h4>
+              <p>Modulo 3 & Modulo 4 · Pediatria e Referral</p>
+            </div>
+          </div>
+          <div class="faculty-card-dossier">
+            <div class="faculty-avatar-circle">GM</div>
+            <div>
+              <h4>Gemma Marcucci</h4>
+              <p>Modulo 3 & Modulo 6 · Adulto e Terapie</p>
+            </div>
+          </div>
+          <div class="faculty-card-dossier">
+            <div class="faculty-avatar-circle" style="background:linear-gradient(135deg, var(--orange) 0%, #D16B12 100%);">GA</div>
+            <div>
+              <h4>Gaetano Paride Arcidiacono</h4>
+              <p>Modulo 2 · Fisiopatologia</p>
+            </div>
+          </div>
+          <div class="faculty-card-dossier">
+            <div class="faculty-avatar-circle" style="background:linear-gradient(135deg, var(--orange) 0%, #D16B12 100%);">VG</div>
+            <div>
+              <h4>Vincenzo Grassia</h4>
+              <p>Modulo 4 · Odontoiatria & Referral</p>
+            </div>
+          </div>
+          <div class="faculty-card-dossier">
+            <div class="faculty-avatar-circle" style="background:linear-gradient(135deg, var(--orange) 0%, #D16B12 100%);">SC</div>
+            <div>
+              <h4>Sabrina Corbetta</h4>
+              <p>Modulo 7 · Vivere con l'XLH</p>
+            </div>
+          </div>
+          <div class="faculty-card-dossier">
+            <div class="faculty-avatar-circle" style="background:linear-gradient(135deg, var(--orange) 0%, #D16B12 100%);">MS</div>
+            <div>
+              <h4>Maurizio Scorianz</h4>
+              <p>Modulo 4 · Ortopedia & Referral</p>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ═══════════════ INFO CARDS ═══════════════ -->
-  <section id="info" class="info-section section-spacing radar-bg">
-    <div class="container">
-      <div class="info-grid">
-        <div class="info-card reveal">
-          <div class="info-card-icon blue">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0E8AC8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+      <!-- Tab 4: Scheda Evento -->
+      <div class="dossier-panel" id="tabScheda">
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:1.5rem;">
+          <div style="border-bottom:1px solid var(--border); padding-bottom:0.75rem;">
+            <div style="font-size:0.75rem; text-transform:uppercase; font-weight:700; color:var(--text-muted);">Data Erogazione</div>
+            <div style="font-size:1.05rem; font-weight:700; color:var(--navy-deep);">Dal 16 Dicembre 2026</div>
           </div>
-          <h3>Cos'è RADAR XLH</h3>
-          <p>Percorso di Formazione a Distanza ECM progettato per elevare le competenze scientifiche e diagnostiche sul territorio riguardo all'XLH, una rachitismo/osteomalacia ereditaria rara.</p>
-        </div>
-
-        <div class="info-card reveal reveal-delay-1">
-          <div class="info-card-icon orange">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E87C1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <div style="border-bottom:1px solid var(--border); padding-bottom:0.75rem;">
+            <div style="font-size:0.75rem; text-transform:uppercase; font-weight:700; color:var(--text-muted);">Formato</div>
+            <div style="font-size:1.05rem; font-weight:700; color:var(--navy-deep);">FAD E-learning asincrona (18 Ore)</div>
           </div>
-          <h3>A chi si rivolge</h3>
-          <p>Ortopedici, Pediatri, Fisiatri, Odontoiatri, MMG, Endocrinologi e Nefrologi. Le sentinelle diagnostiche per intercettare l'XLH prima delle deformità gravi.</p>
-        </div>
-
-        <div class="info-card reveal reveal-delay-2">
-          <div class="info-card-icon blue">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0E8AC8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <div style="border-bottom:1px solid var(--border); padding-bottom:0.75rem;">
+            <div style="font-size:0.75rem; text-transform:uppercase; font-weight:700; color:var(--text-muted);">Provider ECM</div>
+            <div style="font-size:1.05rem; font-weight:700; color:var(--navy-deep);">FORUM pro S.r.l. — ID Accreditamento 95</div>
           </div>
-          <h3>Valore del progetto</h3>
-          <p>Trasformare la conoscenza teorica in comportamento clinico misurabile: riconoscere, inviare, coinvolgere la famiglia, seguire. Dal sospetto alla diagnosi.</p>
-        </div>
-
-        <div class="info-card reveal reveal-delay-3">
-          <div class="info-card-icon orange">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E87C1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          <div style="border-bottom:1px solid var(--border); padding-bottom:0.75rem;">
+            <div style="font-size:0.75rem; text-transform:uppercase; font-weight:700; color:var(--text-muted);">Discipline Accreditate</div>
+            <div style="font-size:0.9375rem; font-weight:600; color:var(--navy-deep);">Pediatri, Ortopedici, Fisiatri, Odontoiatri, MMG, Endocrinologi, Nefrologi</div>
           </div>
-          <h3>Modalità formativa</h3>
-          <p>FAD e-learning asincrona. Contenuti multimediali con video pillole, casi interattivi, flipbook, survey e momenti di sharing experience.</p>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ═══════════════ RAZIONALE SCIENTIFICO ═══════════════ -->
-  <section id="razionale" class="razionale-section section-spacing">
-    <div class="container">
-      <div class="label reveal" style="margin-bottom: var(--space-lg);">Razionale Scientifico</div>
-
-      <div class="razionale-layout">
-        <div class="razionale-text reveal">
-          <h2 class="heading-2xl">Comprendere l'XLH per intercettarla prima</h2>
-
-          <p>L'XLH (Ipofosfatemia Legata all'X) è causata da mutazioni loss-of-function del gene PHEX espressa prevalentemente negli osteociti. Il difetto di PHEX determina un'eccessiva produzione di FGF23 (Fibroblast Growth Factor 23), che agisce a livello renale riducendo il riassorbimento tubulare di fosfato e inibendo la 1-alfa-idrossilasi.</p>
-
-          <p>Il risultato è un'ipofosfatemia cronica con perdita renale di fosfato e un difetto di mineralizzazione dello scheletro in crescita (rachitismo) e dell'osso maturo (osteomalacia).</p>
-
-          <p>Lo spettro clinico è ampio e attraversa l'intero arco di vita. In età pediatrica predominano gambe arcuate, bassa statura, disturbi della deambulazione, dolore e stanchezza; nell'adulto la malattia può manifestarsi con dolore cronico, entesopatie, pseudofratture, anomalie dentarie e ridotta qualità di vita, spesso in pazienti non diagnosticati o persi al follow-up.</p>
-
-          <p>La trasmissione X-linked dominante implica che ogni paziente indice può aprire a nuove diagnosi all'interno della famiglia: lo screening familiare strutturato è un moltiplicatore di valore diagnostico.</p>
-        </div>
-
-        <div class="razionale-sidebar reveal reveal-delay-2">
-          <div class="razionale-highlight">
-            <h3>Perché questo percorso è necessario</h3>
-            <ul>
-              <li>La diagnosi dipende dalle figure specialistiche periferiche che intercettano i primi segnali clinici</li>
-              <li>L'eterogeneità clinica richiede formazione specifica per PLS, odontoiatri, ortopedici e fisiatri</li>
-              <li>L'evoluzione delle opzioni terapeutiche rivolte alla via FGF23 rende il sospetto precoce ancora più rilevante</li>
-              <li>Una diagnosi tempestiva può modificare la storia naturale della malattia</li>
-              <li>L'analisi dei trend di conoscenza avviene in forma aggregata e anonima, preservando la privacy by design</li>
-            </ul>
+      <!-- Tab 5: Metodologia -->
+      <div class="dossier-panel" id="tabMetodologia">
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:1.5rem;">
+          <div style="background:var(--surface-alt); padding:1.25rem; border-radius:var(--radius-md); border:1px solid var(--border);">
+            <h4 style="font-weight:700; color:var(--navy-deep); margin-bottom:6px;">1. Apprendimento Esperienziale Sicuro</h4>
+            <p style="font-size:0.875rem; color:var(--text-secondary);">Gaming, casi e simulazioni senza alcun rischio né compromissione di dati sensibili.</p>
+          </div>
+          <div style="background:var(--surface-alt); padding:1.25rem; border-radius:var(--radius-md); border:1px solid var(--border);">
+            <h4 style="font-weight:700; color:var(--navy-deep); margin-bottom:6px;">2. Valorizzazione delle Sentinelle</h4>
+            <p style="font-size:0.875rem; color:var(--text-secondary);">Strumenti per medici territoriali per anticipare il sospetto prima del danno scheletrico.</p>
+          </div>
+          <div style="background:var(--surface-alt); padding:1.25rem; border-radius:var(--radius-md); border:1px solid var(--border);">
+            <h4 style="font-weight:700; color:var(--navy-deep); margin-bottom:6px;">3. Knowledge Sharing Dinamico</h4>
+            <p style="font-size:0.875rem; color:var(--text-secondary);">Ambiente di crescita condivisa e confronto tra specialisti multidisciplinari.</p>
+          </div>
+          <div style="background:var(--surface-alt); padding:1.25rem; border-radius:var(--radius-md); border:1px solid var(--border);">
+            <h4 style="font-weight:700; color:var(--navy-deep); margin-bottom:6px;">4. Quality Loop</h4>
+            <p style="font-size:0.875rem; color:var(--text-secondary);">Survey basali e finali per misurare il delta di apprendimento e il commitment to change.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════ OBIETTIVI FORMATIVI ═══════════════ -->
-  <section id="obiettivi" class="obiettivi-section section-spacing">
-    <div class="container">
-      <div class="reveal" style="text-align: center; margin-bottom: var(--space-3xl);">
-        <h2 class="heading-2xl" style="margin-bottom: var(--space-md);">Obiettivi Formativi</h2>
-        <p class="body-lg" style="max-width: 60ch; margin-inline: auto;">Cinque dimensioni integrate per un percorso formativo che trasforma la conoscenza in pratica clinica.</p>
+  <!-- ══════════════════ MODAL VISUALIZZATORE & VALIDAZIONE CONTENUTI ══════════════════ -->
+  <div class="modal-overlay" id="contentModal" role="dialog" aria-modal="true" aria-labelledby="modalUnitTitle">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-header-meta">
+          <span class="code" id="modalUnitCode">01:01:00</span>
+          <div class="modal-title-text" id="modalUnitTitle">Titolo Contenuto</div>
+        </div>
+        <button class="modal-close-btn" id="modalCloseBtn" aria-label="Chiudi finestra">&times;</button>
       </div>
 
-      <div class="obiettivi-grid">
-        <div class="obiettivo-card reveal">
-          <div class="obiettivo-number">1</div>
-          <h3>Ecosistema</h3>
-          <p>Costruire un ambiente formativo integrato e coerente intorno a una singola patologia rara.</p>
+      <div class="modal-body">
+        <!-- Player / Contenuto Stage Demo -->
+        <div class="modal-content-stage">
+          <div class="modal-stage-pattern" aria-hidden="true"></div>
+          <div class="stage-preview-icon">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </div>
+          <div class="stage-preview-title" id="modalPreviewTitle">Omeostasi minerale</div>
+          <div class="stage-preview-sub" id="modalPreviewSub">Spazio di preview del contenuto didattico pronto per accogliere i testi e i media editati.</div>
+          <div class="stage-preview-badge">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            In attesa inserimento contenuti editati
+          </div>
         </div>
 
-        <div class="obiettivo-card reveal reveal-delay-1">
-          <div class="obiettivo-number">2</div>
-          <h3>Competenze</h3>
-          <p>Elevare il livello di conoscenza scientifica e diagnostica territoriale sull'XLH.</p>
+        <!-- Meta Informazioni da Matrice Excel -->
+        <div class="modal-meta-grid">
+          <div class="meta-field">
+            <label>Docente / Autore</label>
+            <span id="modalUnitAuthor">Danilo Fintini</span>
+          </div>
+          <div class="meta-field">
+            <label>Tipologia Formativa</label>
+            <span id="modalUnitType">Video Pillola</span>
+          </div>
+          <div class="meta-field">
+            <label>Modulo di Riferimento</label>
+            <span id="modalUnitModule">Modulo 01</span>
+          </div>
         </div>
 
-        <div class="obiettivo-card reveal reveal-delay-2">
-          <div class="obiettivo-number">3</div>
-          <h3>Diagnosi</h3>
-          <p>Fornire strumenti pratici per il sospetto clinico e il referral precoce verso i centri appropriati.</p>
-        </div>
-
-        <div class="obiettivo-card reveal reveal-delay-3">
-          <div class="obiettivo-number">4</div>
-          <h3>Sicurezza</h3>
-          <p>Restituire trend conoscitivi in forma aggregata e anonima, preservando la privacy per design.</p>
-        </div>
-
-        <div class="obiettivo-card reveal reveal-delay-4">
-          <div class="obiettivo-number">5</div>
-          <h3>Miglioramento</h3>
-          <p>Consapevolezza e valutazione delle esigenze territoriali attraverso analisi e condivisioni pratiche.</p>
+        <!-- Box di Validazione per la Faculty -->
+        <div class="faculty-validation-box">
+          <h4>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0E8AC8" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            Feedback di Revisione & Validazione Faculty
+          </h4>
+          <textarea id="reviewNote" class="review-textarea" placeholder="Inserisci eventuali note scientifiche, correzioni editoriali o conferme per la redazione..."></textarea>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ═══════════════ MODULI DIDATTICI ═══════════════ -->
-  <section id="moduli" class="moduli-section section-spacing">
-    <div class="container">
-      <div class="reveal" style="margin-bottom: var(--space-xl);">
-        <h2 class="heading-2xl" style="margin-bottom: var(--space-sm);">Percorso Formativo</h2>
-        <p class="body-lg">7 moduli propedeutici, una traiettoria dal sospetto alla sintesi multidisciplinare.</p>
-      </div>
-
-      <!-- Module Tabs -->
-      <div class="moduli-nav reveal" role="tablist">
-        <button class="modulo-tab active" data-module="1" role="tab" aria-selected="true">
-          <span class="tab-num">01</span> L'importanza del fosfato
+      <div class="modal-footer">
+        <span style="font-size:0.75rem; color:var(--text-muted);">Stato: Pronto per verifica</span>
+        <button class="btn-validate-save" onclick="saveValidation()">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Conferma & Salva Validazione
         </button>
-        <button class="modulo-tab" data-module="2" role="tab">
-          <span class="tab-num">02</span> Comprendere l'Ipofosfatemia X-Linked
-        </button>
-        <button class="modulo-tab" data-module="3" role="tab">
-          <span class="tab-num">03</span> Identificare il paziente
-        </button>
-        <button class="modulo-tab" data-module="4" role="tab">
-          <span class="tab-num">04</span> Mappatura e network di referral
-        </button>
-        <button class="modulo-tab" data-module="5" role="tab">
-          <span class="tab-num">05</span> Mappatura famigliare
-        </button>
-        <button class="modulo-tab" data-module="6" role="tab">
-          <span class="tab-num">06</span> Il percorso dell'XLH
-        </button>
-        <button class="modulo-tab" data-module="7" role="tab">
-          <span class="tab-num">07</span> Vivere con l'XLH
-        </button>
-      </div>
-
-      <!-- ── MODULO 1 ── -->
-      <div id="modulo-1" class="modulo-panel active" role="tabpanel">
-        <div class="modulo-header">
-          <div class="modulo-title-block">
-            <h2>Modulo 1 — L'importanza del fosfato</h2>
-            <p>Far percepire il fosfato come biomarker clinicamente rilevante, non un parametro accessorio.</p>
-          </div>
-          <div class="modulo-authors">
-            <span class="author-chip">
-              <span class="author-avatar">DF</span>
-              Danilo Fintini
-            </span>
-          </div>
-        </div>
-
-        <div class="paragrafi-list">
-          <div class="paragrafo-card">
-            <span class="paragrafo-id">01.01</span>
-            <div class="paragrafo-info">
-              <h4>Omeostasi minerale</h4>
-              <span class="paragrafo-docente">Danilo Fintini</span>
-            </div>
-            <div>
-              <span class="paragrafo-tipo tipo-video">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                Video Pillola
-              </span>
-              <div style="margin-top: 6px;"><span class="status-badge status-pending"><span class="status-dot"></span>In attesa</span></div>
-            </div>
-          </div>
-
-          <div class="paragrafo-card">
-            <span class="paragrafo-id">01.02</span>
-            <div class="paragrafo-info">
-              <h4>Ruolo clinico del fosfato</h4>
-              <span class="paragrafo-docente">Danilo Fintini</span>
-            </div>
-            <div>
-              <span class="paragrafo-tipo tipo-video">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                Video Pillola
-              </span>
-              <div style="margin-top: 6px;"><span class="status-badge status-pending"><span class="status-dot"></span>In attesa</span></div>
-            </div>
-          </div>
-
-          <div class="paragrafo-card">
-            <span class="paragrafo-id">01.03</span>
-            <div class="paragrafo-info">
-              <h4>Omeostasi fosfo-calcica in una pagina</h4>
-              <span class="paragrafo-docente">Danilo Fintini</span>
-            </div>
-            <div>
-              <span class="paragrafo-tipo tipo-flipbook">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-                Info-grafiche / FlipBook
-              </span>
-              <div style="margin-top: 6px;"><span class="status-badge status-pending"><span class="status-dot"></span>In attesa</span></div>
-            </div>
-          </div>
-
-          <div class="paragrafo-card">
-            <span class="paragrafo-id">01.04</span>
-            <div class="paragrafo-info">
-              <h4>Quanto conosci e utilizzi il metabolismo fosfo-calcico nella tua pratica?</h4>
-              <span class="paragrafo-docente">Danilo Fintini</span>
-            </div>
-            <div>
-              <span class="paragrafo-tipo tipo-survey">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-                Survey Baseline
-              </span>
-              <div style="margin-top: 6px;"><span class="status-badge status-pending"><span class="status-dot"></span>In attesa</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ── MODULO 2 ── -->
-      <div id="modulo-2" class="modulo-panel" role="tabpanel">
-        <div class="modulo-header">
-          <div class="modulo-title-block">
-            <h2>Modulo 2 — Comprendere l'Ipofosfatemia X-Linked</h2>
-            <p>Tradurre la fisiopatologia in un ragionamento clinico semplice.</p>
-          </div>
-          <div class="modulo-authors">
-            <span class="author-chip">
-              <span class="author-avatar">GA</span>
-              Gaetano Paride Arcidiacono
-            </span>
-          </div>
-        </div>
-
-        <div class="paragrafi-list">
-          <div class="paragrafo-card">
-            <span class="paragrafo-id">02.01</span>
-            <div class="paragrafo-info">
-              <h4>Da PHEX a FGF23: perché nell'XLH si perde fosfato</h4>
-              <span class="paragrafo-docente">Gaetano Paride Arcidiacono</span>
-            </div>
-            <div>
-              <span class="paragrafo-tipo tipo-video">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                Video Lezione
-              </span>
-              <div style="margin-top: 6px;"><span class="status-badge status-pending"><span class="status-dot"></span>In attesa</span></div>
-            </div>
-          </div>
-
-          <div class="paragrafo-card">
-            <span class="paragrafo-id">02.02</span>
-            <div class="paragrafo-info">
-              <h4>Caso Interattivo</h4>
-              <span class="paragrafo-docente">Gaetano Paride Arcidiacono</span>
-            </div>
-            <div>
-              <span class="paragrafo-tipo tipo-interattivo">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 15l-2 5L9 9l11 4-5 2z"/></svg>
-                Caso Interattivo
-              </span>
-              <div style="margin-top: 6px;"><span class="status-badge status-pending"><span class="status-dot"></span>In attesa</span></div>
-            </div>
-          </div>
-
-          <div class="paragrafo-card">
-            <span class="paragrafo-id">02.03</span>
-            <div class="paragrafo-info">
-              <h4>XLH spiegata al referrer</h4>
-              <span class="paragrafo-docente">Gaetano Paride Arcidiacono</span>
-            </div>
-            <div>
-              <span class="paragrafo-tipo tipo-flipbook">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-                FlipBook
-              </span>
-              <div style="margin-top: 6px;"><span class="status-badge status-pending"><span class="status-dot"></span>In attesa</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ── MODULO 3 ── -->
-      <div id="modulo-3" class="modulo-panel" role="tabpanel">
-        <div class="modulo-header">
-          <div class="modulo-title-block">
-            <h2>Modulo 3 — Identificare il paziente</h2>
-            <p>Riconoscere il fenotipo pediatrico e adulto e passare dalla teoria al riconoscimento pratico.</p>
-          </div>
-          <div class="modulo-authors">
-            <span class="author-chip">
-              <span class="author-avatar">AG</span>
-              Anna Grandone
-            </span>
-            <span class="author-chip">
-              <span class="author-avatar">GM</span>
-              Gemma Marcucci
-            </span>
-          </div>
-        </div>
-
-        <div class="paragrafi-list">
-          <div class="paragrafo-card">
-            <span class="paragrafo-id">03.01</span>
-            <div class="paragrafo-info">
-              <h4>Quando pensare all'XLH nel bambino</h4>
-              <span class="paragrafo-docente">Anna Grandone</span>
-            </div>
-            <div>
-              <span class="paragrafo-tipo tipo-video">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                Video Pillola
-              </span>
-              <div style="margin-top: 6px;"><span class="status-badge status-pending"><span class="status-dot"></span>In attesa</span></div>
-            </div>
-          </div>
-
-          <div class="paragrafo-card">
-            <span class="paragrafo-id">03.02</span>
-            <div class="paragrafo-info">
-              <h4>Manifestazioni nell'adulto</h4>
-              <span class="paragrafo-docente">Gemma Marcucci</span>
-            </div>
-            <div>
-              <span class="paragrafo-tipo tipo-video">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                Video Pillola
-              </span>
-              <div style="margin-top: 6px;"><span class="status-badge status-pending"><span class="status-dot"></span>In attesa</span></div>
-            </div>
-          </div>
-
-          <div class="paragrafo-card">
-            <span class="paragrafo-id">03.03</span>
-            <div class="paragrafo-info">
-              <h4>Mini-Casi Interattivi "effetto Sliding Doors"</h4>
-              <span class="paragrafo-docente">Anna Grandone / Gemma Marcucci</span>
-            </div>
-            <div>
-              <span class="paragrafo-tipo tipo-interattivo">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 15l-2 5L9 9l11 4-5 2z"/></svg>
-                Mini-Casi Interattivi
-              </span>
-              <div style="margin-top: 6px;"><span class="status-badge status-pending"><span class="status-dot"></span>In attesa</span></div>
-            </div>
-          </div>
-
-          <div class="paragrafo-card">
-            <span class="paragrafo-id">03.04</span>
-            <div class="paragrafo-info">
-              <h4>Red Flags</h4>
-              <span class="paragrafo-docente">Anna Grandone / Gemma Marcucci</span>
-            </div>
-            <div>
-              <span class="paragrafo-tipo tipo-survey">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                Sharing Experience / Survey
-              </span>
-              <div style="margin-top: 6px;"><span class="status-badge status-pending"><span class="status-dot"></span>In attesa</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ── MODULO 4 ── -->
-      <div id="modulo-4" class="modulo-panel" role="tabpanel">
-        <div class="modulo-header">
-          <div class="modulo-title-block">
-            <h2>Modulo 4 — Mappatura e network di referral</h2>
-            <p>Valorizzare le sentinelle non-treater e rendere il referral naturale e praticabile.</p>
-          </div>
-          <div class="modulo-authors">
-            <span class="author-chip"><span class="author-avatar">AG</span>Anna Grandone</span>
-            <span class="author-chip"><span class="author-avatar">VG</span>Vincenzo Grassia</span>
-            <span class="author-chip"><span class="author-avatar">MS</span>Maurizio Scorianz</span>
-            <span class="author-chip"><span class="author-avatar">RS</span>Rossella Santoro</span>
-          </div>
-        </div>
-
-        <div class="paragrafi-list">
-          <div class="paragrafo-card">
-            <span class="paragrafo-id">04.03</span>
-            <div class="paragrafo-info">
-              <h4>Ruolo del Pediatra di Libera Scelta</h4>
-              <span class="paragrafo-docente">Anna Grandone / Vincenzo Grassia / Maurizio Scorianz</span>
-            </div>
-            <div>
-              <span class="paragrafo-tipo tipo-video">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                Video Pillola
-              </span>
-              <div style="margin-top: 6px;"><span class="status-badge status-pending"><span class="status-dot"></span>In attesa</span></div>
-            </div>
-          </div>
-
-          <div class="paragrafo-card">
-            <span class="paragrafo-id">04.04</span>
-            <div class="paragrafo-info">
-              <h4>Ruolo di odontoiatra</h4>
-              <span class="paragrafo-docente">Anna Grandone / Vincenzo Grassia / Maurizio Scorianz</span>
-            </div>
-            <div>
-              <span class="paragrafo-tipo tipo-video">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                Video Pillola
-              </span>
-              <div style="margin-top: 6px;"><span class="status-badge status-pending"><span class="status-dot"></span>In attesa</span></div>
-            </div>
-          </div>
-
-          <div class="paragrafo-card">
-            <span class="paragrafo-id">04.05</span>
-            <div class="paragrafo-info">
-              <h4>Ruolo di ortopedico e fisiatra</h4>
-              <span class="paragrafo-docente">Anna Grandone / Vincenzo Grassia / Maurizio Scorianz</span>
-            </div>
-            <div>
-              <span class="paragrafo-tipo tipo-video">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                Video Pillola
-              </span>
-              <div style="margin-top: 6px;"><span class="status-badge status-pending"><span class="status-dot"></span>In attesa</span></div>
-            </div>
-          </div>
-
-          <div class="paragrafo-card">
-            <span class="paragrafo-id">04.06</span>
-            <div class="paragrafo-info">
-              <h4>Dove invieresti oggi un paziente sospetto?</h4>
-              <span class="paragrafo-docente">Anna Grandone / Rossella Santoro / Maurizio Scorianz</span>
-            </div>
-            <div>
-              <span class="paragrafo-tipo tipo-survey">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                Survey Referral Mapping
-              </span>
-              <div style="margin-top: 6px;"><span class="status-badge status-pending"><span class="status-dot"></span>In attesa</span></div>
-            </div>
-          </div>
-
-          <div class="paragrafo-card">
-            <span class="paragrafo-id">04.07</span>
-            <div class="paragrafo-info">
-              <h4>Corretto WorkFlow di referral ed Infografica centri italiani sul territorio</h4>
-              <span class="paragrafo-docente">Anna Grandone / Rossella Santoro / Maurizio Scorianz</span>
-            </div>
-            <div>
-              <span class="paragrafo-tipo tipo-infografica">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-                Info-Grafica
-              </span>
-              <div style="margin-top: 6px;"><span class="status-badge status-pending"><span class="status-dot"></span>In attesa</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ── MODULO 5 ── -->
-      <div id="modulo-5" class="modulo-panel" role="tabpanel">
-        <div class="modulo-header">
-          <div class="modulo-title-block">
-            <h2>Modulo 5 — Mappatura famigliare</h2>
-            <p>Dal Paziente alla Famiglia: trasformare l'anamnesi familiare in uno strumento di screening attivo per moltiplicare le diagnosi precoci.</p>
-          </div>
-          <div class="modulo-authors">
-            <span class="author-chip">
-              <span class="author-avatar">FG</span>
-              Francesco Gallo
-            </span>
-          </div>
-        </div>
-
-        <div class="paragrafi-list">
-          <div class="paragrafo-card">
-            <span class="paragrafo-id">05.01</span>
-            <div class="paragrafo-info">
-              <h4>Genetica ed ereditarietà X-linked dominante</h4>
-              <span class="paragrafo-docente">Francesco Gallo</span>
-            </div>
-            <div>
-              <span class="paragrafo-tipo tipo-video">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                Video Masterclass
-              </span>
-              <div style="margin-top: 6px;"><span class="status-badge status-pending"><span class="status-dot"></span>In attesa</span></div>
-            </div>
-          </div>
-
-          <div class="paragrafo-card">
-            <span class="paragrafo-id">05.02</span>
-            <div class="paragrafo-info">
-              <h4>Family Mapping Challenge</h4>
-              <span class="paragrafo-docente">Francesco Gallo</span>
-            </div>
-            <div>
-              <span class="paragrafo-tipo tipo-infografica">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-                Info-Grafica
-              </span>
-              <div style="margin-top: 6px;"><span class="status-badge status-pending"><span class="status-dot"></span>In attesa</span></div>
-            </div>
-          </div>
-
-          <div class="paragrafo-card">
-            <span class="paragrafo-id">05.03</span>
-            <div class="paragrafo-info">
-              <h4>Family Screening</h4>
-              <span class="paragrafo-docente">Francesco Gallo</span>
-            </div>
-            <div>
-              <span class="paragrafo-tipo tipo-survey">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                Survey
-              </span>
-              <div style="margin-top: 6px;"><span class="status-badge status-pending"><span class="status-dot"></span>In attesa</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ── MODULO 6 ── -->
-      <div id="modulo-6" class="modulo-panel" role="tabpanel">
-        <div class="modulo-header">
-          <div class="modulo-title-block">
-            <h2>Modulo 6 — Il percorso dell'XLH</h2>
-            <p>Mostrare il valore di un percorso strutturato e basato sull'approccio multidisciplinare dopo il sospetto. Non chiudere il follow-up alla fine della crescita.</p>
-          </div>
-          <div class="modulo-authors">
-            <span class="author-chip"><span class="author-avatar">DF</span>Danilo Fintini</span>
-            <span class="author-chip"><span class="author-avatar">GM</span>Gemma Marcucci</span>
-          </div>
-        </div>
-
-        <div class="paragrafi-list">
-          <div class="paragrafo-card">
-            <span class="paragrafo-id">06.01</span>
-            <div class="paragrafo-info">
-              <h4>Approccio Terapeutico — Pediatrico</h4>
-              <span class="paragrafo-docente">Danilo Fintini</span>
-            </div>
-            <div>
-              <span class="paragrafo-tipo tipo-video">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                Video Pillola
-              </span>
-              <div style="margin-top: 6px;"><span class="status-badge status-pending"><span class="status-dot"></span>In attesa</span></div>
-            </div>
-          </div>
-
-          <div class="paragrafo-card">
-            <span class="paragrafo-id">06.02</span>
-            <div class="paragrafo-info">
-              <h4>Approccio Terapeutico — Adulto</h4>
-              <span class="paragrafo-docente">Gemma Marcucci</span>
-            </div>
-            <div>
-              <span class="paragrafo-tipo tipo-video">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                Video Pillola
-              </span>
-              <div style="margin-top: 6px;"><span class="status-badge status-pending"><span class="status-dot"></span>In attesa</span></div>
-            </div>
-          </div>
-
-          <div class="paragrafo-card">
-            <span class="paragrafo-id">06.03</span>
-            <div class="paragrafo-info">
-              <h4>Transizione pediatrico-adulto</h4>
-              <span class="paragrafo-docente">Danilo Fintini</span>
-            </div>
-            <div>
-              <span class="paragrafo-tipo tipo-video">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                Video Pillola
-              </span>
-              <div style="margin-top: 6px;"><span class="status-badge status-pending"><span class="status-dot"></span>In attesa</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ── MODULO 7 ── -->
-      <div id="modulo-7" class="modulo-panel" role="tabpanel">
-        <div class="modulo-header">
-          <div class="modulo-title-block">
-            <h2>Modulo 7 — Vivere con l'XLH</h2>
-            <p>Ricollegare la diagnosi precoce agli outcome di vita e consolidare il comportamento atteso.</p>
-          </div>
-          <div class="modulo-authors">
-            <span class="author-chip">
-              <span class="author-avatar">SC</span>
-              Sabrina Corbetta
-            </span>
-          </div>
-        </div>
-
-        <div class="paragrafi-list">
-          <div class="paragrafo-card">
-            <span class="paragrafo-id">07.01</span>
-            <div class="paragrafo-info">
-              <h4>Dal bambino all'adulto in età avanzata</h4>
-              <span class="paragrafo-docente">Sabrina Corbetta</span>
-            </div>
-            <div>
-              <span class="paragrafo-tipo tipo-interattivo">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 15l-2 5L9 9l11 4-5 2z"/></svg>
-                Video-Case Simulato
-              </span>
-              <div style="margin-top: 6px;"><span class="status-badge status-pending"><span class="status-dot"></span>In attesa</span></div>
-            </div>
-          </div>
-
-          <div class="paragrafo-card">
-            <span class="paragrafo-id">07.02</span>
-            <div class="paragrafo-info">
-              <h4>Transizione — Qualità di vita</h4>
-              <span class="paragrafo-docente">Sabrina Corbetta</span>
-            </div>
-            <div>
-              <span class="paragrafo-tipo tipo-flipbook">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-                FlipBook Finale
-              </span>
-              <div style="margin-top: 6px;"><span class="status-badge status-pending"><span class="status-dot"></span>In attesa</span></div>
-            </div>
-          </div>
-
-          <div class="paragrafo-card">
-            <span class="paragrafo-id">07.04</span>
-            <div class="paragrafo-info">
-              <h4>Cosa cambierai nella tua pratica?</h4>
-              <span class="paragrafo-docente">Sabrina Corbetta</span>
-            </div>
-            <div>
-              <span class="paragrafo-tipo tipo-survey">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                Survey Finale
-              </span>
-              <div style="margin-top: 6px;"><span class="status-badge status-pending"><span class="status-dot"></span>In attesa</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ═══════════════ FACULTY / GOVERNANCE ═══════════════ -->
-  <section id="faculty" class="faculty-section section-spacing">
-    <div class="container">
-      <div class="reveal" style="text-align: center; margin-bottom: var(--space-3xl);">
-        <h2 class="heading-2xl" style="margin-bottom: var(--space-sm);">Governance Scientifica</h2>
-        <p class="body-lg" style="max-width: 50ch; margin-inline: auto;">Il board scientifico che guida e supervisiona l'intero percorso formativo RADAR XLH.</p>
-      </div>
-
-      <div class="faculty-grid">
-        <div class="faculty-card reveal">
-          <div class="faculty-avatar">FG</div>
-          <h4>Francesco Gallo</h4>
-          <p>Modulo 5</p>
-        </div>
-        <div class="faculty-card reveal reveal-delay-1">
-          <div class="faculty-avatar">DF</div>
-          <h4>Danilo Fintini</h4>
-          <p>Moduli 1, 6</p>
-        </div>
-        <div class="faculty-card reveal reveal-delay-2">
-          <div class="faculty-avatar">AG</div>
-          <h4>Anna Grandone</h4>
-          <p>Moduli 3, 4</p>
-        </div>
-        <div class="faculty-card reveal reveal-delay-3">
-          <div class="faculty-avatar">GM</div>
-          <h4>Gemma Marcucci</h4>
-          <p>Moduli 3, 6</p>
-        </div>
-        <div class="faculty-card reveal reveal-delay-1">
-          <div class="faculty-avatar" style="background: linear-gradient(135deg, var(--orange) 0%, #c05e10 100%);">GA</div>
-          <h4>Gaetano P. Arcidiacono</h4>
-          <p>Modulo 2</p>
-        </div>
-        <div class="faculty-card reveal reveal-delay-2">
-          <div class="faculty-avatar" style="background: linear-gradient(135deg, var(--orange) 0%, #c05e10 100%);">VG</div>
-          <h4>Vincenzo Grassia</h4>
-          <p>Modulo 4</p>
-        </div>
-        <div class="faculty-card reveal reveal-delay-3">
-          <div class="faculty-avatar" style="background: linear-gradient(135deg, var(--orange) 0%, #c05e10 100%);">SC</div>
-          <h4>Sabrina Corbetta</h4>
-          <p>Modulo 7</p>
-        </div>
-        <div class="faculty-card reveal reveal-delay-4">
-          <div class="faculty-avatar" style="background: linear-gradient(135deg, var(--orange) 0%, #c05e10 100%);">MS</div>
-          <h4>Maurizio Scorianz</h4>
-          <p>Modulo 4</p>
-        </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- ═══════════════ SCHEDA EVENTO ═══════════════ -->
-  <section id="scheda" class="scheda-section section-spacing">
-    <div class="container">
-      <div class="reveal" style="margin-bottom: var(--space-2xl);">
-        <h2 class="heading-2xl" style="margin-bottom: var(--space-sm);">Scheda Evento</h2>
-        <p class="body-lg">Dettagli tecnici e accreditamento del percorso formativo ECM.</p>
-      </div>
-
-      <div class="scheda-layout">
-        <div class="scheda-details reveal">
-          <div class="scheda-row">
-            <div class="scheda-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-            </div>
-            <div>
-              <div class="scheda-label">Data Evento</div>
-              <div class="scheda-value">Dal 16 Dicembre 2026</div>
-            </div>
-          </div>
-
-          <div class="scheda-row">
-            <div class="scheda-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
-            <div>
-              <div class="scheda-label">Sede Evento</div>
-              <div class="scheda-value">Piattaforma LMS (erogazione FAD asincrona)</div>
-            </div>
-          </div>
-
-          <div class="scheda-row">
-            <div class="scheda-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
-            <div>
-              <div class="scheda-label">Ore Formative</div>
-              <div class="scheda-value">18 ore</div>
-            </div>
-          </div>
-
-          <div class="scheda-row">
-            <div class="scheda-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-            </div>
-            <div>
-              <div class="scheda-label">Tipologia Formativa</div>
-              <div class="scheda-value">FAD asincrona, fruizione continua</div>
-            </div>
-          </div>
-
-          <div class="scheda-row">
-            <div class="scheda-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            </div>
-            <div>
-              <div class="scheda-label">Provider / Accreditamento</div>
-              <div class="scheda-value">FORUM pro S.r.l. — ID 95 (AGENAS)</div>
-            </div>
-          </div>
-
-          <div class="scheda-row">
-            <div class="scheda-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            </div>
-            <div>
-              <div class="scheda-label">Crediti ECM</div>
-              <div class="scheda-value">Riconosciuti con completamento percorso e 75% risposte corrette</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="scheda-accreditate reveal reveal-delay-2">
-          <h3>Figure Professionali Accreditate</h3>
-          <div class="specialita-tags">
-            <span class="specialita-tag">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-              Ortopedici
-            </span>
-            <span class="specialita-tag">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-              Pediatri
-            </span>
-            <span class="specialita-tag">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-              Fisiatri
-            </span>
-            <span class="specialita-tag">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-              Odontoiatri
-            </span>
-            <span class="specialita-tag">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-              MMG
-            </span>
-            <span class="specialita-tag">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-              Endocrinologi
-            </span>
-            <span class="specialita-tag">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-              Nefrologi
-            </span>
-          </div>
+  <!-- ══════════════════ FOOTER ══════════════════ -->
+  <footer class="footer-portal" role="contentinfo">
+    <div class="container footer-portal-inner">
+      <div class="footer-brand-box">
+        <img src="assets/img/logo.png" alt="Logo RADAR XLH" class="footer-brand-logo">
+        <div>
+          <strong style="color:var(--white);">RADAR XLH</strong> — Faculty Content Review Platform
+          <div style="font-size:0.75rem; color:rgba(255,255,255,0.45);">Provider FORUM pro S.r.l. · ID Accreditamento 95</div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════ METODOLOGIA ═══════════════ -->
-  <section id="metodologia" class="metodologia-section section-spacing">
-    <div class="container">
-      <div class="reveal" style="margin-bottom: var(--space-2xl);">
-        <h2 class="heading-2xl" style="margin-bottom: var(--space-sm);">Innovazione Metodologica</h2>
-        <p class="body-lg">Quattro principi che coniugano rigore scientifico e design esperienziale.</p>
-      </div>
-
-      <div class="metodologia-grid">
-        <div class="metodo-card reveal">
-          <div class="metodo-num">1</div>
-          <h3>Apprendimento Esperienziale Sicuro</h3>
-          <p>Moduli formativi dinamici, survey, tappe di gaming e condivisione in modalità totalmente anonima. Il discente impara "facendo" all'interno di scenari clinici, senza rischio per i pazienti e senza esposizione di dati sensibili.</p>
-        </div>
-
-        <div class="metodo-card reveal reveal-delay-1">
-          <div class="metodo-num">2</div>
-          <h3>Knowledge Sharing Innovativo</h3>
-          <p>L'erogazione di tool di Knowledge Sharing rende questo progetto educazionale unico nel suo genere. La conoscenza diventa condivisa e dinamica, valorizzando la qualità dell'impegno del partecipante.</p>
-        </div>
-
-        <div class="metodo-card reveal reveal-delay-2">
-          <div class="metodo-num">3</div>
-          <h3>Valorizzazione delle Sentinelle</h3>
-          <p>Strumenti di diagnosi precoce dedicati alle figure specialistiche periferiche per intercettare le manifestazioni cliniche prima delle gravi deformità scheletriche. La sentinella non sostituisce lo specialista: anticipa il sospetto.</p>
-        </div>
-
-        <div class="metodo-card reveal reveal-delay-3">
-          <div class="metodo-num">4</div>
-          <h3>Quality Loop (Misurazione Aggregata)</h3>
-          <p>Le survey basali e finali alimentano un loop di qualità: il delta pre/post e i benchmark aggregati restituiscono l'impatto educativo del percorso e i bisogni formativi residui, nel pieno rispetto della privacy by design.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════ FOOTER ═══════════════ -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-logo">
-        <img src="assets/img/logo.png" alt="RADAR XLH" width="32" height="32">
-        <span class="footer-text">RADAR XLH — Faculty Review Platform</span>
-      </div>
-
-      <div class="footer-badge">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        Accesso riservato alla Faculty
-      </div>
-
-      <span class="footer-text">Provider ECM: FORUM pro S.r.l. — ID 95</span>
+      <div>Accesso protetto e riservato alla Faculty scientifica</div>
     </div>
   </footer>
 
