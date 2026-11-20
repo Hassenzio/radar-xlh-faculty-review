@@ -144,51 +144,42 @@ const MODULES_DATA = [
     "authors": [
       "Anna Grandone",
       "Vincenzo Grassia",
-      "Maurizio Scorianz",
-      "Rossella Santoro"
+      "Maurizio Scorianza"
     ],
     "units": [
       {
-        "id": "04:03:00",
-        "title": "Ruolo del Pediatra di Libera Scelta",
-        "authors": "Anna Grandone / Vincenzo Grassia / Maurizio Scorianz",
+        "id": "04:01:00",
+        "title": "Ruolo di Odontoiatra",
+        "authors": "Vincenzo Grassia",
         "type": "Video Pillola",
         "formatClass": "format-video",
         "hasRealContent": false
       },
       {
+        "id": "04:02:00",
+        "title": "Ruolo di Ortopedico e Fisiatra",
+        "authors": "Maurizio Scorianza",
+        "type": "Video Pillola",
+        "formatClass": "format-video",
+        "hasRealContent": false
+      },
+      {
+        "id": "04:03:00",
+        "title": "Dove Invieresti Oggi un Paziente Sospetto?",
+        "authors": "Anna Grandone",
+        "type": "Survey Referral Mapping",
+        "formatClass": "format-survey",
+        "hasRealContent": false
+      },
+      {
         "id": "04:04:00",
-        "title": "Ruolo di Odontoiatra",
+        "title": "XLH nel Bambino: Mappatura Network di Referral",
         "authors": "Anna Grandone",
         "type": "Video Lezione",
         "formatClass": "format-video",
         "hasRealContent": true,
         "embedUrl": "https://player.vimeo.com/video/1248731358?h=71a8d18886",
         "embedHtml": '<div class="vimeo-embed-wrapper"><iframe src="https://player.vimeo.com/video/1248731358?h=71a8d18886&autoplay=1&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="0404 Grandone"></iframe></div>'
-      },
-      {
-        "id": "04:05:00",
-        "title": "Ruolo di Ortopedico e Fisiatra",
-        "authors": "Anna Grandone / Vincenzo Grassia / Maurizio Scorianz",
-        "type": "Video Pillola",
-        "formatClass": "format-video",
-        "hasRealContent": false
-      },
-      {
-        "id": "04:06:00",
-        "title": "Dove Invieresti Oggi un Paziente Sospetto?",
-        "authors": "Anna Grandone / Rossella Santoro / Maurizio Scorianz",
-        "type": "Survey Referral Mapping",
-        "formatClass": "format-survey",
-        "hasRealContent": false
-      },
-      {
-        "id": "04:07:00",
-        "title": "Corretto Work Flow di Referral ed Infografica Centri Italiani sul Territorio",
-        "authors": "Anna Grandone / Rossella Santoro / Maurizio Scorianz",
-        "type": "Info-Grafica",
-        "formatClass": "format-infografica",
-        "hasRealContent": false
       }
     ]
   },
