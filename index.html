@@ -492,47 +492,42 @@
           <span class="code" id="modalUnitCode">01:03:00</span>
           <div class="modal-title-text" id="modalUnitTitle">Titolo Contenuto</div>
         </div>
-        <button class="modal-close-btn" id="modalCloseBtn" aria-label="Chiudi finestra">&times;</button>
+        <div class="modal-header-actions">
+          <a href="#" target="_blank" rel="noopener noreferrer" class="btn-open-fullscreen-tab" id="btnFullscreenExternal" title="Apri in una finestra dedicata a tutto schermo">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Apri a Schermo Intero ↗
+          </a>
+          <button class="modal-close-btn" id="modalCloseBtn" aria-label="Chiudi finestra">&times;</button>
+        </div>
       </div>
 
       <div class="modal-body">
-        <!-- Stage del Contenuto Singolo (Viewer dedicato) -->
+        <!-- Stage HD a Massima Risoluzione (FlipBook o Video Player) -->
         <div class="modal-content-stage" id="modalContentStage">
-          <!-- Popolato dinamicamente da app.js (iframe Heyzine o scheda placeholder) -->
+          <!-- Popolato dinamicamente da app.js -->
         </div>
 
-        <!-- Meta Informazioni da Matrice Excel -->
-        <div class="modal-meta-grid">
-          <div class="meta-field">
-            <label>Docente / Autore</label>
-            <span id="modalUnitAuthor">Danilo Fintini</span>
+        <!-- Meta Informazioni Essenziali in Riga Singola Compatta -->
+        <div class="modal-meta-strip">
+          <div class="meta-strip-item">
+            <span class="meta-strip-label">Docente:</span>
+            <strong id="modalUnitAuthor">Danilo Fintini</strong>
           </div>
-          <div class="meta-field">
-            <label>Tipologia Formativa</label>
-            <span id="modalUnitType">Info-grafiche / FlipBook</span>
+          <div class="meta-strip-divider">·</div>
+          <div class="meta-strip-item">
+            <span class="meta-strip-label">Tipologia:</span>
+            <strong id="modalUnitType">Info-grafiche / FlipBook</strong>
           </div>
-          <div class="meta-field">
-            <label>Modulo di Riferimento</label>
-            <span id="modalUnitModule">Modulo 01</span>
+          <div class="meta-strip-divider">·</div>
+          <div class="meta-strip-item">
+            <span class="meta-strip-label">Modulo:</span>
+            <strong id="modalUnitModule">Modulo 01</strong>
+          </div>
+          <div class="meta-strip-divider">·</div>
+          <div class="meta-strip-item">
+            <span class="status-ready-pill">🟢 Contenuto Attivo & Verificabile</span>
           </div>
         </div>
-
-        <!-- Box di Validazione per la Faculty -->
-        <div class="faculty-validation-box">
-          <h4>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0E8AC8" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-            Feedback di Revisione & Validazione Faculty
-          </h4>
-          <textarea id="reviewNote" class="review-textarea" placeholder="Inserisci eventuali note scientifiche, correzioni editoriali o conferme per la redazione..."></textarea>
-        </div>
-      </div>
-
-      <div class="modal-footer">
-        <span style="font-size:0.75rem; color:var(--text-muted);">Stato: Pronto per verifica</span>
-        <button class="btn-validate-save" onclick="saveValidation()">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-          Conferma & Salva Validazione
-        </button>
       </div>
     </div>
   </div>
@@ -553,5 +548,6 @@
 
   <!-- Scripts -->
   <script src="assets/app.js"></script>
+  <script src="https://player.vimeo.com/api/player.js"></script>
 </body>
 </html>

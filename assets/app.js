@@ -51,7 +51,7 @@ const MODULES_DATA = [
     ]
   },
   {
-    "id": 2,
+        "id": 2,
     "code": "02",
     "rawTitle": "Modulo 2 - Comprendere l'Ipofosfatemia X-Linked",
     "title": "Comprendere l'Ipofosfatemia X-Linked",
@@ -63,17 +63,21 @@ const MODULES_DATA = [
         "id": "02:01:00",
         "title": "Da PHEX a FGF23: Perché nell'XLH si Perde Fosfato",
         "authors": "Gaetano Paride Arcidiacono",
-        "type": "Video Lezione",
+        "type": "Video Pillola",
         "formatClass": "format-video",
-        "hasRealContent": false
+        "hasRealContent": true,
+        "embedUrl": "https://player.vimeo.com/video/1246890324?h=2ba8f2e4d6",
+        "embedHtml": '<div class="vimeo-embed-wrapper"><iframe src="https://player.vimeo.com/video/1246890324?h=2ba8f2e4d6&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="0201 Arcidiacono"></iframe></div>'
       },
       {
         "id": "02:02:00",
         "title": "Il Paziente con Ipofosfatemia: dall'Alterazione Biochimica alla Diagnosi",
         "authors": "Gaetano Paride Arcidiacono",
-        "type": "Video Lezione",
+        "type": "Video Pillola",
         "formatClass": "format-video",
-        "hasRealContent": false
+        "hasRealContent": true,
+        "embedUrl": "https://player.vimeo.com/video/1246890324?h=2ba8f2e4d6",
+        "embedHtml": '<div class="vimeo-embed-wrapper"><iframe src="https://player.vimeo.com/video/1246890324?h=2ba8f2e4d6&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="0202 Arcidiacono"></iframe></div>'
       },
       {
         "id": "02:03:00",
@@ -83,11 +87,10 @@ const MODULES_DATA = [
         "formatClass": "format-flipbook",
         "hasRealContent": true,
         "embedUrl": "https://heyzine.com/flip-book/b168ce046b.html",
-        "embedHtml": '<iframe allowfullscreen allow="autoplay; fullscreen; clipboard-write" scrolling="no" style="width: 100%; height: 480px; border: none;" src="https://heyzine.com/flip-book/b168ce046b.html"></iframe>'
+        "embedHtml": '<iframe allowfullscreen allow="autoplay; fullscreen; clipboard-write" scrolling="no" src="https://heyzine.com/flip-book/b168ce046b.html"></iframe>'
       }
     ]
-  },
-  {
+  }, {
     "id": 3,
     "code": "03",
     "rawTitle": "Modulo 3 - Identificare il Paziente",
@@ -428,7 +431,7 @@ function renderModuleViewer(id) {
 
             <button class="btn-select-unit ${isReady ? 'ready-action' : ''}" onclick="openContentModal('${unit.id}', ${moduleData.id})">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-              ${isReady ? 'Visiona FlipBook & Valida' : 'Apri Scheda Contenuto'}
+              ${isReady ? (unit.formatClass === 'format-video' ? 'Guarda Video Pillola HD' : 'Sfoglia FlipBook HD') : 'In Fase Editoriale'}
             </button>
           </div>
         `;
@@ -502,12 +505,7 @@ function openContentModal(unitId, moduleId) {
   overlay.classList.add('open');
 }
 
-function saveValidation() {
-  alert('Validazione scientifica registrata con successo!');
-  document.getElementById('contentModal').classList.remove('open');
-  const noteEl = document.getElementById('reviewNote');
-  if (noteEl) noteEl.value = '';
-}
+
 
 // ── DOSSIER TABS ──
 function initDossierTabs() {
