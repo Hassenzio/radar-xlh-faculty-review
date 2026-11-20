@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════════════════════
    RADAR XLH — Faculty Review Platform
-   Interactive Module Engine & Content Viewer
+   Interactive Module Engine & Uniform Content Navigator
    ═══════════════════════════════════════════════════════ */
 
 // Matrice Organizzativa Ufficiale (da Matrice Organizzativa Moduli - FaD RADAR XLH.xlsx)
@@ -14,44 +14,40 @@ const MODULES_DATA = [
     units: [
       {
         id: "01:01:00",
-        chapter: "Capitolo 1",
+        chapter: "Cap. 01",
         title: "Omeostasi minerale",
         authors: "Danilo Fintini",
         type: "Video Pillola",
         formatClass: "format-video",
-        icon: "video",
         hasRealContent: false
       },
       {
         id: "01:02:00",
-        chapter: "Capitolo 2",
+        chapter: "Cap. 02",
         title: "Ruolo clinico del fosfato",
         authors: "Danilo Fintini",
         type: "Video Pillola",
         formatClass: "format-video",
-        icon: "video",
         hasRealContent: false
       },
       {
         id: "01:03:00",
-        chapter: "Capitolo 3",
+        chapter: "Cap. 03",
         title: "Omeostasi fosfo-calcica in una pagina",
         authors: "Danilo Fintini",
         type: "Info-grafiche / FlipBook",
         formatClass: "format-flipbook",
-        icon: "book-open",
         hasRealContent: true,
         embedUrl: "https://heyzine.com/flip-book/97c5fa83a3.html",
-        embedHtml: '<iframe allowfullscreen allow="autoplay; fullscreen; clipboard-write" scrolling="no" style="width: 100%; height: 420px; border: 1px solid #CBD5E1; border-radius: 8px;" src="https://heyzine.com/flip-book/97c5fa83a3.html"></iframe>'
+        embedHtml: '<iframe allowfullscreen allow="autoplay; fullscreen; clipboard-write" scrolling="no" style="width: 100%; height: 480px; border: none;" src="https://heyzine.com/flip-book/97c5fa83a3.html"></iframe>'
       },
       {
         id: "01:04:00",
-        chapter: "Capitolo 4",
+        chapter: "Cap. 04",
         title: "Quanto conosci e utilizzi il metabolismo fosfo-calcico nella tua pratica?",
         authors: "Danilo Fintini",
         type: "Survey Baseline",
         formatClass: "format-survey",
-        icon: "check-circle",
         hasRealContent: false
       }
     ]
@@ -65,32 +61,29 @@ const MODULES_DATA = [
     units: [
       {
         id: "02:01:00",
-        chapter: "Capitolo 1",
+        chapter: "Cap. 01",
         title: "Da PHEX a FGF23: perché nell'XLH si perde fosfato",
         authors: "Gaetano Paride Arcidiacono",
         type: "Video Lezione",
         formatClass: "format-video",
-        icon: "video",
         hasRealContent: false
       },
       {
         id: "02:02:00",
-        chapter: "Capitolo 2",
+        chapter: "Cap. 02",
         title: "Caso Interattivo",
         authors: "Gaetano Paride Arcidiacono",
         type: "Caso Interattivo",
         formatClass: "format-interactive",
-        icon: "play-circle",
         hasRealContent: false
       },
       {
         id: "02:03:00",
-        chapter: "Capitolo 3",
+        chapter: "Cap. 03",
         title: "XLH spiegata al referrer",
         authors: "Gaetano Paride Arcidiacono",
         type: "FlipBook",
         formatClass: "format-flipbook",
-        icon: "book-open",
         hasRealContent: false
       }
     ]
@@ -104,42 +97,38 @@ const MODULES_DATA = [
     units: [
       {
         id: "03:01:00",
-        chapter: "Capitolo 1",
+        chapter: "Cap. 01",
         title: "Quando pensare all'XLH nel bambino",
         authors: "Anna Grandone",
         type: "Video Pillola",
         formatClass: "format-video",
-        icon: "video",
         hasRealContent: false
       },
       {
         id: "03:02:00",
-        chapter: "Capitolo 2",
+        chapter: "Cap. 02",
         title: "Manifestazioni nell'adulto",
         authors: "Gemma Marcucci",
         type: "Video Pillola",
         formatClass: "format-video",
-        icon: "video",
         hasRealContent: false
       },
       {
         id: "03:03:00",
-        chapter: "Capitolo 3",
+        chapter: "Cap. 03",
         title: "Mini-Casi Interattivi \"effetto Sliding Doors\"",
         authors: "Anna Grandone / Gemma Marcucci",
         type: "Mini-Casi Interattivi",
         formatClass: "format-interactive",
-        icon: "play-circle",
         hasRealContent: false
       },
       {
         id: "03:04:00",
-        chapter: "Capitolo 4",
+        chapter: "Cap. 04",
         title: "Red Flags",
         authors: "Anna Grandone / Gemma Marcucci",
         type: "Sharing Experience / Survey",
         formatClass: "format-survey",
-        icon: "flag",
         hasRealContent: false
       }
     ]
@@ -153,52 +142,47 @@ const MODULES_DATA = [
     units: [
       {
         id: "04:03:00",
-        chapter: "Capitolo 1",
+        chapter: "Cap. 01",
         title: "Ruolo del Pediatra di Libera Scelta",
         authors: "Anna Grandone / Vincenzo Grassia / Maurizio Scorianz",
         type: "Video Pillola",
         formatClass: "format-video",
-        icon: "video",
         hasRealContent: false
       },
       {
         id: "04:04:00",
-        chapter: "Capitolo 2",
+        chapter: "Cap. 02",
         title: "Ruolo di odontoiatra",
         authors: "Anna Grandone / Vincenzo Grassia / Maurizio Scorianz",
         type: "Video Pillola",
         formatClass: "format-video",
-        icon: "video",
         hasRealContent: false
       },
       {
         id: "04:05:00",
-        chapter: "Capitolo 3",
+        chapter: "Cap. 03",
         title: "Ruolo di ortopedico e fisiatra",
         authors: "Anna Grandone / Vincenzo Grassia / Maurizio Scorianz",
         type: "Video Pillola",
         formatClass: "format-video",
-        icon: "video",
         hasRealContent: false
       },
       {
         id: "04:06:00",
-        chapter: "Capitolo 4",
+        chapter: "Cap. 04",
         title: "Dove invieresti oggi un paziente sospetto?",
         authors: "Anna Grandone / Rossella Santoro / Maurizio Scorianz",
         type: "Survey Referral Mapping",
         formatClass: "format-survey",
-        icon: "compass",
         hasRealContent: false
       },
       {
         id: "04:07:00",
-        chapter: "Capitolo 5",
+        chapter: "Cap. 05",
         title: "Corretto Work Flow di referral ed Infografica centri italiani sul territorio",
         authors: "Anna Grandone / Rossella Santoro / Maurizio Scorianz",
         type: "Info-Grafica",
         formatClass: "format-infografica",
-        icon: "map",
         hasRealContent: false
       }
     ]
@@ -212,32 +196,29 @@ const MODULES_DATA = [
     units: [
       {
         id: "05:01:00",
-        chapter: "Capitolo 1",
+        chapter: "Cap. 01",
         title: "Genetica ed ereditarietà X-linked dominante",
         authors: "Francesco Gallo",
         type: "Video Masterclass",
         formatClass: "format-video",
-        icon: "video",
         hasRealContent: false
       },
       {
         id: "05:02:00",
-        chapter: "Capitolo 2",
+        chapter: "Cap. 02",
         title: "Family Mapping Challenge",
         authors: "Francesco Gallo",
         type: "Info-Grafica",
         formatClass: "format-infografica",
-        icon: "users",
         hasRealContent: false
       },
       {
         id: "05:03:00",
-        chapter: "Capitolo 3",
+        chapter: "Cap. 03",
         title: "Family Screening",
         authors: "Francesco Gallo",
         type: "Survey",
         formatClass: "format-survey",
-        icon: "check-circle",
         hasRealContent: false
       }
     ]
@@ -251,32 +232,29 @@ const MODULES_DATA = [
     units: [
       {
         id: "06:01:00",
-        chapter: "Capitolo 1",
+        chapter: "Cap. 01",
         title: "Approccio Terapeutico - Pediatrico",
         authors: "Danilo Fintini",
         type: "Video Pillola",
         formatClass: "format-video",
-        icon: "video",
         hasRealContent: false
       },
       {
         id: "06:02:00",
-        chapter: "Capitolo 2",
+        chapter: "Cap. 02",
         title: "Approccio Terapeutico - Adulto",
         authors: "Gemma Marcucci",
         type: "Video Pillola",
         formatClass: "format-video",
-        icon: "video",
         hasRealContent: false
       },
       {
         id: "06:03:00",
-        chapter: "Capitolo 3",
+        chapter: "Cap. 03",
         title: "Transizione pediatrico-adulto",
         authors: "Danilo Fintini",
         type: "Video Pillola",
         formatClass: "format-video",
-        icon: "video",
         hasRealContent: false
       }
     ]
@@ -290,32 +268,29 @@ const MODULES_DATA = [
     units: [
       {
         id: "07:01:00",
-        chapter: "Capitolo 1",
+        chapter: "Cap. 01",
         title: "Dal bambino all'adulto in età avanzata",
         authors: "Sabrina Corbetta",
         type: "Video-Case Simulato",
         formatClass: "format-interactive",
-        icon: "film",
         hasRealContent: false
       },
       {
         id: "07:02:00",
-        chapter: "Capitolo 2",
+        chapter: "Cap. 02",
         title: "Transizione - Qualità di vita",
         authors: "Sabrina Corbetta",
         type: "FlipBook Finale",
         formatClass: "format-flipbook",
-        icon: "book-open",
         hasRealContent: false
       },
       {
         id: "07:04:00",
-        chapter: "Capitolo 3",
+        chapter: "Cap. 03",
         title: "Cosa cambierai nella tua pratica?",
         authors: "Sabrina Corbetta",
         type: "Survey Finale",
         formatClass: "format-survey",
-        icon: "award",
         hasRealContent: false
       }
     ]
@@ -355,7 +330,7 @@ function initNavbar() {
   });
 }
 
-// ── ROADMAP GRID (Le 7 Tappe Formative) ──
+// ── ROADMAP GRID: 7 CARD RIGOROSAMENTE IDENTICHE E UNIFORMI ──
 function renderRoadmapGrid() {
   const container = document.getElementById('roadmapGrid');
   if (!container) return;
@@ -365,9 +340,9 @@ function renderRoadmapGrid() {
     const hasReady = mod.units.some(u => u.hasRealContent);
     return `
       <div class="tappa-card ${isActive ? 'active' : ''}" data-module-id="${mod.id}" onclick="selectModule(${mod.id})">
-        <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+        <div class="tappa-top-row">
           <div class="tappa-badge">${mod.code}</div>
-          ${hasReady ? '<span style="background:#16A34A; color:white; font-size:10px; font-weight:800; padding:2px 7px; border-radius:100px;">1 PRONTO</span>' : ''}
+          ${hasReady ? '<span class="tappa-ready-pill">1 Pronto</span>' : ''}
         </div>
         <div class="tappa-card-title">${mod.title}</div>
         <div class="tappa-card-author">${mod.authors.join(', ')}</div>
@@ -380,29 +355,29 @@ function renderRoadmapGrid() {
   }).join('');
 }
 
-// ── SELECT MODULE ──
+// ── SELEZIONE MODULO ──
 function selectModule(id) {
   currentActiveModuleId = id;
   
-  // Update Tappe Cards
+  // Aggiorna stato active delle card
   document.querySelectorAll('.tappa-card').forEach(card => {
     const cardId = parseInt(card.dataset.moduleId, 10);
     card.classList.toggle('active', cardId === id);
   });
 
-  // Render Viewer
+  // Renderizza il selettore contenuti del modulo
   renderModuleViewer(id);
 
-  // Smooth scroll into stage viewer
+  // Scroll morbido alla sezione del modulo
   const viewer = document.getElementById('stageViewer');
   if (viewer) {
-    const yOffset = -100;
+    const yOffset = -90;
     const y = viewer.getBoundingClientRect().top + window.pageYOffset + yOffset;
     window.scrollTo({ top: y, behavior: 'smooth' });
   }
 }
 
-// ── RENDER STAGE VIEWER ──
+// ── RENDER STAGE VIEWER: SELETTORE CONTENUTI PULITO (NON ESPLOSO) ──
 function renderModuleViewer(id) {
   const moduleData = MODULES_DATA.find(m => m.id === id);
   if (!moduleData) return;
@@ -410,12 +385,12 @@ function renderModuleViewer(id) {
   const headerContainer = document.getElementById('stageViewerHeader');
   const unitsContainer = document.getElementById('stageUnitsList');
 
-  // Header
+  // Header uniforme del Modulo
   headerContainer.innerHTML = `
     <div>
       <div class="stage-number-tag">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        Tappa Didattica ${moduleData.code} di 07
+        Modulo Didattico ${moduleData.code} di 07
       </div>
       <h2 class="stage-viewer-title">${moduleData.title}</h2>
       <p class="stage-viewer-goal"><strong>Obiettivo Formativo:</strong> ${moduleData.goal}</p>
@@ -430,62 +405,43 @@ function renderModuleViewer(id) {
     </div>
   `;
 
-  // Se c'è un contenuto pronto (es. Modulo 1 Capitolo 3), creiamo un box speciale sopra la lista
-  const readyContent = moduleData.units.find(u => u.hasRealContent);
-  let readyBoxHtml = '';
-  if (readyContent) {
-    readyBoxHtml = `
-      <div class="featured-content-ready-box">
-        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-          <div class="featured-content-badge">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-            CONTENUTO EDITATO PRONTO PER LA REVISIONE DELLA FACULTY
-          </div>
-          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:700; color:#15803D;">${readyContent.id} · ${readyContent.chapter}</span>
-        </div>
-        <div class="featured-content-title">${readyContent.title}</div>
-        <div class="featured-content-desc">
-          <strong>Tipologia:</strong> ${readyContent.type} | <strong>Docente:</strong> ${readyContent.authors} — Puoi sfogliare il FlipBook interattivo qui sotto o aprirlo a tutto schermo per registrare la validazione.
-        </div>
-        <div class="featured-iframe-wrap">
-          ${readyContent.embedHtml}
-        </div>
-      </div>
-    `;
-  }
+  // Griglia di Card Contenuto IDENTICHE PER DIMENSIONI (Nessun iframe esploso in home)
+  unitsContainer.innerHTML = `
+    <div class="units-uniform-grid">
+      ${moduleData.units.map(unit => {
+        const isReady = unit.hasRealContent;
+        return `
+          <div class="unit-card ${isReady ? 'is-ready' : ''}">
+            <div class="unit-card-top">
+              <span class="unit-chapter-badge">${unit.chapter}</span>
+              <span class="format-badge ${unit.formatClass}">${unit.type}</span>
+            </div>
+            
+            <div class="unit-card-title" title="${escapeHtml(unit.title)}">${unit.title}</div>
+            
+            <div class="unit-card-author" title="${escapeHtml(unit.authors)}">
+              Docente: ${unit.authors}
+            </div>
 
-  // Units list
-  const listHtml = moduleData.units.map((unit) => {
-    return `
-      <div class="unit-row ${unit.hasRealContent ? 'has-content' : ''}">
-        <div class="unit-code">${unit.id.substring(0, 5)}</div>
-        <div class="unit-info">
-          <h4>
-            ${unit.title}
-            ${unit.hasRealContent ? '<span class="badge-live-ready">🟢 CONTENUTO PRONTO</span>' : ''}
-          </h4>
-          <div class="unit-authors">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-            ${unit.chapter} · ${unit.authors}
-          </div>
-        </div>
-        <div class="unit-actions">
-          <span class="format-badge ${unit.formatClass}">
-            ${unit.type}
-          </span>
-          <button class="btn-review-content ${unit.hasRealContent ? 'btn-ready' : ''}" onclick="openContentModal('${unit.id}', ${moduleData.id})">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            ${unit.hasRealContent ? 'Visiona FlipBook & Valida' : 'Visiona & Valida'}
-          </button>
-        </div>
-      </div>
-    `;
-  }).join('');
+            <div class="unit-status-indicator">
+              ${isReady 
+                ? '<span class="status-text-ready">🟢 Pronto per revisione</span>' 
+                : '<span class="status-text-pending">⚪ In fase editoriale</span>'
+              }
+            </div>
 
-  unitsContainer.innerHTML = readyBoxHtml + listHtml;
+            <button class="btn-select-unit ${isReady ? 'ready-action' : ''}" onclick="openContentModal('${unit.id}', ${moduleData.id})">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              ${isReady ? 'Visiona FlipBook & Valida' : 'Apri Scheda Contenuto'}
+            </button>
+          </div>
+        `;
+      }).join('')}
+    </div>
+  `;
 }
 
-// ── CONTENT MODAL VIEWER ──
+// ── MODAL VISUALIZZATORE DEL SINGOLO CONTENUTO SELEZIONATO ──
 function initModal() {
   const overlay = document.getElementById('contentModal');
   const closeBtn = document.getElementById('modalCloseBtn');
@@ -496,6 +452,13 @@ function initModal() {
 
   overlay?.addEventListener('click', (e) => {
     if (e.target === overlay) {
+      overlay.classList.remove('open');
+    }
+  });
+
+  // Chiusura con tasto Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && overlay?.classList.contains('open')) {
       overlay.classList.remove('open');
     }
   });
@@ -521,7 +484,7 @@ function openContentModal(unitId, moduleId) {
   modalType.textContent = unit.type;
   modalModule.textContent = `Modulo 0${moduleId}`;
 
-  // Se è presente il contenuto reale (es. FlipBook Modulo 1 Capitolo 3)
+  // Se è presente il contenuto reale caricato (es. FlipBook Heyzine Modulo 1 Capitolo 3)
   if (unit.hasRealContent && unit.embedHtml) {
     stageBox.className = 'modal-content-stage has-embed';
     stageBox.innerHTML = unit.embedHtml;
@@ -529,13 +492,13 @@ function openContentModal(unitId, moduleId) {
     stageBox.className = 'modal-content-stage';
     stageBox.innerHTML = `
       <div class="stage-preview-icon">
-        <svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
       </div>
       <div class="stage-preview-title">${unit.title}</div>
-      <div class="stage-preview-sub">Spazio di preview del contenuto didattico pronto per accogliere i testi e i file video/slide editati.</div>
+      <div class="stage-preview-sub">Spazio di preview riservato per l'erogazione di questo contenuto [${unit.type}]. In attesa di caricamento testi/video editati.</div>
       <div class="stage-preview-badge">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        In attesa inserimento contenuti editati
+        In attesa di caricamento
       </div>
     `;
   }
@@ -544,13 +507,13 @@ function openContentModal(unitId, moduleId) {
 }
 
 function saveValidation() {
-  alert('Validazione scientifica registrata con successo per questo contenuto!');
+  alert('Validazione scientifica registrata con successo!');
   document.getElementById('contentModal').classList.remove('open');
   const noteEl = document.getElementById('reviewNote');
   if (noteEl) noteEl.value = '';
 }
 
-// ── DOSSIER SECONDARIO TABS ──
+// ── DOSSIER TABS ──
 function initDossierTabs() {
   const tabBtns = document.querySelectorAll('.dossier-tab-btn');
   const panels = document.querySelectorAll('.dossier-panel');
@@ -566,4 +529,8 @@ function initDossierTabs() {
       document.getElementById(targetId)?.classList.add('active');
     });
   });
+}
+
+function escapeHtml(str) {
+  return str.replace(/'/g, "\\'").replace(/"/g, '&quot;');
 }
