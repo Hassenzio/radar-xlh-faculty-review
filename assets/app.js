@@ -6,292 +6,286 @@
 // Matrice Organizzativa Ufficiale (da Matrice Organizzativa Moduli - FaD RADAR XLH.xlsx)
 const MODULES_DATA = [
   {
-    id: 1,
-    code: "01",
-    title: "L'importanza del fosfato",
-    goal: "Far percepire il fosfato come biomarker clinicamente rilevante, non un parametro accessorio.",
-    authors: ["Danilo Fintini"],
-    units: [
+    "id": 1,
+    "code": "01",
+    "rawTitle": "Modulo 1 - L'importanza del fosfato",
+    "title": "L'importanza del fosfato",
+    "authors": [
+      "Danilo Fintini"
+    ],
+    "units": [
       {
-        id: "01:01:00",
-        chapter: "Cap. 01",
-        title: "Omeostasi minerale",
-        authors: "Danilo Fintini",
-        type: "Video Pillola",
-        formatClass: "format-video",
-        hasRealContent: false
+        "id": "01:01:00",
+        "title": "Omeostasi minerale",
+        "authors": "Danilo Fintini",
+        "type": "Video Pillola",
+        "formatClass": "format-video",
+        "hasRealContent": false
       },
       {
-        id: "01:02:00",
-        chapter: "Cap. 02",
-        title: "Ruolo clinico del fosfato",
-        authors: "Danilo Fintini",
-        type: "Video Pillola",
-        formatClass: "format-video",
-        hasRealContent: false
+        "id": "01:02:00",
+        "title": "Ruolo clinico del fosfato",
+        "authors": "Danilo Fintini",
+        "type": "Video Pillola",
+        "formatClass": "format-video",
+        "hasRealContent": false
       },
       {
-        id: "01:03:00",
-        chapter: "Cap. 03",
-        title: "Omeostasi fosfo-calcica in una pagina",
-        authors: "Danilo Fintini",
-        type: "Info-grafiche / FlipBook",
-        formatClass: "format-flipbook",
-        hasRealContent: true,
-        embedUrl: "https://heyzine.com/flip-book/97c5fa83a3.html",
-        embedHtml: '<iframe allowfullscreen allow="autoplay; fullscreen; clipboard-write" scrolling="no" style="width: 100%; height: 480px; border: none;" src="https://heyzine.com/flip-book/97c5fa83a3.html"></iframe>'
+        "id": "01:03:00",
+        "title": "Omeostasi fosfo-calcica in una pagina",
+        "authors": "Danilo Fintini",
+        "type": "Info-grafiche/flipbook",
+        "formatClass": "format-flipbook",
+        "hasRealContent": true,
+        "embedUrl": "https://heyzine.com/flip-book/97c5fa83a3.html",
+        "embedHtml": "<iframe allowfullscreen allow=\"autoplay; fullscreen; clipboard-write\" scrolling=\"no\" style=\"width: 100%; height: 480px; border: none;\" src=\"https://heyzine.com/flip-book/97c5fa83a3.html\"></iframe>"
       },
       {
-        id: "01:04:00",
-        chapter: "Cap. 04",
-        title: "Quanto conosci e utilizzi il metabolismo fosfo-calcico nella tua pratica?",
-        authors: "Danilo Fintini",
-        type: "Survey Baseline",
-        formatClass: "format-survey",
-        hasRealContent: false
+        "id": "01:04:00",
+        "title": "Quanto conosci e utilizzi il metabolismo fosfo-calcico nella tua pratica?",
+        "authors": "Danilo Fintini",
+        "type": "Survey Baseline",
+        "formatClass": "format-survey",
+        "hasRealContent": false
       }
     ]
   },
   {
-    id: 2,
-    code: "02",
-    title: "Comprendere l'Ipofosfatemia X-Linked",
-    goal: "Tradurre la fisiopatologia in un ragionamento clinico semplice (Da PHEX a FGF23).",
-    authors: ["Gaetano Paride Arcidiacono"],
-    units: [
+    "id": 2,
+    "code": "02",
+    "rawTitle": "Modulo 2 - Comprendere l'Ipofosfatemia X-Linked",
+    "title": "Comprendere l'Ipofosfatemia X-Linked",
+    "authors": [
+      "Gaetano Paride Arcidiacono"
+    ],
+    "units": [
       {
-        id: "02:01:00",
-        chapter: "Cap. 01",
-        title: "Da PHEX a FGF23: perché nell'XLH si perde fosfato",
-        authors: "Gaetano Paride Arcidiacono",
-        type: "Video Lezione",
-        formatClass: "format-video",
-        hasRealContent: false
+        "id": "02:01:00",
+        "title": "Da PHEX a FGF23: perché nell'XLH si perde fosfato",
+        "authors": "Gaetano Paride Arcidiacono",
+        "type": "Video Lezione",
+        "formatClass": "format-video",
+        "hasRealContent": false
       },
       {
-        id: "02:02:00",
-        chapter: "Cap. 02",
-        title: "Caso Interattivo",
-        authors: "Gaetano Paride Arcidiacono",
-        type: "Caso Interattivo",
-        formatClass: "format-interactive",
-        hasRealContent: false
+        "id": "02:02:00",
+        "title": "Caso Interattivo",
+        "authors": "Gaetano Paride Arcidiacono",
+        "type": "Caso Interattivo",
+        "formatClass": "format-interactive",
+        "hasRealContent": false
       },
       {
-        id: "02:03:00",
-        chapter: "Cap. 03",
-        title: "XLH spiegata al referrer",
-        authors: "Gaetano Paride Arcidiacono",
-        type: "FlipBook",
-        formatClass: "format-flipbook",
-        hasRealContent: false
+        "id": "02:03:00",
+        "title": "XLH spiegata al referrer",
+        "authors": "Gaetano Paride Arcidiacono",
+        "type": "FlipBook",
+        "formatClass": "format-flipbook",
+        "hasRealContent": false
       }
     ]
   },
   {
-    id: 3,
-    code: "03",
-    title: "Identificare il paziente",
-    goal: "Riconoscere il fenotipo pediatrico e adulto e passare dalla teoria al riconoscimento pratico.",
-    authors: ["Anna Grandone", "Gemma Marcucci"],
-    units: [
+    "id": 3,
+    "code": "03",
+    "rawTitle": "Modulo 3 - Identificare il paziente",
+    "title": "Identificare il paziente",
+    "authors": [
+      "Anna Grandone",
+      "Gemma Marcucci"
+    ],
+    "units": [
       {
-        id: "03:01:00",
-        chapter: "Cap. 01",
-        title: "Quando pensare all'XLH nel bambino",
-        authors: "Anna Grandone",
-        type: "Video Pillola",
-        formatClass: "format-video",
-        hasRealContent: false
+        "id": "03:01:00",
+        "title": "Quando pensare all'XLH nel bambino",
+        "authors": "Anna Grandone",
+        "type": "Video Pillola",
+        "formatClass": "format-video",
+        "hasRealContent": false
       },
       {
-        id: "03:02:00",
-        chapter: "Cap. 02",
-        title: "Manifestazioni nell'adulto",
-        authors: "Gemma Marcucci",
-        type: "Video Pillola",
-        formatClass: "format-video",
-        hasRealContent: false
+        "id": "03:02:00",
+        "title": "Manifestazioni nell'adulto",
+        "authors": "Gemma Marcucci",
+        "type": "Video Pillola",
+        "formatClass": "format-video",
+        "hasRealContent": false
       },
       {
-        id: "03:03:00",
-        chapter: "Cap. 03",
-        title: "Mini-Casi Interattivi \"effetto Sliding Doors\"",
-        authors: "Anna Grandone / Gemma Marcucci",
-        type: "Mini-Casi Interattivi",
-        formatClass: "format-interactive",
-        hasRealContent: false
+        "id": "03:03:00",
+        "title": "Mini-Casi Interattivi \"effetto Sliding Doors\"",
+        "authors": "Anna Grandone / Gemma Marcucci",
+        "type": "Mini-Casi Interattivi",
+        "formatClass": "format-interactive",
+        "hasRealContent": false
       },
       {
-        id: "03:04:00",
-        chapter: "Cap. 04",
-        title: "Red Flags",
-        authors: "Anna Grandone / Gemma Marcucci",
-        type: "Sharing Experience / Survey",
-        formatClass: "format-survey",
-        hasRealContent: false
+        "id": "03:04:00",
+        "title": "Red Flags",
+        "authors": "Anna Grandone / Gemma Marcucci",
+        "type": "Sharing Experience / Survey",
+        "formatClass": "format-survey",
+        "hasRealContent": false
       }
     ]
   },
   {
-    id: 4,
-    code: "04",
-    title: "Mappatura e network di referral",
-    goal: "Valorizzare le sentinelle non-treater e rendere il referral naturale e praticabile.",
-    authors: ["Anna Grandone", "Vincenzo Grassia", "Maurizio Scorianz", "Rossella Santoro"],
-    units: [
+    "id": 4,
+    "code": "04",
+    "rawTitle": "Modulo 4 - Mappatura e network di referral",
+    "title": "Mappatura e network di referral",
+    "authors": [
+      "Anna Grandone",
+      "Vincenzo Grassia",
+      "Maurizio Scorianz",
+      "Rossella Santoro"
+    ],
+    "units": [
       {
-        id: "04:03:00",
-        chapter: "Cap. 01",
-        title: "Ruolo del Pediatra di Libera Scelta",
-        authors: "Anna Grandone / Vincenzo Grassia / Maurizio Scorianz",
-        type: "Video Pillola",
-        formatClass: "format-video",
-        hasRealContent: false
+        "id": "04:03:00",
+        "title": "Ruolo del Pediatra di Libera Scelta",
+        "authors": "Anna Grandone / Vincenzo Grassia / Maurizio Scorianz",
+        "type": "Video Pillola",
+        "formatClass": "format-video",
+        "hasRealContent": false
       },
       {
-        id: "04:04:00",
-        chapter: "Cap. 02",
-        title: "Ruolo di odontoiatra",
-        authors: "Anna Grandone / Vincenzo Grassia / Maurizio Scorianz",
-        type: "Video Pillola",
-        formatClass: "format-video",
-        hasRealContent: false
+        "id": "04:04:00",
+        "title": "Ruolo di odontoiatra",
+        "authors": "Anna Grandone / Vincenzo Grassia / Maurizio Scorianz",
+        "type": "Video Pillola",
+        "formatClass": "format-video",
+        "hasRealContent": false
       },
       {
-        id: "04:05:00",
-        chapter: "Cap. 03",
-        title: "Ruolo di ortopedico e fisiatra",
-        authors: "Anna Grandone / Vincenzo Grassia / Maurizio Scorianz",
-        type: "Video Pillola",
-        formatClass: "format-video",
-        hasRealContent: false
+        "id": "04:05:00",
+        "title": "Ruolo di ortopedico e fisiatra",
+        "authors": "Anna Grandone / Vincenzo Grassia / Maurizio Scorianz",
+        "type": "Video Pillola",
+        "formatClass": "format-video",
+        "hasRealContent": false
       },
       {
-        id: "04:06:00",
-        chapter: "Cap. 04",
-        title: "Dove invieresti oggi un paziente sospetto?",
-        authors: "Anna Grandone / Rossella Santoro / Maurizio Scorianz",
-        type: "Survey Referral Mapping",
-        formatClass: "format-survey",
-        hasRealContent: false
+        "id": "04:06:00",
+        "title": "Dove invieresti oggi un paziente sospetto?",
+        "authors": "Anna Grandone / Rossella Santoro / Maurizio Scorianz",
+        "type": "Survey Referral Mapping",
+        "formatClass": "format-survey",
+        "hasRealContent": false
       },
       {
-        id: "04:07:00",
-        chapter: "Cap. 05",
-        title: "Corretto Work Flow di referral ed Infografica centri italiani sul territorio",
-        authors: "Anna Grandone / Rossella Santoro / Maurizio Scorianz",
-        type: "Info-Grafica",
-        formatClass: "format-infografica",
-        hasRealContent: false
+        "id": "04:07:00",
+        "title": "Corretto Work Flow  di referral ed Infografica centri italiani sul territorio",
+        "authors": "Anna Grandone / Rossella Santoro / Maurizio Scorianz",
+        "type": "Info-Grafica",
+        "formatClass": "format-infografica",
+        "hasRealContent": false
       }
     ]
   },
   {
-    id: 5,
-    code: "05",
-    title: "Mappatura famigliare",
-    goal: "Dal Paziente alla Famiglia: trasformare l'anamnesi in screening attivo moltiplicatore.",
-    authors: ["Francesco Gallo"],
-    units: [
+    "id": 5,
+    "code": "05",
+    "rawTitle": "Modulo 5 - Mappatura famigliare",
+    "title": "Mappatura famigliare",
+    "authors": [
+      "Francesco Gallo"
+    ],
+    "units": [
       {
-        id: "05:01:00",
-        chapter: "Cap. 01",
-        title: "Genetica ed ereditarietà X-linked dominante",
-        authors: "Francesco Gallo",
-        type: "Video Masterclass",
-        formatClass: "format-video",
-        hasRealContent: false
+        "id": "05:01:00",
+        "title": "Genetica ed ereditarietà X-linked dominante",
+        "authors": "Francesco Gallo",
+        "type": "Video Masterclass",
+        "formatClass": "format-video",
+        "hasRealContent": false
       },
       {
-        id: "05:02:00",
-        chapter: "Cap. 02",
-        title: "Family Mapping Challenge",
-        authors: "Francesco Gallo",
-        type: "Info-Grafica",
-        formatClass: "format-infografica",
-        hasRealContent: false
+        "id": "05:02:00",
+        "title": "Family Mapping Challenge",
+        "authors": "Francesco Gallo",
+        "type": "Info-Grafica",
+        "formatClass": "format-infografica",
+        "hasRealContent": false
       },
       {
-        id: "05:03:00",
-        chapter: "Cap. 03",
-        title: "Family Screening",
-        authors: "Francesco Gallo",
-        type: "Survey",
-        formatClass: "format-survey",
-        hasRealContent: false
+        "id": "05:03:00",
+        "title": "Family Screening",
+        "authors": "Francesco Gallo",
+        "type": "Survey",
+        "formatClass": "format-survey",
+        "hasRealContent": false
       }
     ]
   },
   {
-    id: 6,
-    code: "06",
-    title: "Il percorso dell'XLH",
-    goal: "Approccio multidisciplinare e follow-up continuativo nella transizione pediatrico-adulto.",
-    authors: ["Danilo Fintini", "Gemma Marcucci"],
-    units: [
+    "id": 6,
+    "code": "06",
+    "rawTitle": "Modulo 6 - Il percorso dell'XLH",
+    "title": "Il percorso dell'XLH",
+    "authors": [
+      "Danilo Fintini",
+      "Gemma Marcucci"
+    ],
+    "units": [
       {
-        id: "06:01:00",
-        chapter: "Cap. 01",
-        title: "Approccio Terapeutico - Pediatrico",
-        authors: "Danilo Fintini",
-        type: "Video Pillola",
-        formatClass: "format-video",
-        hasRealContent: false
+        "id": "06:01:00",
+        "title": "Approccio Terapeutico - Pediatrico",
+        "authors": "Danilo Fintini",
+        "type": "Video Pillola",
+        "formatClass": "format-video",
+        "hasRealContent": false
       },
       {
-        id: "06:02:00",
-        chapter: "Cap. 02",
-        title: "Approccio Terapeutico - Adulto",
-        authors: "Gemma Marcucci",
-        type: "Video Pillola",
-        formatClass: "format-video",
-        hasRealContent: false
+        "id": "06:02:00",
+        "title": "Approccio Terapeutico - Adulto",
+        "authors": "Gemma Marcucci",
+        "type": "Video Pillola",
+        "formatClass": "format-video",
+        "hasRealContent": false
       },
       {
-        id: "06:03:00",
-        chapter: "Cap. 03",
-        title: "Transizione pediatrico-adulto",
-        authors: "Danilo Fintini",
-        type: "Video Pillola",
-        formatClass: "format-video",
-        hasRealContent: false
+        "id": "06:03:00",
+        "title": "Transizione pediatrico-adulto",
+        "authors": "Danilo Fintini",
+        "type": "Video Pillola",
+        "formatClass": "format-video",
+        "hasRealContent": false
       }
     ]
   },
   {
-    id: 7,
-    code: "07",
-    title: "Vivere con l'XLH",
-    goal: "Ricollegare la diagnosi precoce agli outcome di vita lungo tutto il ciclo del paziente.",
-    authors: ["Sabrina Corbetta"],
-    units: [
+    "id": 7,
+    "code": "07",
+    "rawTitle": "Modulo 7 - Vivere con I'XLH",
+    "title": "Vivere con l'XLH",
+    "authors": [
+      "Sabrina Corbetta"
+    ],
+    "units": [
       {
-        id: "07:01:00",
-        chapter: "Cap. 01",
-        title: "Dal bambino all'adulto in età avanzata",
-        authors: "Sabrina Corbetta",
-        type: "Video-Case Simulato",
-        formatClass: "format-interactive",
-        hasRealContent: false
+        "id": "07:01:00",
+        "title": "Dal bambino all'adulto in età avanzata",
+        "authors": "Sabrina Corbetta",
+        "type": "Video-Case Simulato",
+        "formatClass": "format-interactive",
+        "hasRealContent": false
       },
       {
-        id: "07:02:00",
-        chapter: "Cap. 02",
-        title: "Transizione - Qualità di vita",
-        authors: "Sabrina Corbetta",
-        type: "FlipBook Finale",
-        formatClass: "format-flipbook",
-        hasRealContent: false
+        "id": "07:02:00",
+        "title": "Transizione- Qualità di vita-",
+        "authors": "Sabrina Corbetta",
+        "type": "FlipBook Finale",
+        "formatClass": "format-flipbook",
+        "hasRealContent": false
       },
       {
-        id: "07:04:00",
-        chapter: "Cap. 03",
-        title: "Cosa cambierai nella tua pratica?",
-        authors: "Sabrina Corbetta",
-        type: "Survey Finale",
-        formatClass: "format-survey",
-        hasRealContent: false
+        "id": "07:04:00",
+        "title": "Cosa cambierai nella tua pratica?",
+        "authors": "Sabrina Corbetta",
+        "type": "Survey Finale",
+        "formatClass": "format-survey",
+        "hasRealContent": false
       }
     ]
   }
@@ -390,10 +384,10 @@ function renderModuleViewer(id) {
     <div>
       <div class="stage-number-tag">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        Modulo Didattico ${moduleData.code} di 07
+        Tappa Didattica ${moduleData.code} di 07 · Matrice Ufficiale Validata
       </div>
-      <h2 class="stage-viewer-title">${moduleData.title}</h2>
-      <p class="stage-viewer-goal"><strong>Obiettivo Formativo:</strong> ${moduleData.goal}</p>
+      <h2 class="stage-viewer-title">${moduleData.rawTitle}</h2>
+      <p class="stage-viewer-goal"><strong>Percorso Didattico Validato:</strong> ${moduleData.units.length} Unità Didattiche (Paragrafi da ${moduleData.units[0].id.substring(0, 5)} a ${moduleData.units[moduleData.units.length - 1].id.substring(0, 5)}) come da matrice organizzativa approvata.</p>
     </div>
     <div class="stage-author-tags">
       ${moduleData.authors.map(a => `
@@ -413,7 +407,7 @@ function renderModuleViewer(id) {
         return `
           <div class="unit-card ${isReady ? 'is-ready' : ''}">
             <div class="unit-card-top">
-              <span class="unit-chapter-badge">${unit.chapter}</span>
+              <span class="unit-chapter-badge">Par. ${unit.id.substring(0, 5)}</span>
               <span class="format-badge ${unit.formatClass}">${unit.type}</span>
             </div>
             
@@ -479,10 +473,10 @@ function openContentModal(unitId, moduleId) {
   const stageBox = document.getElementById('modalContentStage');
 
   modalCode.textContent = unit.id;
-  modalTitle.textContent = `${unit.chapter} — ${unit.title}`;
+  modalTitle.textContent = `Paragrafo ${unit.id.substring(0, 5)} — ${unit.title}`;
   modalAuthor.textContent = unit.authors;
   modalType.textContent = unit.type;
-  modalModule.textContent = `Modulo 0${moduleId}`;
+  modalModule.textContent = `Modulo 0${moduleId} · ${moduleData.title}`;
 
   // Se è presente il contenuto reale caricato (es. FlipBook Heyzine Modulo 1 Capitolo 3)
   if (unit.hasRealContent && unit.embedHtml) {

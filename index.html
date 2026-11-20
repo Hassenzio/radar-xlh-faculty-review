@@ -23,7 +23,7 @@
   <!-- Watermark Pattern sfondo (richiamo RADAR XLH FONDALE) -->
   <div class="page-watermark-rings" aria-hidden="true"></div>
 
-  <!-- ══════════════════ NAVBAR ══════════════════ -->
+  <!-- ══════════════════ NAVBAR (TUTTI I PULSANTI VERIFICATI) ══════════════════ -->
   <header class="nav" role="banner">
     <div class="container nav-inner">
       <a href="#hero" class="nav-brand" aria-label="RADAR XLH Home">
@@ -40,9 +40,9 @@
           7 Tappe Formative
         </a>
         <a href="#stageViewer">Contenuti Modulo</a>
-        <a href="#dossierProgetto">Razionale & Info</a>
-        <a href="#facultySection">Faculty</a>
-        <a href="#schedaEventoSection">Scheda Evento</a>
+        <a href="#faculty">Faculty</a>
+        <a href="#razionale">Razionale & Info</a>
+        <a href="#schedaEvento">Scheda Evento</a>
       </nav>
 
       <button class="nav-burger" aria-label="Apri Menu Mobile">
@@ -55,16 +55,16 @@
   <div class="nav-mobile" aria-hidden="true">
     <a href="#tappeFormative" class="highlight">7 Tappe Formative</a>
     <a href="#stageViewer">Contenuti Modulo Selezionato</a>
-    <a href="#dossierProgetto">Razionale & Finalità</a>
-    <a href="#facultySection">Governance Scientifica</a>
-    <a href="#schedaEventoSection">Scheda ECM & Accreditamento</a>
+    <a href="#faculty">Faculty Scientifica</a>
+    <a href="#razionale">Razionale & Finalità</a>
+    <a href="#schedaEvento">Scheda ECM & Accreditamento</a>
   </div>
 
   <!-- ══════════════════ HERO PORTAL (CERCHI FISSI + RADAR ANIMATO + LOGO) ══════════════════ -->
   <section id="hero" class="hero-portal">
     <div class="hero-fondale-layer" aria-hidden="true"></div>
 
-    <!-- 1. CERCHI RADAR FISSI (Base sorgente brand RADAR XLH) -->
+    <!-- 1. Cerchi radar fissi (Base sorgente brand RADAR XLH) -->
     <div class="hero-radar-fixed-rings" aria-hidden="true">
       <div class="radar-fixed-circle c1"></div>
       <div class="radar-fixed-circle c2"></div>
@@ -72,18 +72,17 @@
       <div class="radar-fixed-circle c4"></div>
       <div class="radar-fixed-circle c5"></div>
       <div class="radar-fixed-circle c6"></div>
-      <div class="radar-fixed-circle c7"></div>
       <div class="radar-center-blip"></div>
     </div>
 
-    <!-- Cerchi radar secondari a sinistra per equilibrio compositivo -->
+    <!-- Cerchi radar secondari a sinistra -->
     <div class="hero-radar-left-rings" aria-hidden="true">
       <div class="radar-fixed-circle c2"></div>
       <div class="radar-fixed-circle c4"></div>
       <div class="radar-fixed-circle c6"></div>
     </div>
 
-    <!-- 2. EFFETTO ANIMATO RADAR (Rotazione fascio conico continuo 360°) -->
+    <!-- 2. Effetto animato radar 360° continuo -->
     <div class="hero-radar-sweep-scanner" aria-hidden="true"></div>
 
     <div class="container">
@@ -108,9 +107,9 @@
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
               Accedi alle 7 Tappe Formative
             </a>
-            <a href="#dossierProgetto" class="btn-secondary-hero">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-              Info & Razionale Progetto
+            <a href="#faculty" class="btn-secondary-hero">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              Faculty Scientifica
             </a>
           </div>
         </div>
@@ -140,18 +139,17 @@
     </div>
   </section>
 
-  <!-- ══════════════════ CORE ROADMAP: LE 7 TAPPE FORMATIVE IN PRIMISSIMO PIANO ══════════════════ -->
+  <!-- ══════════════════ CORE ROADMAP: LE 7 TAPPE UNIFORMI ══════════════════ -->
   <main class="container">
     <section id="tappeFormative" class="roadmap-section" aria-label="Percorso dei 7 Moduli Didattici">
-      <!-- Header di Navigazione Tappe -->
       <div class="roadmap-header">
         <div class="roadmap-header-left">
           <div class="roadmap-icon-tag">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
           </div>
           <div class="roadmap-title-area">
             <h2>I 7 Moduli Didattici del Percorso</h2>
-            <p>Seleziona una tappa per visualizzare, verificare e validare i contenuti formativi editati.</p>
+            <p>Seleziona una tappa per visualizzare i capitoli e accedere al visualizzatore del singolo contenuto.</p>
           </div>
         </div>
 
@@ -161,13 +159,13 @@
         </div>
       </div>
 
-      <!-- Quick Switcher 7 Tappe Formative -->
+      <!-- Quick Switcher 7 Tappe Formative (Rigide & Uniformi) -->
       <div class="roadmap-grid" id="roadmapGrid">
         <!-- Renderizzato dinamicamente da app.js -->
       </div>
     </section>
 
-    <!-- ══════════════════ STAGE VIEWER: VISUALIZZATORE DETTAGLIATO DEL MODULO ══════════════════ -->
+    <!-- ══════════════════ STAGE VIEWER: SELETTORE CONTENUTI PULITO (NON ESPLOSO) ══════════════════ -->
     <section id="stageViewer" class="stage-viewer-section" aria-live="polite">
       <div class="stage-viewer-header" id="stageViewerHeader">
         <!-- Generato dinamicamente -->
@@ -178,7 +176,7 @@
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
           Unità Didattiche di questo Modulo
         </h3>
-        <span class="content-instruction-banner">Seleziona un contenuto per aprirlo e validarlo</span>
+        <span class="content-instruction-banner">Seleziona un'unità per aprirla nel visualizzatore dedicato e rilasciare la validazione</span>
       </div>
 
       <div id="stageUnitsList">
@@ -187,169 +185,253 @@
     </section>
   </main>
 
-  <!-- ══════════════════ DOSSIER SECONDARIO (INFO, RAZIONALE, FACULTY, SCHEDA) ══════════════════ -->
-  <section id="dossierProgetto" class="dossier-section">
+  <!-- ══════════════════ SEZIONE AUTONOMA 1: GOVERNANCE SCIENTIFICA (FACULTY) ══════════════════ -->
+  <section id="faculty" class="faculty-section-full">
     <div class="container">
-      <div class="dossier-header">
-        <h2>Dossier Scientifico & Informativo</h2>
-        <p>Tutti i riferimenti, gli obiettivi, la governance e la scheda tecnica dell'iniziativa FaD RADAR XLH.</p>
+      <div class="section-title-wrap">
+        <span class="sub-tag">Comitato Scientifico Validato</span>
+        <h2>Governance Scientifica</h2>
+        <p>I 9 docenti e specialisti della Faculty assegnati ai 7 moduli formativi secondo la Matrice Organizzativa Ufficiale.</p>
       </div>
 
-      <div class="dossier-tabs" role="tablist">
-        <button class="dossier-tab-btn active" data-tab="tabRazionale">Razionale Scientifico</button>
-        <button class="dossier-tab-btn" data-tab="tabObiettivi">Obiettivi Formativi</button>
-        <button class="dossier-tab-btn" data-tab="tabFaculty" id="facultySection">Governance Scientifica</button>
-        <button class="dossier-tab-btn" data-tab="tabScheda" id="schedaEventoSection">Scheda Evento ECM</button>
-        <button class="dossier-tab-btn" data-tab="tabMetodologia">Innovazione Metodologica</button>
-      </div>
-
-      <!-- Tab 1: Razionale -->
-      <div class="dossier-panel active" id="tabRazionale">
-        <div style="display:grid; grid-template-columns: 1fr; gap:2rem;">
-          <h3 style="font-size:1.35rem; color:var(--navy-deep); font-weight:800;">Trasformare la conoscenza teorica in comportamento clinico misurabile</h3>
-          <p style="color:var(--text-secondary); line-height:1.75;">
-            L'XLH (Ipofosfatemia Legata all'X) è una rachitismo/osteomalacia ereditaria rara a trasmissione X-linked dominante causata da mutazioni loss-of-function del gene <strong>PHEX</strong>. Il difetto determina un'eccessiva produzione di <strong>FGF23</strong>, che riduce il riassorbimento tubulare di fosfato e inibisce la 1-alfa-idrossilasi.
-          </p>
-          <p style="color:var(--text-secondary); line-height:1.75;">
-            Il risultato è un'ipofosfatemia cronica con difetto di mineralizzazione dello scheletro in crescita e dell'osso maturo. In età pediatrica predominano gambe arcuate, bassa statura e disturbi della deambulazione; nell'adulto dolore cronico, entesopatie, pseudofratture e ascessi dentari spontanei.
-          </p>
-          <div style="background:var(--blue-pale); border-left:4px solid var(--blue-radar); padding:1rem 1.25rem; border-radius:var(--radius-sm); color:var(--navy-deep); font-size:0.9375rem;">
-            <strong>Principio Guida:</strong> La diagnosi precoce dipende in modo cruciale dalle sentinelle territoriali (PLS, Odontoiatri, Ortopedici, Fisiatri, MMG) prima della comparsa di deformità scheletriche irreversibili.
+      <!-- Griglia Faculty Ampia a 2 Colonne: Spazio Completo per i Titoli su Riga Unica Senza Spezzature -->
+      <div class="faculty-grid-wide">
+        <!-- 1. Danilo Fintini -->
+        <div class="faculty-card-wide">
+          <div class="faculty-portrait-wrap">
+            <img src="assets/img/faculty/danilo-fintini.png" alt="Dott. Danilo Fintini" loading="lazy">
           </div>
-        </div>
-      </div>
-
-      <!-- Tab 2: Obiettivi -->
-      <div class="dossier-panel" id="tabObiettivi">
-        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:1.25rem;">
-          <div style="background:var(--surface-alt); border:1px solid var(--border); padding:1.25rem; border-radius:var(--radius-md);">
-            <div style="font-weight:800; color:var(--blue-radar); margin-bottom:4px;">01. Ecosistema</div>
-            <p style="font-size:0.875rem; color:var(--text-secondary);">Costruire un ambiente formativo integrato e coerente intorno all'XLH.</p>
-          </div>
-          <div style="background:var(--surface-alt); border:1px solid var(--border); padding:1.25rem; border-radius:var(--radius-md);">
-            <div style="font-weight:800; color:var(--blue-radar); margin-bottom:4px;">02. Competenze</div>
-            <p style="font-size:0.875rem; color:var(--text-secondary);">Elevare il livello di competenza scientifica e diagnostica sul territorio.</p>
-          </div>
-          <div style="background:var(--surface-alt); border:1px solid var(--border); padding:1.25rem; border-radius:var(--radius-md);">
-            <div style="font-weight:800; color:var(--blue-radar); margin-bottom:4px;">03. Diagnosi</div>
-            <p style="font-size:0.875rem; color:var(--text-secondary);">Strumenti pratici per il sospetto precoce e referral appropriato ai centri esperti.</p>
-          </div>
-          <div style="background:var(--surface-alt); border:1px solid var(--border); padding:1.25rem; border-radius:var(--radius-md);">
-            <div style="font-weight:800; color:var(--blue-radar); margin-bottom:4px;">04. Privacy & Sicurezza</div>
-            <p style="font-size:0.875rem; color:var(--text-secondary);">Trend conoscitivi restituiti in forma aggregata e anonima, preservando la privacy.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Tab 3: Faculty -->
-      <div class="dossier-panel" id="tabFaculty">
-        <div class="faculty-grid-dossier">
-          <div class="faculty-card-dossier">
-            <div class="faculty-avatar-circle">FG</div>
-            <div>
-              <h4>Francesco Gallo</h4>
-              <p>Modulo 5 · Mappatura Famigliare</p>
-            </div>
-          </div>
-          <div class="faculty-card-dossier">
-            <div class="faculty-avatar-circle">DF</div>
-            <div>
-              <h4>Danilo Fintini</h4>
-              <p>Modulo 1 & Modulo 6 · Fosfato e Terapie</p>
-            </div>
-          </div>
-          <div class="faculty-card-dossier">
-            <div class="faculty-avatar-circle">AG</div>
-            <div>
-              <h4>Anna Grandone</h4>
-              <p>Modulo 3 & Modulo 4 · Pediatria e Referral</p>
-            </div>
-          </div>
-          <div class="faculty-card-dossier">
-            <div class="faculty-avatar-circle">GM</div>
-            <div>
-              <h4>Gemma Marcucci</h4>
-              <p>Modulo 3 & Modulo 6 · Adulto e Terapie</p>
-            </div>
-          </div>
-          <div class="faculty-card-dossier">
-            <div class="faculty-avatar-circle" style="background:linear-gradient(135deg, var(--orange) 0%, #D16B12 100%);">GA</div>
-            <div>
-              <h4>Gaetano Paride Arcidiacono</h4>
-              <p>Modulo 2 · Fisiopatologia</p>
-            </div>
-          </div>
-          <div class="faculty-card-dossier">
-            <div class="faculty-avatar-circle" style="background:linear-gradient(135deg, var(--orange) 0%, #D16B12 100%);">VG</div>
-            <div>
-              <h4>Vincenzo Grassia</h4>
-              <p>Modulo 4 · Odontoiatria & Referral</p>
-            </div>
-          </div>
-          <div class="faculty-card-dossier">
-            <div class="faculty-avatar-circle" style="background:linear-gradient(135deg, var(--orange) 0%, #D16B12 100%);">SC</div>
-            <div>
-              <h4>Sabrina Corbetta</h4>
-              <p>Modulo 7 · Vivere con l'XLH</p>
-            </div>
-          </div>
-          <div class="faculty-card-dossier">
-            <div class="faculty-avatar-circle" style="background:linear-gradient(135deg, var(--orange) 0%, #D16B12 100%);">MS</div>
-            <div>
-              <h4>Maurizio Scorianz</h4>
-              <p>Modulo 4 · Ortopedia & Referral</p>
+          <div class="faculty-info-box">
+            <div class="faculty-name">Dott. Danilo Fintini</div>
+            <div class="faculty-module-row" title="Modulo 1 (01:01 - 01:04) & Modulo 6 (06:01, 06:03)">Modulo 1 · L'importanza del fosfato & Modulo 6 · Il percorso dell'XLH</div>
+            <div class="faculty-role-affiliation" title="UOC Endocrinologia e Diabetologia, Ospedale Pediatrico Bambino Gesù, Roma">
+              UOC Endocrinologia e Diabetologia, Ospedale Pediatrico Bambino Gesù, Roma
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Tab 4: Scheda Evento -->
-      <div class="dossier-panel" id="tabScheda">
-        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:1.5rem;">
-          <div style="border-bottom:1px solid var(--border); padding-bottom:0.75rem;">
-            <div style="font-size:0.75rem; text-transform:uppercase; font-weight:700; color:var(--text-muted);">Data Erogazione</div>
-            <div style="font-size:1.05rem; font-weight:700; color:var(--navy-deep);">Dal 16 Dicembre 2026</div>
+        <!-- 2. Gaetano Paride Arcidiacono -->
+        <div class="faculty-card-wide">
+          <div class="faculty-portrait-wrap">
+            <img src="assets/img/faculty/gaetano-arcidiacono.png" alt="Dott. Gaetano Paride Arcidiacono" loading="lazy">
           </div>
-          <div style="border-bottom:1px solid var(--border); padding-bottom:0.75rem;">
-            <div style="font-size:0.75rem; text-transform:uppercase; font-weight:700; color:var(--text-muted);">Formato</div>
-            <div style="font-size:1.05rem; font-weight:700; color:var(--navy-deep);">FAD E-learning asincrona (18 Ore)</div>
-          </div>
-          <div style="border-bottom:1px solid var(--border); padding-bottom:0.75rem;">
-            <div style="font-size:0.75rem; text-transform:uppercase; font-weight:700; color:var(--text-muted);">Provider ECM</div>
-            <div style="font-size:1.05rem; font-weight:700; color:var(--navy-deep);">FORUM pro S.r.l. — ID Accreditamento 95</div>
-          </div>
-          <div style="border-bottom:1px solid var(--border); padding-bottom:0.75rem;">
-            <div style="font-size:0.75rem; text-transform:uppercase; font-weight:700; color:var(--text-muted);">Discipline Accreditate</div>
-            <div style="font-size:0.9375rem; font-weight:600; color:var(--navy-deep);">Pediatri, Ortopedici, Fisiatri, Odontoiatri, MMG, Endocrinologi, Nefrologi</div>
+          <div class="faculty-info-box">
+            <div class="faculty-name">Dott. Gaetano Paride Arcidiacono</div>
+            <div class="faculty-module-row" title="Modulo 2 · Comprendere l'Ipofosfatemia X-Linked (02:01 - 02:03)">Modulo 2 · Comprendere l'Ipofosfatemia X-Linked</div>
+            <div class="faculty-role-affiliation" title="UOSD Malattie Metaboliche dello Scheletro, Azienda Ospedale-Università di Padova">
+              UOSD Malattie Metaboliche dello Scheletro, Azienda Ospedale-Università di Padova
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Tab 5: Metodologia -->
-      <div class="dossier-panel" id="tabMetodologia">
-        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:1.5rem;">
-          <div style="background:var(--surface-alt); padding:1.25rem; border-radius:var(--radius-md); border:1px solid var(--border);">
-            <h4 style="font-weight:700; color:var(--navy-deep); margin-bottom:6px;">1. Apprendimento Esperienziale Sicuro</h4>
-            <p style="font-size:0.875rem; color:var(--text-secondary);">Gaming, casi e simulazioni senza alcun rischio né compromissione di dati sensibili.</p>
+        <!-- 3. Anna Grandone -->
+        <div class="faculty-card-wide">
+          <div class="faculty-portrait-wrap">
+            <img src="assets/img/faculty/anna-grandone.png" alt="Prof.ssa Anna Grandone" loading="lazy">
           </div>
-          <div style="background:var(--surface-alt); padding:1.25rem; border-radius:var(--radius-md); border:1px solid var(--border);">
-            <h4 style="font-weight:700; color:var(--navy-deep); margin-bottom:6px;">2. Valorizzazione delle Sentinelle</h4>
-            <p style="font-size:0.875rem; color:var(--text-secondary);">Strumenti per medici territoriali per anticipare il sospetto prima del danno scheletrico.</p>
+          <div class="faculty-info-box">
+            <div class="faculty-name">Prof.ssa Anna Grandone</div>
+            <div class="faculty-module-row" title="Modulo 3 (03:01, 03:03, 03:04) & Modulo 4 (04:03 - 04:07)">Modulo 3 · Identificare il paziente & Modulo 4 · Network referral</div>
+            <div class="faculty-role-affiliation" title="Dipartimento della Donna e del Bambino, Università degli Studi della Campania 'Luigi Vanvitelli'">
+              Dip. della Donna e del Bambino, Università della Campania "Luigi Vanvitelli"
+            </div>
           </div>
-          <div style="background:var(--surface-alt); padding:1.25rem; border-radius:var(--radius-md); border:1px solid var(--border);">
-            <h4 style="font-weight:700; color:var(--navy-deep); margin-bottom:6px;">3. Knowledge Sharing Dinamico</h4>
-            <p style="font-size:0.875rem; color:var(--text-secondary);">Ambiente di crescita condivisa e confronto tra specialisti multidisciplinari.</p>
+        </div>
+
+        <!-- 4. Gemma Marcucci -->
+        <div class="faculty-card-wide">
+          <div class="faculty-portrait-wrap">
+            <img src="assets/img/faculty/gemma-marcucci.png" alt="Prof.ssa Gemma Marcucci" loading="lazy">
           </div>
-          <div style="background:var(--surface-alt); padding:1.25rem; border-radius:var(--radius-md); border:1px solid var(--border);">
-            <h4 style="font-weight:700; color:var(--navy-deep); margin-bottom:6px;">4. Quality Loop</h4>
-            <p style="font-size:0.875rem; color:var(--text-secondary);">Survey basali e finali per misurare il delta di apprendimento e il commitment to change.</p>
+          <div class="faculty-info-box">
+            <div class="faculty-name">Prof.ssa Gemma Marcucci</div>
+            <div class="faculty-module-row" title="Modulo 3 (03:02 - 03:04) & Modulo 6 (06:02)">Modulo 3 · Identificare il paziente & Modulo 6 · Il percorso dell'XLH</div>
+            <div class="faculty-role-affiliation" title="SOD Malattie del Metabolismo Minerale e Osseo, AOU Careggi · Università di Firenze">
+              SOD Malattie Metabolismo Minerale e Osseo, AOU Careggi · Univ. di Firenze
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Vincenzo Grassia -->
+        <div class="faculty-card-wide">
+          <div class="faculty-portrait-wrap">
+            <img src="assets/img/faculty/vincenzo-grassia.png" alt="Prof. Vincenzo Grassia" loading="lazy">
+          </div>
+          <div class="faculty-info-box">
+            <div class="faculty-name">Prof. Vincenzo Grassia</div>
+            <div class="faculty-module-row" title="Modulo 4 · Mappatura e network di referral (04:03 - 04:05)">Modulo 4 · Mappatura e network di referral</div>
+            <div class="faculty-role-affiliation" title="Dipartimento Multidisciplinare Medico-Chirurgico e Odontoiatrico, Università Luigi Vanvitelli">
+              Dip. Medico-Chirurgico e Odontoiatrico, Università Luigi Vanvitelli
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Maurizio Scorianz -->
+        <div class="faculty-card-wide">
+          <div class="faculty-portrait-wrap">
+            <img src="assets/img/faculty/maurizio-scorianz.png" alt="Dott. Maurizio Scorianz" loading="lazy">
+          </div>
+          <div class="faculty-info-box">
+            <div class="faculty-name">Dott. Maurizio Scorianz</div>
+            <div class="faculty-module-row" title="Modulo 4 · Mappatura e network di referral (04:03 - 04:07)">Modulo 4 · Mappatura e network di referral</div>
+            <div class="faculty-role-affiliation" title="SOD Ortopedia Oncologica e Ricostruttiva, Azienda Ospedaliero-Universitaria Careggi, Firenze">
+              SOD Ortopedia Oncologica e Ricostruttiva, AOU Careggi, Firenze
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Rossella Santoro -->
+        <div class="faculty-card-wide">
+          <div class="faculty-portrait-wrap">
+            <img src="assets/img/faculty/rossella-santoro.png" alt="Dott.ssa Rossella Santoro" loading="lazy">
+          </div>
+          <div class="faculty-info-box">
+            <div class="faculty-name">Dott.ssa Rossella Santoro</div>
+            <div class="faculty-module-row" title="Modulo 4 · Mappatura e network di referral (04:06, 04:07)">Modulo 4 · Referral Mapping & Workflow Centri</div>
+            <div class="faculty-role-affiliation" title="Specialista in Pediatria e Nefrologia · Rete Regionale Malattie Rare">
+              Specialista in Pediatria e Nefrologia · Rete Regionale Malattie Rare
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. Francesco Gallo -->
+        <div class="faculty-card-wide">
+          <div class="faculty-portrait-wrap">
+            <img src="assets/img/faculty/francesco-gallo.png" alt="Dott. Francesco Gallo" loading="lazy">
+          </div>
+          <div class="faculty-info-box">
+            <div class="faculty-name">Dott. Francesco Gallo</div>
+            <div class="faculty-module-row" title="Modulo 5 · Mappatura famigliare (05:01, 05:02, 05:03)">Modulo 5 · Mappatura famigliare</div>
+            <div class="faculty-role-affiliation" title="U.O.C. Pediatria, Ospedale Perrino di Brindisi · PI Registro Internazionale XLH">
+              U.O.C. Pediatria, Ospedale Perrino di Brindisi · PI Registro Internazionale XLH
+            </div>
+          </div>
+        </div>
+
+        <!-- 9. Sabrina Corbetta -->
+        <div class="faculty-card-wide">
+          <div class="faculty-portrait-wrap">
+            <img src="assets/img/faculty/sabrina-corbetta.png" alt="Prof.ssa Sabrina Corbetta" loading="lazy">
+          </div>
+          <div class="faculty-info-box">
+            <div class="faculty-name">Prof.ssa Sabrina Corbetta</div>
+            <div class="faculty-module-row" title="Modulo 7 · Vivere con l'XLH (07:01, 07:02, 07:04)">Modulo 7 · Vivere con l'XLH</div>
+            <div class="faculty-role-affiliation" title="Endocrinologia, IRCCS Ospedale Galeazzi - Sant'Ambrogio · Università degli Studi di Milano">
+              Endocrinologia, IRCCS Galeazzi - Sant'Ambrogio · Università degli Studi di Milano
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ══════════════════ MODAL VISUALIZZATORE & VALIDAZIONE CONTENUTI ══════════════════ -->
+  <!-- ══════════════════ SEZIONE AUTONOMA 2: RAZIONALE & OBIETTIVI ══════════════════ -->
+  <section id="razionale" class="razionale-section-full">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="sub-tag">Documento di Progetto</span>
+        <h2>Razionale & Finalità Formative</h2>
+        <p>Trasformare la conoscenza teorica sull'Ipofosfatemia Legata all'X in comportamento clinico misurabile sul territorio.</p>
+      </div>
+
+      <div class="razionale-content-box">
+        <div class="razionale-lead-text">
+          L'XLH è una malattia rara ereditaria a trasmissione X-linked dominante causata da mutazioni loss-of-function del gene PHEX espressa prevalentemente negli osteociti.
+        </div>
+        <p class="razionale-body-text">
+          Il difetto di PHEX determina un'eccessiva produzione di FGF23 (Fibroblast Growth Factor 23), che agisce a livello renale riducendo il riassorbimento tubulare di fosfato (inibizione dei cotrasportatori NPT2a) e inibendo la 1-alfa-idrossilasi. Il risultato è un'ipofosfatemia cronica con perdita renale di fosfato e difetto di mineralizzazione dello scheletro in crescita (rachitismo) e dell'osso maturo (osteomalacia).
+        </p>
+        <p class="razionale-body-text">
+          In età pediatrica predominano gambe arcuate, bassa statura, disturbi della deambulazione e dolore; nell'adulto dolore cronico, entesopatie, pseudofratture, anomalie dentarie con accessi spontanei in assenza di carie e ridotta qualità di vita. Proprio per questa eterogeneità, la diagnosi precoce dipende in modo decisivo dalle figure specialistiche periferiche (PLS, odontoiatri, ortopedici e fisiatri) che intercettano i primi segnali clinici prima delle deformità scheletriche gravi.
+        </p>
+        <div class="razionale-alert-banner">
+          <strong>Screening Familiare & Valore Diagnostico:</strong> La trasmissione X-linked dominante implica che ogni paziente indice può aprire a nuove diagnosi all'interno della famiglia. Il percorso formativo struttura l'anamnesi familiare come moltiplicatore attivo di diagnosi precoci.
+        </div>
+      </div>
+
+      <!-- I 5 Obiettivi Formativi -->
+      <div class="obiettivi-grid-five">
+        <div class="obiettivo-mini-card">
+          <span class="obiettivo-num">01</span>
+          <div class="obiettivo-title">Ecosistema</div>
+          <p class="obiettivo-desc">Costruire un ambiente formativo integrato intorno a una patologia rara.</p>
+        </div>
+        <div class="obiettivo-mini-card">
+          <span class="obiettivo-num">02</span>
+          <div class="obiettivo-title">Competenze</div>
+          <p class="obiettivo-desc">Elevare la preparazione diagnostica territoriale sulla via del fosfato.</p>
+        </div>
+        <div class="obiettivo-mini-card">
+          <span class="obiettivo-num">03</span>
+          <div class="obiettivo-title">Diagnosi</div>
+          <p class="obiettivo-desc">Fornire strumenti pratici per il sospetto clinico e il referral tempestivo.</p>
+        </div>
+        <div class="obiettivo-mini-card">
+          <span class="obiettivo-num">04</span>
+          <div class="obiettivo-title">Sicurezza</div>
+          <p class="obiettivo-desc">Restituire trend conoscitivi aggregati preservando la privacy per design.</p>
+        </div>
+        <div class="obiettivo-mini-card">
+          <span class="obiettivo-num">05</span>
+          <div class="obiettivo-title">Miglioramento</div>
+          <p class="obiettivo-desc">Rilevare le reali esigenze territoriali attraverso l'apprendimento esperienziale.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════ SEZIONE AUTONOMA 3: SCHEDA EVENTO ECM ══════════════════ -->
+  <section id="schedaEvento" class="scheda-section-full">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="sub-tag">Dati Tecnici & Accreditamento</span>
+        <h2>Scheda Evento ECM</h2>
+        <p>Informazioni istituzionali di accreditamento e modalità di erogazione della FaD.</p>
+      </div>
+
+      <div class="scheda-details-grid">
+        <div class="scheda-info-card">
+          <div class="scheda-info-label">Data Erogazione</div>
+          <div class="scheda-info-val">Dal 16 Dicembre 2026</div>
+        </div>
+        <div class="scheda-info-card">
+          <div class="scheda-info-label">Tipologia Formativa</div>
+          <div class="scheda-info-val">FAD Asincrona a Fruizione Continua</div>
+        </div>
+        <div class="scheda-info-card">
+          <div class="scheda-info-label">Ore Formative</div>
+          <div class="scheda-info-val">18 Ore (7 Moduli Didattici)</div>
+        </div>
+        <div class="scheda-info-card">
+          <div class="scheda-info-label">Provider Accreditamento</div>
+          <div class="scheda-info-val">FORUM pro S.r.l. — ID 95 (AGENAS)</div>
+        </div>
+        <div class="scheda-info-card">
+          <div class="scheda-info-label">Requisito Crediti ECM</div>
+          <div class="scheda-info-val">Completamento percorso + 75% risposte corrette</div>
+        </div>
+        <div class="scheda-info-card">
+          <div class="scheda-info-label">Sede Erogazione</div>
+          <div class="scheda-info-val">Piattaforma LMS FORUM pro</div>
+        </div>
+      </div>
+
+      <div class="accreditate-banner">
+        <div class="accreditate-title">Figure Professionali & Discipline Accreditate:</div>
+        <div class="accreditate-pills">
+          <span class="accreditate-pill">Ortopedici</span>
+          <span class="accreditate-pill">Pediatri</span>
+          <span class="accreditate-pill">Fisiatri</span>
+          <span class="accreditate-pill">Odontoiatri</span>
+          <span class="accreditate-pill">MMG (Medici di Medicina Generale)</span>
+          <span class="accreditate-pill">Endocrinologi</span>
+          <span class="accreditate-pill">Nefrologi</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════ MODAL VISUALIZZATORE DEL SINGOLO CONTENUTO ══════════════════ -->
   <div class="modal-overlay" id="contentModal" role="dialog" aria-modal="true" aria-labelledby="modalUnitTitle">
     <div class="modal-dialog">
       <div class="modal-header">
@@ -361,9 +443,9 @@
       </div>
 
       <div class="modal-body">
-        <!-- Player / Contenuto Stage Reale o Preview Placeholder -->
+        <!-- Stage del Contenuto Singolo (Viewer dedicato) -->
         <div class="modal-content-stage" id="modalContentStage">
-          <!-- Popolato dinamicamente da app.js (iframe o placeholder) -->
+          <!-- Popolato dinamicamente da app.js (iframe Heyzine o scheda placeholder) -->
         </div>
 
         <!-- Meta Informazioni da Matrice Excel -->
