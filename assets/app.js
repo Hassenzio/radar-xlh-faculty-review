@@ -497,9 +497,12 @@ function renderModuleViewer(id) {
     </div>
   `;
 
+  const unitCount = moduleData.units.length;
+  const colClass = unitCount === 3 ? "cols-3" : (unitCount === 2 ? "cols-2" : (unitCount === 1 ? "cols-1" : "cols-4"));
+
   // Griglia di Card Contenuto IDENTICHE PER DIMENSIONI (Nessun iframe esploso in home)
   unitsContainer.innerHTML = `
-    <div class="units-uniform-grid">
+    <div class="units-uniform-grid ${colClass}">
       ${moduleData.units.map(unit => {
         const isReady = unit.hasRealContent;
         return `
