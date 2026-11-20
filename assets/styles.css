@@ -1803,6 +1803,12 @@ img {
   gap: 5px;
 }
 
+.framing-status-tag.ready-tag {
+  color: #065F46;
+  background: #D1FAE5;
+  border: 1px solid rgba(16, 185, 129, 0.35);
+}
+
 .framing-action-btn {
   font-size: 0.8125rem;
   font-weight: 700;

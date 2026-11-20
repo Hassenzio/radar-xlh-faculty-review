@@ -104,9 +104,11 @@ const MODULES_DATA = [
         "id": "03:01:00",
         "title": "Quando Pensare all'XLH nel Bambino",
         "authors": "Anna Grandone",
-        "type": "Video Pillola",
+        "type": "Video Lezione",
         "formatClass": "format-video",
-        "hasRealContent": false
+        "hasRealContent": true,
+        "embedUrl": "https://player.vimeo.com/video/1248713581?h=cd2ad0b805",
+        "embedHtml": '<div class="vimeo-embed-wrapper"><iframe src="https://player.vimeo.com/video/1248713581?h=cd2ad0b805&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="0301 Grandone"></iframe></div>'
       },
       {
         "id": "03:02:00",
@@ -309,22 +311,14 @@ const PROLOGO_MODULE = {
   ],
   units: [
     {
-      id: "PR:01:00",
-      title: "Introduzione e Razionale Scientifico del Progetto RADAR XLH",
-      authors: "Sabrina Corbetta",
+      id: "00:01:00",
+      title: "Pillola Iniziale — Saluto delle Responsabili Scientifiche",
+      authors: "Prof.ssa Sabrina Corbetta & Prof.ssa Anna Grandone",
       type: "Video Pillola",
       formatClass: "format-video",
-      hasRealContent: false,
-      note: "In allestimento — Direzione Scientifica"
-    },
-    {
-      id: "PR:02:00",
-      title: "Metodologia Formativa e Obiettivi della Rete Clinica Interdisciplinare",
-      authors: "Anna Grandone",
-      type: "Video Pillola",
-      formatClass: "format-video",
-      hasRealContent: false,
-      note: "In allestimento — Direzione Scientifica"
+      hasRealContent: true,
+      embedUrl: "https://player.vimeo.com/video/1248701878?h=bad1833c80",
+      embedHtml: '<div class="vimeo-embed-wrapper"><iframe src="https://player.vimeo.com/video/1248701878?h=bad1833c80&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="PROLOGO RADAR XLH"></iframe></div>'
     }
   ]
 };
@@ -476,7 +470,9 @@ function renderModuleViewer(id) {
       : `Tappa Didattica ${moduleData.code} di 07 · Matrice Ufficiale Validata`;
 
   const descText = isFraming
-    ? `<strong>Allestimento Direzione Scientifica:</strong> 2 Video Pillole affidate alle Responsabili Scientifiche Prof.ssa Sabrina Corbetta e Prof.ssa Anna Grandone.`
+    ? (id === "prologo"
+        ? `<strong>Saluto Direzione Scientifica:</strong> Video Pillola Istituzionale di apertura affidata alle Responsabili Scientifiche Prof.ssa Sabrina Corbetta e Prof.ssa Anna Grandone.`
+        : `<strong>Conclusioni Direzione Scientifica:</strong> 2 Video Pillole di sintesi e prospettive affidate alle Responsabili Scientifiche Prof.ssa Sabrina Corbetta e Prof.ssa Anna Grandone.`)
     : `<strong>Percorso Didattico Validato:</strong> ${moduleData.units.length} Unità Didattiche (Paragrafi da ${moduleData.units[0].id.substring(0, 5)} a ${moduleData.units[moduleData.units.length - 1].id.substring(0, 5)}) come da matrice organizzativa approvata.`;
 
   // Header uniforme del Modulo
@@ -526,7 +522,7 @@ function renderModuleViewer(id) {
 
             <button class="btn-select-unit ${isReady ? "ready-action" : ""}" onclick="openContentModal('${unit.id}', '${moduleData.id}')">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-              ${isReady ? (unit.formatClass === "format-video" ? "Guarda Video Pillola HD" : "Sfoglia FlipBook HD") : "In Fase Editoriale"}
+              ${isReady ? (unit.formatClass === "format-video" ? (unit.type && unit.type.toLowerCase().includes("lezione") ? "Guarda Video Lezione HD" : "Guarda Video Pillola HD") : "Sfoglia FlipBook HD") : "In Fase Editoriale"}
             </button>
           </div>
         `;
