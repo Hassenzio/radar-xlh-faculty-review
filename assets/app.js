@@ -77,11 +77,13 @@ const MODULES_DATA = [
       },
       {
         "id": "02:03:00",
-        "title": "XLH Spiegata al Referrer",
+        "title": "Guida Pratica e Metodologia del Referral (XLH Spiegata al Referrer)",
         "authors": "Gaetano Paride Arcidiacono",
         "type": "FlipBook",
         "formatClass": "format-flipbook",
-        "hasRealContent": false
+        "hasRealContent": true,
+        "embedUrl": "https://heyzine.com/flip-book/b168ce046b.html",
+        "embedHtml": '<iframe allowfullscreen allow="autoplay; fullscreen; clipboard-write" scrolling="no" style="width: 100%; height: 480px; border: none;" src="https://heyzine.com/flip-book/b168ce046b.html"></iframe>'
       }
     ]
   },
@@ -331,12 +333,12 @@ function renderRoadmapGrid() {
 
   container.innerHTML = MODULES_DATA.map(mod => {
     const isActive = mod.id === currentActiveModuleId;
-    const hasReady = mod.units.some(u => u.hasRealContent);
+    const readyCount = mod.units.filter(u => u.hasRealContent).length;
     return `
       <div class="tappa-card ${isActive ? 'active' : ''}" data-module-id="${mod.id}" onclick="selectModule(${mod.id})">
         <div class="tappa-top-row">
           <div class="tappa-badge">${mod.code}</div>
-          ${hasReady ? '<span class="tappa-ready-pill">1 Pronto</span>' : ''}
+          ${readyCount > 0 ? `<span class="tappa-ready-pill">${readyCount} ${readyCount === 1 ? 'Pronto' : 'Pronti'}</span>` : ''}
         </div>
         <div class="tappa-card-title">${mod.title}</div>
         <div class="tappa-card-author">${mod.authors.map(a => `<span class="tappa-author-name">${escapeHtml(a)}</span>`).join(', ')}</div>
