@@ -114,9 +114,11 @@ const MODULES_DATA = [
         "id": "03:02:00",
         "title": "Manifestazioni nell'Adulto",
         "authors": "Gemma Marcucci",
-        "type": "Video Pillola",
+        "type": "Video Lezione",
         "formatClass": "format-video",
-        "hasRealContent": false
+        "hasRealContent": true,
+        "embedUrl": "https://player.vimeo.com/video/1249362502?h=f1963f2ad7",
+        "embedHtml": '<div class="vimeo-embed-wrapper"><iframe src="https://player.vimeo.com/video/1249362502?h=f1963f2ad7&autoplay=1&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="0302 Marcucci"></iframe></div>'
       },
       {
         "id": "03:03:00",
@@ -144,7 +146,7 @@ const MODULES_DATA = [
     "authors": [
       "Anna Grandone",
       "Vincenzo Grassia",
-      "Maurizio Scorianza"
+      "Maurizio Scorianz"
     ],
     "units": [
       {
@@ -158,7 +160,7 @@ const MODULES_DATA = [
       {
         "id": "04:02:00",
         "title": "Ruolo di Ortopedico e Fisiatra",
-        "authors": "Maurizio Scorianza",
+        "authors": "Maurizio Scorianz",
         "type": "Video Pillola",
         "formatClass": "format-video",
         "hasRealContent": false
@@ -240,9 +242,11 @@ const MODULES_DATA = [
         "id": "06:02:00",
         "title": "Approccio Terapeutico - Adulto",
         "authors": "Gemma Marcucci",
-        "type": "Video Pillola",
+        "type": "Video Lezione",
         "formatClass": "format-video",
-        "hasRealContent": false
+        "hasRealContent": true,
+        "embedUrl": "https://player.vimeo.com/video/1249362552?h=ea31620b3f",
+        "embedHtml": '<div class="vimeo-embed-wrapper"><iframe src="https://player.vimeo.com/video/1249362552?h=ea31620b3f&autoplay=1&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="0602 Marcucci"></iframe></div>'
       },
       {
         "id": "06:03:00",
@@ -275,9 +279,11 @@ const MODULES_DATA = [
         "id": "07:02:00",
         "title": "Transizione - Qualità di Vita",
         "authors": "Sabrina Corbetta",
-        "type": "Contenuto Multimediale",
-        "formatClass": "format-flipbook",
-        "hasRealContent": false
+        "type": "Video Lezione",
+        "formatClass": "format-video",
+        "hasRealContent": true,
+        "embedUrl": "https://player.vimeo.com/video/1249307577?h=25e2dd3216",
+        "embedHtml": '<div class="vimeo-embed-wrapper"><iframe src="https://player.vimeo.com/video/1249307577?h=25e2dd3216&autoplay=1&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="0702 Corbetta"></iframe></div>'
       },
       {
         "id": "07:04:00",
