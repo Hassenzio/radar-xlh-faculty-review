@@ -18,17 +18,21 @@ const MODULES_DATA = [
         "id": "01:01:00",
         "title": "Omeostasi Minerale",
         "authors": "Danilo Fintini",
-        "type": "Video Pillola",
+        "type": "Video Lezione",
         "formatClass": "format-video",
-        "hasRealContent": false
+        "hasRealContent": true,
+        "embedUrl": "https://player.vimeo.com/video/1249730286?h=c64d0ed07c",
+        "embedHtml": '<div class="vimeo-embed-wrapper"><iframe src="https://player.vimeo.com/video/1249730286?h=c64d0ed07c&autoplay=1&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="0101 Fintini"></iframe></div>'
       },
       {
         "id": "01:02:00",
         "title": "Ruolo Clinico del Fosfato",
         "authors": "Danilo Fintini",
-        "type": "Video Pillola",
+        "type": "Video Lezione",
         "formatClass": "format-video",
-        "hasRealContent": false
+        "hasRealContent": true,
+        "embedUrl": "https://player.vimeo.com/video/1249730284?h=0f90725942",
+        "embedHtml": '<div class="vimeo-embed-wrapper"><iframe src="https://player.vimeo.com/video/1249730284?h=0f90725942&autoplay=1&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="0102 Fintini"></iframe></div>'
       },
       {
         "id": "01:03:00",
@@ -177,11 +181,11 @@ const MODULES_DATA = [
         "id": "04:04:00",
         "title": "XLH nel Bambino: Mappatura Network di Referral",
         "authors": "Anna Grandone",
-        "type": "Video Lezione",
-        "formatClass": "format-video",
+        "type": "Contenuto Multimediale",
+        "formatClass": "format-flipbook",
         "hasRealContent": true,
-        "embedUrl": "https://player.vimeo.com/video/1248731358?h=71a8d18886",
-        "embedHtml": '<div class="vimeo-embed-wrapper"><iframe src="https://player.vimeo.com/video/1248731358?h=71a8d18886&autoplay=1&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="0404 Grandone"></iframe></div>'
+        "embedUrl": "https://heyzine.com/flip-book/99e5385f42.html",
+        "embedHtml": '<iframe allowfullscreen allow="autoplay; fullscreen; clipboard-write" scrolling="no" style="width: 100%; height: 100%; min-height: 76vh; border: none; display: block;" src="https://heyzine.com/flip-book/99e5385f42.html"></iframe>'
       }
     ]
   },
@@ -198,17 +202,21 @@ const MODULES_DATA = [
         "id": "05:01:00",
         "title": "Genetica ed Ereditarietà X-Linked Dominante",
         "authors": "Francesco Gallo",
-        "type": "Video Masterclass",
+        "type": "Video Lezione",
         "formatClass": "format-video",
-        "hasRealContent": false
+        "hasRealContent": true,
+        "embedUrl": "https://player.vimeo.com/video/1249661528?h=def6abceb0",
+        "embedHtml": '<div class="vimeo-embed-wrapper"><iframe src="https://player.vimeo.com/video/1249661528?h=def6abceb0&autoplay=1&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="0501 Gallo"></iframe></div>'
       },
       {
         "id": "05:02:00",
         "title": "Family Mapping Challenge",
         "authors": "Francesco Gallo",
-        "type": "Info-Grafica",
-        "formatClass": "format-infografica",
-        "hasRealContent": false
+        "type": "Video Lezione",
+        "formatClass": "format-video",
+        "hasRealContent": true,
+        "embedUrl": "https://player.vimeo.com/video/1249661531?h=8edb037739",
+        "embedHtml": '<div class="vimeo-embed-wrapper"><iframe src="https://player.vimeo.com/video/1249661531?h=8edb037739&autoplay=1&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="0502 Gallo"></iframe></div>'
       },
       {
         "id": "05:03:00",
