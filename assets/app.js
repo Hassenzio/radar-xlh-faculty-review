@@ -25,7 +25,7 @@ const MODULES_DATA = [
         "embedHtml": '<div class="vimeo-embed-wrapper"><iframe src="https://player.vimeo.com/video/1249730286?h=c64d0ed07c&autoplay=1&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="0101 Fintini"></iframe></div>'
       },
       {
-        "id": "01:03:00",
+        "id": "01:02:00",
         "title": "Omeostasi Fosfo-Calcica in una Pagina",
         "authors": "Danilo Fintini",
         "type": "Contenuto Multimediale",
@@ -35,7 +35,7 @@ const MODULES_DATA = [
         "embedHtml": "<iframe allowfullscreen allow=\"autoplay; fullscreen; clipboard-write\" scrolling=\"no\" style=\"width: 100%; height: 480px; border: none;\" src=\"https://heyzine.com/flip-book/97c5fa83a3.html\"></iframe>"
       },
       {
-        "id": "01:04:00",
+        "id": "01:03:00",
         "title": "Quanto Conosci e Utilizzi il Metabolismo Fosfo-Calcico nella Tua Pratica?",
         "authors": "Danilo Fintini",
         "type": "Survey Baseline",
@@ -232,9 +232,11 @@ const MODULES_DATA = [
         "id": "06:01:00",
         "title": "Approccio Terapeutico - Pediatrico",
         "authors": "Danilo Fintini",
-        "type": "Video Pillola",
+        "type": "Video Lezione",
         "formatClass": "format-video",
-        "hasRealContent": false
+        "hasRealContent": true,
+        "embedUrl": "https://player.vimeo.com/video/1249730286?h=c64d0ed07c",
+        "embedHtml": '<div class="vimeo-embed-wrapper"><iframe src="https://player.vimeo.com/video/1249730286?h=c64d0ed07c&autoplay=1&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="0601 Fintini"></iframe></div>'
       },
       {
         "id": "06:02:00",
@@ -250,9 +252,11 @@ const MODULES_DATA = [
         "id": "06:03:00",
         "title": "Transizione Pediatrico-Adulto",
         "authors": "Danilo Fintini",
-        "type": "Video Pillola",
+        "type": "Video Lezione",
         "formatClass": "format-video",
-        "hasRealContent": false
+        "hasRealContent": true,
+        "embedUrl": "https://player.vimeo.com/video/1249990838?h=804c856e41",
+        "embedHtml": '<div class="vimeo-embed-wrapper"><iframe src="https://player.vimeo.com/video/1249990838?h=804c856e41&autoplay=1&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="0603 Fintini"></iframe></div>'
       }
     ]
   },
