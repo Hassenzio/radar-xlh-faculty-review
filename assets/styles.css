@@ -1860,3 +1860,316 @@ img {
   color: var(--white);
   border-color: var(--navy-deep);
 }
+
+/* ── AZIONI AGGIUNTIVE UNIT CARD & MODAL (TOOL PIRAMIDE INVERSA) ── */
+.unit-card-actions {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.unit-card-actions .btn-select-unit {
+  margin-top: 0;
+}
+
+.btn-external-tool {
+  width: 100%;
+  min-height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(232, 124, 30, 0.45);
+  background: #FFF7ED;
+  color: #C2410C;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn-external-tool:hover {
+  background: var(--orange);
+  border-color: var(--orange);
+  color: var(--white);
+}
+
+.btn-modal-external-tool {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--orange);
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.15s ease;
+}
+
+.btn-modal-external-tool:hover {
+  background: var(--orange-hover);
+}
+
+/* ══════════════════ SEZIONE AUTONOMA 4: QUESTIONARIO ECM ══════════════════ */
+.ecm-quiz-section-full {
+  padding-block: 4.5rem;
+  background: #F1F6FB;
+  border-top: 1px solid var(--border);
+  position: relative;
+  z-index: 2;
+}
+
+.ecm-toolbar {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.15rem 1.25rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ecm-toolbar-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.ecm-search-wrap {
+  position: relative;
+  flex: 1;
+  min-width: 240px;
+}
+
+.ecm-search-wrap svg {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.ecm-search-input {
+  width: 100%;
+  height: 38px;
+  padding: 0 12px 0 36px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 0.875rem;
+  color: var(--navy-deep);
+  background: var(--surface-alt);
+  transition: border-color 0.15s ease, background 0.15s ease;
+  box-sizing: border-box;
+}
+
+.ecm-search-input:focus {
+  outline: none;
+  border-color: var(--blue-radar);
+  background: var(--white);
+}
+
+.ecm-toggle-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--navy-deep);
+  cursor: pointer;
+  user-select: none;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+}
+
+.ecm-toggle-label input[type="checkbox"] {
+  accent-color: #16A34A;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.ecm-toolbar-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+}
+
+.ecm-range-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.ecm-range-btn {
+  padding: 6px 12px;
+  border-radius: 100px;
+  border: 1px solid var(--border);
+  background: var(--white);
+  color: var(--text-secondary);
+  font-family: inherit;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.ecm-range-btn:hover {
+  border-color: var(--blue-radar);
+  color: var(--blue-radar);
+}
+
+.ecm-range-btn.active {
+  background: var(--navy-deep);
+  border-color: var(--navy-deep);
+  color: var(--white);
+}
+
+.ecm-visible-count {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.ecm-quiz-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ecm-question-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.35rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.ecm-question-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 1rem;
+}
+
+.ecm-q-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--blue-radar);
+  background: var(--blue-pale);
+  padding: 4px 9px;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.ecm-q-text {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--navy-deep);
+  line-height: 1.45;
+  margin: 0;
+}
+
+.ecm-options-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+@media (min-width: 768px) {
+  .ecm-options-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.ecm-option-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface-alt);
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: var(--text-secondary);
+}
+
+.ecm-option-item.is-correct {
+  background: #ECFDF5;
+  border-color: #10B981;
+  color: #065F46;
+  font-weight: 600;
+}
+
+.ecm-opt-letter {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 1px solid var(--border);
+  color: var(--navy-deep);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ecm-option-item.is-correct .ecm-opt-letter {
+  background: #10B981;
+  border-color: #10B981;
+  color: var(--white);
+}
+
+.ecm-opt-text {
+  flex: 1;
+  padding-top: 1px;
+}
+
+.ecm-correct-badge {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: #047857;
+  background: #D1FAE5;
+  padding: 2px 7px;
+  border-radius: 100px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+.ecm-empty-state {
+  background: var(--white);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-md);
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9375rem;
+}

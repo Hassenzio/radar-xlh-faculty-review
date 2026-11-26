@@ -16,7 +16,7 @@
   <link rel="icon" type="image/png" href="assets/img/logo.png">
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="assets/styles.css?v=2.4">
+  <link rel="stylesheet" href="assets/styles.css?v=2.5">
 </head>
 <body>
 
@@ -43,6 +43,7 @@
         <a href="#faculty">Faculty</a>
         <a href="#razionale">Razionale & Info</a>
         <a href="#schedaEvento">Scheda Evento</a>
+        <a href="#questionariEcm">Questionario ECM</a>
       </nav>
 
       <button class="nav-burger" aria-label="Apri Menu Mobile">
@@ -58,6 +59,7 @@
     <a href="#faculty">Faculty Scientifica</a>
     <a href="#razionale">Razionale & Finalità</a>
     <a href="#schedaEvento">Scheda ECM & Accreditamento</a>
+    <a href="#questionariEcm">Questionario ECM (81 Quesiti)</a>
   </div>
 
   <!-- ══════════════════ HERO PORTAL (CERCHI FISSI + RADAR ANIMATO + LOGO) ══════════════════ -->
@@ -501,6 +503,45 @@
     </div>
   </section>
 
+  <!-- ══════════════════ SEZIONE AUTONOMA 4: QUESTIONARIO ECM ══════════════════ -->
+  <section id="questionariEcm" class="ecm-quiz-section-full">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="sub-tag">Verifica dell'Apprendimento · Approvazione Faculty</span>
+        <h2>Questionario ECM</h2>
+        <p>Proposta completa degli 81 quesiti a risposta multipla per l'accreditamento AGENAS, con indicazione della risposta corretta per la validazione scientifica.</p>
+      </div>
+
+      <div class="ecm-toolbar">
+        <div class="ecm-toolbar-top">
+          <div class="ecm-search-wrap">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="search" id="ecmSearchInput" class="ecm-search-input" placeholder="Cerca per parola chiave o numero quesito (es. FGF23, fosfato, 15)..." aria-label="Cerca nei quesiti ECM">
+          </div>
+          <label class="ecm-toggle-label">
+            <input type="checkbox" id="ecmToggleAnswers" checked>
+            <span>Evidenzia risposte corrette</span>
+          </label>
+        </div>
+
+        <div class="ecm-toolbar-bottom">
+          <div class="ecm-range-tabs" role="tablist" aria-label="Blocchi quesiti ECM">
+            <button type="button" class="ecm-range-btn active" data-range="1-20">Quesiti 1–20</button>
+            <button type="button" class="ecm-range-btn" data-range="21-40">Quesiti 21–40</button>
+            <button type="button" class="ecm-range-btn" data-range="41-60">Quesiti 41–60</button>
+            <button type="button" class="ecm-range-btn" data-range="61-81">Quesiti 61–81</button>
+            <button type="button" class="ecm-range-btn" data-range="all">Tutti (81)</button>
+          </div>
+          <div class="ecm-visible-count" id="ecmVisibleCount">20 quesiti visualizzati su 81</div>
+        </div>
+      </div>
+
+      <div id="ecmQuizList" class="ecm-quiz-list" aria-live="polite">
+        <!-- Popolato dinamicamente da app.js tramite ECM_QUIZ_DATA -->
+      </div>
+    </div>
+  </section>
+
   <!-- ══════════════════ MODAL VISUALIZZATORE DEL SINGOLO CONTENUTO ══════════════════ -->
   <div class="modal-overlay" id="contentModal" role="dialog" aria-modal="true" aria-labelledby="modalUnitTitle">
     <div class="modal-dialog">
@@ -510,6 +551,9 @@
           <div class="modal-title-text" id="modalUnitTitle">Titolo Contenuto</div>
         </div>
         <div class="modal-header-actions">
+          <a href="#" target="_blank" rel="noopener noreferrer" class="btn-modal-external-tool" id="btnModalExternalTool" style="display:none;" title="Apri tool interattivo dedicato">
+            Caso clinico Piramide Inversa ↗
+          </a>
           <a href="#" target="_blank" rel="noopener noreferrer" class="btn-open-fullscreen-tab" id="btnFullscreenExternal" title="Apri in una finestra dedicata a tutto schermo">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             Apri a Schermo Intero ↗
@@ -564,7 +608,8 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="assets/app.js?v=2.4"></script>
+  <script src="assets/ecm-quiz.js?v=2.5"></script>
+  <script src="assets/app.js?v=2.5"></script>
   <script src="https://player.vimeo.com/api/player.js"></script>
 </body>
 </html>

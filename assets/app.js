@@ -71,7 +71,11 @@ const MODULES_DATA = [
         "formatClass": "format-video",
         "hasRealContent": true,
         "embedUrl": "https://player.vimeo.com/video/1246890324?h=2ba8f2e4d6",
-        "embedHtml": '<div class="vimeo-embed-wrapper"><iframe src="https://player.vimeo.com/video/1246890324?h=2ba8f2e4d6&autoplay=1&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="0202 Arcidiacono"></iframe></div>'
+        "embedHtml": '<div class="vimeo-embed-wrapper"><iframe src="https://player.vimeo.com/video/1246890324?h=2ba8f2e4d6&autoplay=1&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="0202 Arcidiacono"></iframe></div>',
+        "externalTool": {
+          "label": "Caso clinico Piramide Inversa",
+          "url": "https://hassenzio.github.io/radar-xlh-piramide-inversa/"
+        }
       },
       {
         "id": "02:03:00",
@@ -149,7 +153,9 @@ const MODULES_DATA = [
         "authors": "Vincenzo Grassia",
         "type": "Video Pillola",
         "formatClass": "format-video",
-        "hasRealContent": false
+        "hasRealContent": true,
+        "embedUrl": "https://player.vimeo.com/video/1250332604?h=e581daa712",
+        "embedHtml": '<div class="vimeo-embed-wrapper"><iframe src="https://player.vimeo.com/video/1250332604?h=e581daa712&autoplay=1&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="0401 Grassia"></iframe></div>'
       },
       {
         "id": "04:02:00",
@@ -377,6 +383,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderModuleViewer(1);
   initDossierTabs();
   initModal();
+  initEcmQuizViewer();
 });
 
 // ── NAVBAR SCROLL & BURGER ──
@@ -524,10 +531,18 @@ function renderModuleViewer(id) {
               }
             </div>
 
-            <button class="btn-select-unit ${isReady ? "ready-action" : ""}" onclick="openContentModal('${unit.id}', '${moduleData.id}')">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-              ${isReady ? (unit.formatClass === "format-video" ? (unit.type && unit.type.toLowerCase().includes("lezione") ? "Guarda Video Lezione HD" : "Guarda Video Pillola HD") : "Leggi il contenuto multimediale") : "In Fase Editoriale"}
-            </button>
+            <div class="unit-card-actions">
+              <button class="btn-select-unit ${isReady ? "ready-action" : ""}" onclick="openContentModal('${unit.id}', '${moduleData.id}')">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                ${isReady ? (unit.formatClass === "format-video" ? (unit.type && unit.type.toLowerCase().includes("lezione") ? "Guarda Video Lezione HD" : "Guarda Video Pillola HD") : "Leggi il contenuto multimediale") : "In Fase Editoriale"}
+              </button>
+              ${unit.externalTool ? `
+                <a href="${unit.externalTool.url}" target="_blank" rel="noopener noreferrer" class="btn-external-tool" title="Apri tool interattivo: ${escapeHtml(unit.externalTool.label)}">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  ${unit.externalTool.label} ↗
+                </a>
+              ` : ""}
+            </div>
           </div>
         `;
       }).join("")}
@@ -600,12 +615,24 @@ function openContentModal(unitId, moduleId) {
   const modalModule = document.getElementById("modalUnitModule");
   const stageBox = document.getElementById("modalContentStage");
   const btnExternal = document.getElementById("btnFullscreenExternal");
+  const btnExternalTool = document.getElementById("btnModalExternalTool");
 
   modalCode.textContent = unit.id;
   modalTitle.innerHTML = `Paragrafo ${unit.id.substring(0, 5)} — ${formatTitleNoBreak(unit.title)}`;
   modalAuthor.textContent = unit.authors;
   modalType.textContent = unit.type;
   modalModule.innerHTML = `${moduleData.code} · ${formatTitleNoBreak(moduleData.title)}`;
+
+  // Link tool interattivo dedicato (es. Piramide Inversa su 02:02:00)
+  if (btnExternalTool) {
+    if (unit.externalTool) {
+      btnExternalTool.href = unit.externalTool.url;
+      btnExternalTool.textContent = `${unit.externalTool.label} ↗`;
+      btnExternalTool.style.display = "inline-flex";
+    } else {
+      btnExternalTool.style.display = "none";
+    }
+  }
 
   // Link esterno a schermo intero in nuova scheda
   if (btnExternal) {
@@ -688,4 +715,90 @@ function initDossierTabs() {
 
 function escapeHtml(str) {
   return str.replace(/'/g, "\\x27").replace(/"/g, "&quot;");
+}
+
+// ── QUESTIONARIO ECM VIEWER (81 QUESITI) ──
+const ecmQuizState = {
+  range: "1-20",
+  search: "",
+  showAnswers: true
+};
+
+function initEcmQuizViewer() {
+  if (typeof ECM_QUIZ_DATA === "undefined" || !document.getElementById("ecmQuizList")) return;
+
+  const searchInput = document.getElementById("ecmSearchInput");
+  const toggleAnswers = document.getElementById("ecmToggleAnswers");
+  const rangeBtns = document.querySelectorAll(".ecm-range-btn");
+
+  searchInput?.addEventListener("input", (e) => {
+    ecmQuizState.search = e.target.value.trim().toLowerCase();
+    renderEcmQuiz();
+  });
+
+  toggleAnswers?.addEventListener("change", (e) => {
+    ecmQuizState.showAnswers = e.target.checked;
+    renderEcmQuiz();
+  });
+
+  rangeBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      rangeBtns.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      ecmQuizState.range = btn.dataset.range;
+      renderEcmQuiz();
+    });
+  });
+
+  renderEcmQuiz();
+}
+
+function renderEcmQuiz() {
+  const container = document.getElementById("ecmQuizList");
+  const counterEl = document.getElementById("ecmVisibleCount");
+  if (!container || typeof ECM_QUIZ_DATA === "undefined") return;
+
+  let filtered = ECM_QUIZ_DATA;
+
+  if (ecmQuizState.search) {
+    const q = ecmQuizState.search;
+    filtered = filtered.filter(item =>
+      String(item.num).includes(q) ||
+      item.text.toLowerCase().includes(q) ||
+      item.options.some(o => o.text.toLowerCase().includes(q))
+    );
+  } else if (ecmQuizState.range !== "all") {
+    const [start, end] = ecmQuizState.range.split("-").map(Number);
+    filtered = filtered.filter(item => item.num >= start && item.num <= end);
+  }
+
+  if (counterEl) {
+    counterEl.textContent = `${filtered.length} ${filtered.length === 1 ? "quesito visualizzato" : "quesiti visualizzati"} su ${ECM_QUIZ_DATA.length}`;
+  }
+
+  if (filtered.length === 0) {
+    container.innerHTML = `<div class="ecm-empty-state">Nessun quesito ECM trovato per la ricerca corrente.</div>`;
+    return;
+  }
+
+  container.innerHTML = filtered.map(item => `
+    <article class="ecm-question-card">
+      <div class="ecm-question-head">
+        <span class="ecm-q-num">Q${String(item.num).padStart(2, "0")}</span>
+        <h3 class="ecm-q-text">${formatTitleNoBreak(item.text)}</h3>
+      </div>
+      <div class="ecm-options-grid">
+        ${item.options.map(opt => {
+          const isCorrect = ecmQuizState.showAnswers && opt.correct;
+          return `
+            <div class="ecm-option-item ${isCorrect ? "is-correct" : ""}">
+              <span class="ecm-opt-letter">${opt.letter}</span>
+              <span class="ecm-opt-text">${opt.text}</span>
+              ${isCorrect ? `<span class="ecm-correct-badge">✓ Corretta</span>` : ""}
+            </div>
+          `;
+        }).join("")}
+      </div>
+    </article>
+  `).join("");
 }
