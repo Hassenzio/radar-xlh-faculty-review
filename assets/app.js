@@ -375,15 +375,58 @@ function formatTitleNoBreak(str) {
     .replace(/Fosfo[-‑]Calcica/gi, "<span class=\"no-break\">Fosfo&#8209;Calcica</span>");
 }
 
+function buildExternalToolHref(unit, moduleId) {
+  const baseToolUrl = unit?.externalTool?.url;
+  if (!baseToolUrl) return '#';
+  try {
+    const returnUrl = new URL(window.location.href.split('#')[0].split('?')[0]);
+    returnUrl.searchParams.set('module', String(moduleId));
+    if (unit.id) returnUrl.searchParams.set('unit', unit.id);
+    returnUrl.hash = 'stageViewer';
+
+    const target = new URL(baseToolUrl);
+    target.searchParams.set('from', unit.id || String(moduleId));
+    target.searchParams.set('returnTo', returnUrl.toString());
+    return target.toString();
+  } catch (e) {
+    return baseToolUrl;
+  }
+}
+
 let currentActiveModuleId = 1;
 
 document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
+
+  const params = new URLSearchParams(window.location.search);
+  const requestedModule = params.get('module');
+  const requestedUnit = params.get('unit');
+  if (requestedModule && getModuleById(requestedModule)) {
+    currentActiveModuleId = (requestedModule === 'prologo' || requestedModule === 'epilogo')
+      ? requestedModule
+      : parseInt(requestedModule, 10);
+  }
+
   renderRoadmapGrid();
-  renderModuleViewer(1);
+  renderModuleViewer(currentActiveModuleId);
   initDossierTabs();
   initModal();
   initEcmQuizViewer();
+
+  if (requestedModule && getModuleById(requestedModule)) {
+    const viewer = document.getElementById('stageViewer');
+    if (viewer) {
+      requestAnimationFrame(() => {
+        const yOffset = -90;
+        const y = viewer.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
+      });
+    }
+    if (requestedUnit) {
+      const unitBtn = document.querySelector(`[data-unit-id="${CSS.escape(requestedUnit)}"]`);
+      unitBtn?.focus({ preventScroll: true });
+    }
+  }
 });
 
 // ── NAVBAR SCROLL & BURGER ──
@@ -532,14 +575,14 @@ function renderModuleViewer(id) {
             </div>
 
             <div class="unit-card-actions">
-              <button class="btn-select-unit ${isReady ? "ready-action" : ""}" onclick="openContentModal('${unit.id}', '${moduleData.id}')">
+              <button class="btn-select-unit ${isReady ? "ready-action" : ""}" data-unit-id="${escapeHtml(unit.id)}" onclick="openContentModal('${unit.id}', '${moduleData.id}')">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
                 ${isReady ? (unit.formatClass === "format-video" ? (unit.type && unit.type.toLowerCase().includes("lezione") ? "Guarda Video Lezione HD" : "Guarda Video Pillola HD") : "Leggi il contenuto multimediale") : "In Fase Editoriale"}
               </button>
               ${unit.externalTool ? `
-                <a href="${unit.externalTool.url}" target="_blank" rel="noopener noreferrer" class="btn-external-tool" title="Apri tool interattivo: ${escapeHtml(unit.externalTool.label)}">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                  ${unit.externalTool.label} ↗
+                <a href="${escapeHtml(buildExternalToolHref(unit, moduleData.id))}" class="btn-external-tool" title="Apri tool interattivo nella stessa finestra: ${escapeHtml(unit.externalTool.label)}">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                  ${unit.externalTool.label} →
                 </a>
               ` : ""}
             </div>
@@ -623,11 +666,11 @@ function openContentModal(unitId, moduleId) {
   modalType.textContent = unit.type;
   modalModule.innerHTML = `${moduleData.code} · ${formatTitleNoBreak(moduleData.title)}`;
 
-  // Link tool interattivo dedicato (es. Piramide Inversa su 02:02:00)
+  // Link tool interattivo dedicato (es. Piramide Inversa su 02:02:00) nella stessa finestra
   if (btnExternalTool) {
     if (unit.externalTool) {
-      btnExternalTool.href = unit.externalTool.url;
-      btnExternalTool.textContent = `${unit.externalTool.label} ↗`;
+      btnExternalTool.href = buildExternalToolHref(unit, moduleData.id);
+      btnExternalTool.textContent = `${unit.externalTool.label} →`;
       btnExternalTool.style.display = "inline-flex";
     } else {
       btnExternalTool.style.display = "none";
