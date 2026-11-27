@@ -21,8 +21,8 @@ const MODULES_DATA = [
         "type": "Video Lezione",
         "formatClass": "format-video",
         "hasRealContent": true,
-        "embedUrl": "https://player.vimeo.com/video/1249730286?h=c64d0ed07c",
-        "embedHtml": '<div class="vimeo-embed-wrapper"><iframe src="https://player.vimeo.com/video/1249730286?h=c64d0ed07c&autoplay=1&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="0101 Fintini"></iframe></div>'
+        "embedUrl": "https://player.vimeo.com/video/1249730284?h=0f90725942",
+        "embedHtml": '<div class="vimeo-embed-wrapper"><iframe src="https://player.vimeo.com/video/1249730284?h=0f90725942&autoplay=1&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="0101 Fintini"></iframe></div>'
       },
       {
         "id": "01:02:00",
