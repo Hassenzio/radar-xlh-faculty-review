@@ -124,7 +124,13 @@ const MODULES_DATA = [
         "authors": "Anna Grandone / Gemma Marcucci",
         "type": "Mini-Casi Interattivi",
         "formatClass": "format-interactive",
-        "hasRealContent": false
+        "hasRealContent": true,
+        "embedUrl": "https://hassenzio.github.io/radar-xlh-dilemmi/",
+        "embedHtml": '<iframe allowfullscreen allow="autoplay; fullscreen" style="width: 100%; height: 100%; min-height: 78vh; border: none; display: block;" src="https://hassenzio.github.io/radar-xlh-dilemmi/"></iframe>',
+        "externalTool": {
+          "label": "Apri Dilemmi Illustrati",
+          "url": "https://hassenzio.github.io/radar-xlh-dilemmi/"
+        }
       },
       {
         "id": "03:04:00",
