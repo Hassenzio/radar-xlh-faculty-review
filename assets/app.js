@@ -120,15 +120,14 @@ const MODULES_DATA = [
       },
       {
         "id": "03:03:00",
-        "title": "Mini-Casi Interattivi \"Effetto Sliding Doors\"",
+        "title": "Dilemmi Illustrati. Esperienza interattiva di narrazione video-guidata",
         "authors": "Anna Grandone / Gemma Marcucci",
         "type": "Mini-Casi Interattivi",
         "formatClass": "format-interactive",
         "hasRealContent": true,
-        "embedUrl": "https://hassenzio.github.io/radar-xlh-dilemmi/",
-        "embedHtml": '<iframe allowfullscreen allow="autoplay; fullscreen" style="width: 100%; height: 100%; min-height: 78vh; border: none; display: block;" src="https://hassenzio.github.io/radar-xlh-dilemmi/"></iframe>',
+        "externalToolOnly": true,
         "externalTool": {
-          "label": "Apri Dilemmi Illustrati",
+          "label": "Entra nel tool",
           "url": "https://hassenzio.github.io/radar-xlh-dilemmi/"
         }
       },
@@ -581,16 +580,23 @@ function renderModuleViewer(id) {
             </div>
 
             <div class="unit-card-actions">
-              <button class="btn-select-unit ${isReady ? "ready-action" : ""}" data-unit-id="${escapeHtml(unit.id)}" onclick="openContentModal('${unit.id}', '${moduleData.id}')">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                ${isReady ? (unit.formatClass === "format-video" ? (unit.type && unit.type.toLowerCase().includes("lezione") ? "Guarda Video Lezione HD" : "Guarda Video Pillola HD") : "Leggi il contenuto multimediale") : "In Fase Editoriale"}
-              </button>
-              ${unit.externalTool ? `
-                <a href="${escapeHtml(buildExternalToolHref(unit, moduleData.id))}" class="btn-external-tool" title="Apri tool interattivo nella stessa finestra: ${escapeHtml(unit.externalTool.label)}">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                  ${unit.externalTool.label} →
+              ${unit.externalToolOnly && unit.externalTool ? `
+                <a href="${escapeHtml(buildExternalToolHref(unit, moduleData.id))}" class="btn-select-unit ready-action" style="text-decoration: none;" title="${escapeHtml(unit.externalTool.label)}">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  ${escapeHtml(unit.externalTool.label)}
                 </a>
-              ` : ""}
+              ` : `
+                <button class="btn-select-unit ${isReady ? "ready-action" : ""}" data-unit-id="${escapeHtml(unit.id)}" onclick="openContentModal('${unit.id}', '${moduleData.id}')">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  ${isReady ? (unit.formatClass === "format-video" ? (unit.type && unit.type.toLowerCase().includes("lezione") ? "Guarda Video Lezione HD" : "Guarda Video Pillola HD") : "Leggi il contenuto multimediale") : "In Fase Editoriale"}
+                </button>
+                ${unit.externalTool ? `
+                  <a href="${escapeHtml(buildExternalToolHref(unit, moduleData.id))}" class="btn-external-tool" title="Apri tool interattivo nella stessa finestra: ${escapeHtml(unit.externalTool.label)}">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    ${unit.externalTool.label} →
+                  </a>
+                ` : ""}
+              `}
             </div>
           </div>
         `;
